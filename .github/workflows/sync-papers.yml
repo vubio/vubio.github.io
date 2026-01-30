@@ -1,0 +1,33 @@
+name: Sync papers from Google Sheet
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes (UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download CSV from published Google Sheet
+        run: |
+          mkdir -p _data
+          curl -L "${{ secrets.SHEET_CSV_URL }}" -o _data/papers.csv
+
+      - name: Convert CSV -> JSON
+        run: |
+          mkdir -p scripts
+          python3 scripts/csv_to_json.py _data/papers.csv _data/papers.json
+
+      - name: Commit changes (if any)
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "_data/papers.csv _data/papers.json"
+          message: "sync papers"
+          default_author: github_actions
