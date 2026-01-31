@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vubio | cá nhân</title>
+    <link rel="icon" type="image/png" href="../assets/images/vubio_favicon_small.png">
+
+    <style>
+        :root {
+            --bg: #0b132b;
+            --bg-light: #1c2541;
+            --accent: #6fffe9;
+            --text: #e0f2ff;
+            --muted: #6b7b8c;
+            --glass: rgba(12, 19, 43, 0.75);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: "Bahnschrift", "Segoe UI", Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 20% 20%, rgba(111,255,233,0.08), transparent 30%),
+                linear-gradient(145deg, var(--bg) 0%, var(--bg-light) 60%, var(--bg) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(111,255,233,0.1);
+        }
+
+        nav a {
+            color: var(--text);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            text-transform: lowercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        h1, h2 {
+            color: var(--accent);
+            text-transform: lowercase;
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+
+        li {
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .project-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .project-link:hover {
+            opacity: 0.85;
+        }
+
+        .project-desc {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-top: 6px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--muted);
+            font-size: 0.8rem;
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/">trang chủ</a>
+        <a href="/personal/">cá nhân</a>
+        <a href="https://youtube.com/@vubio" target="_blank">youtube</a>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h1>cá nhân</h1>
+            <p>những dự án cá nhân, ghi chú và không gian suy nghĩ riêng</p>
+
+            <ul>
+                <li>
+                    <a class="project-link" href="/personal/paper-reading-log/">
+                        báo khoa học
+                    </a>
+                    <div class="project-desc">
+                        ghi chú ngắn gọn về các bài báo khoa học cần tham khảo
+                    </div>
+                </li>
+
+                <!-- future projects go here -->
+                <!--
+                <li>
+                    <a class="project-link" href="/personal/another-project/">
+                        another project
+                    </a>
+                    <div class="project-desc">
+                        mô tả ngắn cho dự án cá nhân khác.
+                    </div>
+                </li>
+                -->
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 vubio
+    </footer>
+</body>
+</html>
