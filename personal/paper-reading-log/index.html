@@ -163,6 +163,13 @@
             margin-bottom: 10px;
         }
 
+        .meta-value {
+            color: #b7dfe0;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+
         /* ✅ #3: colored section headings */
         .block-title {
             margin-top: 12px;
@@ -243,7 +250,7 @@
     <div class="container">
         <section>
             <h1>báo khoa học</h1>
-            <p>ghi chú ngắn gọn về các bài báo khoa học đã (đang / sẽ) đọc.</p>
+            <p>ghi chú ngắn gọn về các bài báo khoa học cần tham khảo</p>
 
             <div class="controls">
                 <input id="search" placeholder="search (title, tags, notes...)">
@@ -468,8 +475,11 @@ function render() {
             <div class="paper">
                 <h2>${title}</h2>
                 <div class="meta">
-                    year: ${year || "—"} · started: ${ds || "—"} · status: ${status}<br>
-                    clarity/quality: ${clarity} · relevance: ${relevance}
+                    <span class="meta-value">${year || "—"}</span> · 
+                    input date: <span class="meta-value">${ds || "—"}</span> · 
+                    <span class="meta-value">${status}</span><br>
+                    rating (low 1–10 high): <span class="meta-value">${clarity}</span> · 
+                    <span class="meta-value">${relevance}</span>
                 </div>
                 ${mainFinding}
                 ${interesting}
