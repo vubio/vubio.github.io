@@ -82,7 +82,7 @@
             .controls { grid-template-columns: 1fr; }
         }
 
-        /* ✅ Fix dropdown contrast (and keep dark UI) */
+        /* Form controls: dark UI + readable options */
         select, input { color-scheme: dark; }
 
         input, select {
@@ -111,6 +111,40 @@
             line-height: 1.6;
         }
 
+        .count {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+
+        .active-filter {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .active-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 6px;
+            padding: 2px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--accent);
+            background: rgba(111,255,233,0.08);
+        }
+
+        .active-chip button {
+            border: none;
+            background: transparent;
+            color: var(--accent);
+            cursor: pointer;
+            font-size: 0.95rem;
+            line-height: 1;
+            padding: 0;
+        }
+
         .paper {
             padding: 18px 0;
         }
@@ -129,10 +163,11 @@
             margin-bottom: 10px;
         }
 
+        /* ✅ #3: colored section headings */
         .block-title {
-            margin-top: 10px;
-            font-weight: 600;
-            color: var(--text);
+            margin-top: 12px;
+            font-weight: 700;
+            color: var(--accent);
             text-transform: lowercase;
             letter-spacing: 0.03em;
         }
@@ -150,7 +185,12 @@
             margin: 18px 0;
         }
 
-        .tags span {
+        /* tags (keep your style) */
+        .tags {
+            margin-top: 10px;
+        }
+
+        .tag {
             display: inline-block;
             margin: 6px 6px 0 0;
             padding: 2px 10px;
@@ -158,12 +198,18 @@
             border: 1px solid rgba(255,255,255,0.2);
             font-size: 0.75rem;
             color: var(--accent);
+            background: transparent;
+            cursor: pointer;
+            user-select: none;
         }
 
-        .count {
-            color: var(--muted);
-            font-size: 0.85rem;
-            margin-top: 10px;
+        .tag:hover {
+            background: rgba(111,255,233,0.10);
+        }
+
+        .tag.active {
+            background: rgba(111,255,233,0.18);
+            border-color: rgba(111,255,233,0.45);
         }
 
         .error {
@@ -201,6 +247,7 @@
 
             <div class="controls">
                 <input id="search" placeholder="search (title, tags, notes...)">
+
                 <select id="sortField">
                     <option value="date_started">date of starting reading</option>
                     <option value="title">paper title</option>
@@ -214,19 +261,28 @@
                     <option value="asc">ascending</option>
                 </select>
 
+                <!-- ✅ #1: auto-populated -->
                 <select id="statusFilter">
                     <option value="">— all statuses —</option>
-                    <option value="reading">reading</option>
-                    <option value="skimmed">skimmed</option>
-                    <option value="finished">finished</option>
                 </select>
             </div>
 
             <div class="hint">
                 default: newest → oldest by <span style="color: var(--accent);">date of starting reading</span>.
+                click a tag to filter.
             </div>
 
             <div id="count" class="count"></div>
+
+            <!-- ✅ shows active tag filter -->
+            <div id="activeTag" class="active-filter" style="display:none;">
+                tag filter:
+                <span class="active-chip">
+                    <span id="activeTagName"></span>
+                    <button id="clearTag" title="clear tag">×</button>
+                </span>
+            </div>
+
             <div id="error" class="error" style="display:none;"></div>
         </section>
 
@@ -239,10 +295,9 @@
 
 <script>
 let DATA = [];
+let ACTIVE_TAG = "";   // ✅ #2 tag filter
 
-function asText(x) {
-    return (x ?? "").toString().trim();
-}
+function asText(x) { return (x ?? "").toString().trim(); }
 
 function parseDateLoose(s) {
     const t = asText(s);
@@ -284,7 +339,17 @@ function getSortComparator(field) {
     return (p, q) => compareDate(p.date_started, q.date_started);
 }
 
-function matchesFilters(p, q, statusFilter) {
+function matchesFilters(p, q, statusFilter, activeTag) {
+    // Status filter exact-match (case-insensitive)
+    if (statusFilter && asText(p.status).toLowerCase() !== statusFilter) return false;
+
+    // ✅ #2 Tag filter: must include activeTag (case-insensitive)
+    if (activeTag) {
+        const tags = (p.tags || []).map(t => asText(t).toLowerCase());
+        if (!tags.includes(activeTag)) return false;
+    }
+
+    // Search: free text across fields
     const hay = [
         p.title,
         p.status,
@@ -297,7 +362,6 @@ function matchesFilters(p, q, statusFilter) {
     ].join(" ").toLowerCase();
 
     if (q && !hay.includes(q)) return false;
-    if (statusFilter && asText(p.status).toLowerCase() !== statusFilter) return false;
     return true;
 }
 
@@ -310,13 +374,49 @@ function esc(s) {
       .replaceAll("'", "&#039;");
 }
 
+/* ✅ #1 Build status dropdown from unique values in DATA */
+function populateStatusOptions() {
+    const sel = document.getElementById("statusFilter");
+    const current = sel.value || "";
+
+    // collect unique statuses
+    const set = new Set();
+    for (const p of DATA) {
+        const s = asText(p.status);
+        if (s) set.add(s);
+    }
+    const statuses = Array.from(set).sort((a,b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+
+    // rebuild (keep top "all statuses")
+    sel.innerHTML = `<option value="">— all statuses —</option>` +
+        statuses.map(s => `<option value="${esc(s.toLowerCase())}">${esc(s)}</option>`).join("");
+
+    // restore selection if possible
+    if (current) sel.value = current;
+}
+
+/* ✅ Active tag UI */
+function updateActiveTagUI() {
+    const box = document.getElementById("activeTag");
+    const name = document.getElementById("activeTagName");
+    if (!ACTIVE_TAG) {
+        box.style.display = "none";
+        name.textContent = "";
+        return;
+    }
+    box.style.display = "block";
+    name.textContent = ACTIVE_TAG;
+}
+
 function render() {
     const q = document.getElementById("search").value.trim().toLowerCase();
     const field = document.getElementById("sortField").value;
     const order = document.getElementById("sortOrder").value;
+
+    // statusFilter stores lowercase values
     const statusFilter = document.getElementById("statusFilter").value;
 
-    let items = DATA.filter(p => matchesFilters(p, q, statusFilter));
+    let items = DATA.filter(p => matchesFilters(p, q, statusFilter, ACTIVE_TAG));
 
     const cmp = getSortComparator(field);
     items.sort((a, b) => {
@@ -325,6 +425,7 @@ function render() {
     });
 
     document.getElementById("count").textContent = `${items.length} papers`;
+    updateActiveTagUI();
 
     const list = document.getElementById("list");
     if (!items.length) {
@@ -351,7 +452,14 @@ function render() {
             : "";
 
         const tags = (p.tags || []).length
-            ? `<div class="tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>`
+            ? `<div class="tags">${
+                p.tags.map(t => {
+                    const tl = asText(t).toLowerCase();
+                    const active = (ACTIVE_TAG && tl === ACTIVE_TAG) ? "active" : "";
+                    // data-tag used for click handler
+                    return `<span class="tag ${active}" data-tag="${esc(tl)}" title="filter by tag">${esc(t)}</span>`;
+                }).join("")
+              }</div>`
             : "";
 
         const divider = (idx < items.length - 1) ? `<hr class="divider">` : "";
@@ -370,10 +478,20 @@ function render() {
             ${divider}
         `;
     }).join("");
+
+    // ✅ #2: attach click handler for tags (event delegation)
+    list.querySelectorAll(".tag").forEach(el => {
+        el.addEventListener("click", () => {
+            const t = el.getAttribute("data-tag") || "";
+            // toggle behavior
+            ACTIVE_TAG = (ACTIVE_TAG === t) ? "" : t;
+            render();
+        });
+    });
 }
 
 async function load() {
-    // Default sorting: newest -> oldest by date_started
+    // defaults
     document.getElementById("sortField").value = "date_started";
     document.getElementById("sortOrder").value = "desc";
 
@@ -383,18 +501,19 @@ async function load() {
 
     try {
         const res = await fetch("/assets/data/papers.json", { cache: "no-store" });
-        if (!res.ok) {
-            throw new Error(`HTTP ${res.status} while fetching /assets/data/papers.json`);
-        }
+        if (!res.ok) throw new Error(`HTTP ${res.status} while fetching /assets/data/papers.json`);
         DATA = await res.json();
+
+        // ✅ #1: build status dropdown based on actual values
+        populateStatusOptions();
+
         render();
     } catch (e) {
         DATA = [];
         render();
         errorBox.style.display = "block";
         errorBox.innerHTML =
-          `cannot load data file (<code>/_data/papers.json</code>).<br>` +
-          `most common fix: add an empty <code>.nojekyll</code> file at repo root.<br>` +
+          `cannot load data file (<code>/assets/data/papers.json</code>).<br>` +
           `details: <code>${esc(e.message)}</code>`;
     }
 }
@@ -403,6 +522,12 @@ document.getElementById("search").addEventListener("input", render);
 document.getElementById("sortField").addEventListener("change", render);
 document.getElementById("sortOrder").addEventListener("change", render);
 document.getElementById("statusFilter").addEventListener("change", render);
+
+document.getElementById("clearTag").addEventListener("click", (e) => {
+    e.preventDefault();
+    ACTIVE_TAG = "";
+    render();
+});
 
 load();
 </script>
