@@ -394,4 +394,18 @@ async function load() {
         errorBox.style.display = "block";
         errorBox.innerHTML =
           `cannot load data file (<code>/_data/papers.json</code>).<br>` +
-          `most common fix: add an
+          `most common fix: add an empty <code>.nojekyll</code> file at repo root.<br>` +
+          `details: <code>${esc(e.message)}</code>`;
+    }
+}
+
+document.getElementById("search").addEventListener("input", render);
+document.getElementById("sortField").addEventListener("change", render);
+document.getElementById("sortOrder").addEventListener("change", render);
+document.getElementById("statusFilter").addEventListener("change", render);
+
+load();
+</script>
+
+</body>
+</html>
