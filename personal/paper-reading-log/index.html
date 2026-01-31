@@ -382,9 +382,9 @@ async function load() {
     errorBox.textContent = "";
 
     try {
-        const res = await fetch("/_data/papers.json", { cache: "no-store" });
+        const res = await fetch("/assets/data/papers.json", { cache: "no-store" });
         if (!res.ok) {
-            throw new Error(`HTTP ${res.status} while fetching /_data/papers.json`);
+            throw new Error(`HTTP ${res.status} while fetching /assets/data/papers.json`);
         }
         DATA = await res.json();
         render();
