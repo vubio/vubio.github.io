@@ -475,10 +475,10 @@ function render() {
             <div class="paper">
                 <h2>${title}</h2>
                 <div class="meta">
-                    <span class="meta-value">${year || "—"}</span> · 
+                    published year: <span class="meta-value">${year || "—"}</span> · 
                     input date: <span class="meta-value">${ds || "—"}</span> · 
-                    <span class="meta-value">${status}</span><br>
-                    rating (low 1–10 high): <span class="meta-value">${clarity}</span> · 
+                    reading status: <span class="meta-value">${status}</span><br>
+                    rating: <span class="meta-value">${clarity}/10</span> · 
                     importance (low 0–4 high): <span class="meta-value">${relevance}</span>
                 </div>
                 ${mainFinding}
