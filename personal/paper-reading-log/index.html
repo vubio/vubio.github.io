@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vubio | paper reading log</title>
+    <title>vubio | papers</title>
     <link rel="icon" type="image/png" href="../../assets/images/vubio_favicon_small.png">
 
     <style>
@@ -236,14 +236,14 @@
 <body>
     <nav>
         <a href="/">trang chủ</a>
-        <a href="/personal/">personal</a>
+        <a href="/personal/">cá nhân</a>
         <a href="https://youtube.com/@vubio" target="_blank">youtube</a>
     </nav>
 
     <div class="container">
         <section>
-            <h1>paper reading log</h1>
-            <p>ghi chú ngắn gọn về các bài báo khoa học mình đã đọc.</p>
+            <h1>báo khoa học</h1>
+            <p>ghi chú ngắn gọn về các bài báo khoa học đã (đang / sẽ) đọc.</p>
 
             <div class="controls">
                 <input id="search" placeholder="search (title, tags, notes...)">
@@ -442,12 +442,12 @@ function render() {
         const relevance = esc(p.relevance || "—");
 
         const mainFinding = (p.main_finding || []).length
-            ? `<div class="block-title">main finding</div>
+            ? `<div class="block-title">main</div>
                <ul>${p.main_finding.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`
             : "";
 
         const interesting = (p.interesting_points || []).length
-            ? `<div class="block-title">interesting points</div>
+            ? `<div class="block-title">interesting</div>
                <ul>${p.interesting_points.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`
             : "";
 
