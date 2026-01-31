@@ -6,3 +6,18 @@ Timestamp,Paper Title,Year Published,Date of starting reading,Current Reading St
 - Evidence suggests Cx43 may act as a transcriptional co-factor, directly or indirectly upregulating the expression of mechanical junction genes at the RNA level.
 
 - Longevity: AAV-mediated Cx43 gene therapy significantly prolonged lifespan in severe ACM mouse models, more than doubling survival time in some cases."
+1/31/2026 9:26:44,Mitochondria-Anchored Receptor Atg32 Mediates Degradation of Mitochondria via Selective Autophagy,2009,1/30/2026,Ongoing,"Autophagy, Mitophagy, Yoshinori Ohsumi, free GFP",9,4. Crucial,"- Discovery of Atg32: Atg32 as a mitochondria-anchored protein that is essential for mitophagy.
+
+- Selective vs. Bulk Autophagy: bulk autophagy is triggered by starvation, mitophagy occurs in post-log phase cells under respiratory conditions.
+
+- Mechanism of Recruitment: Atg32 acts as a receptor by localizing to the mitochondrial outer membrane and interacting with Atg8 and Atg11, which are critical proteins for recognizing cargo and initiating the autophagic machinery.
+
+- Essential Genes: The research found that while 14 ""core"" Atg proteins are required for mitophagy, the process is mechanistically unique because it requires Atg11 but can occur independently of Atg13 (a core factor for bulk autophagy).","- Oxidative Stress Trigger: The expression of Atg32 is temporally upregulated during respiratory growth, and this induction can be suppressed by antioxidants like N-acetylcysteine (NAC), suggesting that OXIDATIVE STRESS helps trigger mitochondrial degradation.
+
+- Selective vs. Bulk Autophagy: bulk autophagy is triggered by starvation, mitophagy occurs in post-log phase cells under respiratory conditions.
+
+- Structural Specificity: Atg32 is a single-pass membrane protein with a specific orientation: its N-terminus faces the cytosol to recruit autophagic proteins, while its C-terminus stays inside the mitochondrial intermembrane space.
+
+- Exclusive Cargo Sequestration: Using electron microscopy, the authors observed ""mitophagosomes""—double-membrane vesicles that exclusively sequester mitochondrial fragments while excluding other cytoplasmic components like ribosomes.
+
+- Evolutionary Implications: Although Atg32 homologs were specifically found in yeast, it contains a conserved WXXI/L motif also found in mammalian autophagy receptors (like p62), suggesting a universal evolutionary mechanism for selective organelle degradation."
