@@ -82,6 +82,9 @@
             .controls { grid-template-columns: 1fr; }
         }
 
+        /* ✅ Fix dropdown contrast (and keep dark UI) */
+        select, input { color-scheme: dark; }
+
         input, select {
             width: 100%;
             padding: 10px;
@@ -90,6 +93,15 @@
             color: var(--text);
             border-radius: 8px;
             outline: none;
+        }
+
+        select option {
+            background: var(--bg-light);
+            color: var(--text);
+        }
+
+        select option:checked {
+            background: rgba(111,255,233,0.18);
         }
 
         .hint {
@@ -106,7 +118,7 @@
         .paper h2 {
             font-size: 1.1rem;
             margin-bottom: 8px;
-            text-transform: none; /* titles look better not forced lowercase */
+            text-transform: none;
             color: var(--accent);
         }
 
@@ -152,6 +164,17 @@
             color: var(--muted);
             font-size: 0.85rem;
             margin-top: 10px;
+        }
+
+        .error {
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255, 80, 80, 0.08);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 0.9rem;
         }
 
         footer {
@@ -200,11 +223,11 @@
             </div>
 
             <div class="hint">
-                default: newest → oldest by <span style="color: var(--accent);">date of starting reading</span>.<br>
-                sorting: title/status = text, year/rating = number, date = date.
+                default: newest → oldest by <span style="color: var(--accent);">date of starting reading</span>.
             </div>
 
             <div id="count" class="count"></div>
+            <div id="error" class="error" style="display:none;"></div>
         </section>
 
         <section id="list"></section>
@@ -215,18 +238,6 @@
     </footer>
 
 <script>
-/**
- * Expected JSON fields (from your csv_to_json.py):
- * - title
- * - year_published
- * - date_started
- * - status
- * - clarity_quality
- * - relevance
- * - main_finding (array)
- * - interesting_points (array)
- * - tags (array)
- */
 let DATA = [];
 
 function asText(x) {
@@ -234,8 +245,6 @@ function asText(x) {
 }
 
 function parseDateLoose(s) {
-    // Accepts many formats; JS Date is permissive.
-    // If it fails, return null (we'll fallback to string sort).
     const t = asText(s);
     if (!t) return null;
     const d = new Date(t);
@@ -243,7 +252,6 @@ function parseDateLoose(s) {
 }
 
 function parseNumberLoose(s) {
-    // Extract first number (handles "4/5", "4", "4.5", "Rating: 4")
     const t = asText(s);
     if (!t) return null;
     const m = t.match(/-?\d+(\.\d+)?/);
@@ -267,20 +275,12 @@ function compareDate(a, b) {
     const da = parseDateLoose(a);
     const db = parseDateLoose(b);
     if (da && db) return da - db;
-
-    // fallback: string comparison if not parseable
     return compareText(a, b);
 }
 
 function getSortComparator(field) {
-    // Decide type by field
-    if (field === "title" || field === "status") {
-        return (p, q) => compareText(p[field], q[field]);
-    }
-    if (field === "year_published" || field === "clarity_quality") {
-        return (p, q) => compareNumber(p[field], q[field]);
-    }
-    // date_started
+    if (field === "title" || field === "status") return (p, q) => compareText(p[field], q[field]);
+    if (field === "year_published" || field === "clarity_quality") return (p, q) => compareNumber(p[field], q[field]);
     return (p, q) => compareDate(p.date_started, q.date_started);
 }
 
@@ -323,11 +323,6 @@ function render() {
         const v = cmp(a, b);
         return order === "asc" ? v : -v;
     });
-
-    // Default state requirement:
-    // "newest -> oldest based on Date of starting reading"
-    // We set sortField=date_started and sortOrder=desc by default in the UI,
-    // so render() will already do that when page loads.
 
     document.getElementById("count").textContent = `${items.length} papers`;
 
@@ -378,23 +373,25 @@ function render() {
 }
 
 async function load() {
-    const res = await fetch("/_data/papers.json", { cache: "no-store" });
-    DATA = await res.json();
-
     // Default sorting: newest -> oldest by date_started
     document.getElementById("sortField").value = "date_started";
     document.getElementById("sortOrder").value = "desc";
 
-    render();
-}
+    const errorBox = document.getElementById("error");
+    errorBox.style.display = "none";
+    errorBox.textContent = "";
 
-document.getElementById("search").addEventListener("input", render);
-document.getElementById("sortField").addEventListener("change", render);
-document.getElementById("sortOrder").addEventListener("change", render);
-document.getElementById("statusFilter").addEventListener("change", render);
-
-load();
-</script>
-
-</body>
-</html>
+    try {
+        const res = await fetch("/_data/papers.json", { cache: "no-store" });
+        if (!res.ok) {
+            throw new Error(`HTTP ${res.status} while fetching /_data/papers.json`);
+        }
+        DATA = await res.json();
+        render();
+    } catch (e) {
+        DATA = [];
+        render();
+        errorBox.style.display = "block";
+        errorBox.innerHTML =
+          `cannot load data file (<code>/_data/papers.json</code>).<br>` +
+          `most common fix: add an
