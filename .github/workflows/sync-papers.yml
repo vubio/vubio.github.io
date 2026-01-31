@@ -17,13 +17,12 @@ jobs:
 
       - name: Download CSV from published Google Sheet
         run: |
-          mkdir -p _data
+          mkdir -p assets/data
           curl -L "${{ secrets.SHEET_CSV_URL }}" -o assets/data/papers.csv
 
       - name: Convert CSV -> JSON
         run: |
-          mkdir -p scripts
-          python3 scripts/csv_to_json.py _data/papers.csv assets/data/papers.json
+          python3 scripts/csv_to_json.py assets/data/papers.csv assets/data/papers.json
 
       - name: Commit changes (if any)
         uses: EndBug/add-and-commit@v9
