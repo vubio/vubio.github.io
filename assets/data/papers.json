@@ -1,0 +1,24 @@
+[
+  {
+    "id": "connexin-43-restoration-alleviates-desmosomal-arrhythmogenic-cardiomyopathy-2026",
+    "title": "Connexin-43 Restoration Alleviates Desmosomal Arrhythmogenic Cardiomyopathy",
+    "year_published": 2026,
+    "date_started": "1/30/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Cx43",
+      "ACM"
+    ],
+    "clarity_quality": "5",
+    "relevance": "1. Slightly Relevant",
+    "main_finding": [
+      "Mutation-Agnostic Therapy: Restoring Cx43 expression effectively treats ACM across different genetic backgrounds, including DSP, PKP2, and DSG2 mutations.",
+      "Effects: improve survival, rescue cardiac function, reduce arrhythmias, fix/stabilize structure."
+    ],
+    "interesting_points": [
+      "Therapy effects observed even when administered at late stages of the disease, showing potential for treating patients with existing structural damage.",
+      "Evidence suggests Cx43 may act as a transcriptional co-factor, directly or indirectly upregulating the expression of mechanical junction genes at the RNA level.",
+      "Longevity: AAV-mediated Cx43 gene therapy significantly prolonged lifespan in severe ACM mouse models, more than doubling survival time in some cases."
+    ]
+  }
+]
