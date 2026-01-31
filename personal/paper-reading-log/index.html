@@ -237,6 +237,39 @@
             font-size: 0.8rem;
             text-transform: lowercase;
         }
+        
+        /* ---- Paper toggle ---- */
+        .paper-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+        }
+        
+        .toggle-btn {
+          border: 1px solid rgba(255,255,255,0.2);
+          background: rgba(255,255,255,0.05);
+          color: var(--accent);
+          border-radius: 999px;
+          padding: 4px 10px;
+          font-size: 0.75rem;
+          cursor: pointer;
+        }
+        
+        .toggle-btn:hover {
+          background: rgba(111,255,233,0.12);
+        }
+        
+        /* hidden by default */
+        .paper-body {
+          display: none;
+        }
+        
+        /* shown when expanded */
+        .paper-body.is-expanded {
+          display: block;
+        }
+
     </style>
 </head>
 
@@ -471,19 +504,29 @@ function render() {
 
         const divider = (idx < items.length - 1) ? `<hr class="divider">` : "";
 
+        const pid = `paper-${idx}`; // unique enough for this render()
+
         return `
             <div class="paper">
-                <h2>${title}</h2>
-                <div class="meta">
-                    published year: <span class="meta-value">${year || "—"}</span> · 
-                    input date: <span class="meta-value">${ds || "—"}</span> · 
-                    reading status: <span class="meta-value">${status}</span><br>
-                    rating: <span class="meta-value">${clarity}/10</span> · 
-                    importance (low 0–4 high): <span class="meta-value">${relevance}</span>
+                <div class="paper-header">
+                    <h2 style="margin:0;">${title}</h2>
+                    <button class="toggle-btn" type="button" data-toggle="${pid}" aria-expanded="false">
+                        show
+                    </button>
                 </div>
-                ${mainFinding}
-                ${interesting}
-                ${tags}
+        
+                <div class="paper-body" id="${pid}">
+                    <div class="meta">
+                        published year: <span class="meta-value">${year || "—"}</span> · 
+                        input date: <span class="meta-value">${ds || "—"}</span> · 
+                        reading status: <span class="meta-value">${status}</span><br>
+                        rating: <span class="meta-value">${clarity}/10</span> · 
+                        importance (low 0–4 high): <span class="meta-value">${relevance}</span>
+                    </div>
+                    ${mainFinding}
+                    ${interesting}
+                    ${tags}
+                </div>
             </div>
             ${divider}
         `;
@@ -498,6 +541,19 @@ function render() {
             render();
         });
     });
+    // toggle show/hide (event delegation)
+    list.querySelectorAll(".toggle-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const id = btn.getAttribute("data-toggle");
+            const body = document.getElementById(id);
+            if (!body) return;
+    
+            const expanded = body.classList.toggle("is-expanded");
+            btn.textContent = expanded ? "hide" : "show";
+            btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+        });
+    });
+
 }
 
 async function load() {
