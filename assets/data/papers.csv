@@ -21,3 +21,14 @@ Timestamp,Paper Title,Year Published,Date of starting reading,Current Reading St
 - Exclusive Cargo Sequestration: Using electron microscopy, the authors observed ""mitophagosomes""—double-membrane vesicles that exclusively sequester mitochondrial fragments while excluding other cytoplasmic components like ribosomes.
 
 - Evolutionary Implications: Although Atg32 homologs were specifically found in yeast, it contains a conserved WXXI/L motif also found in mammalian autophagy receptors (like p62), suggesting a universal evolutionary mechanism for selective organelle degradation."
+2/2/2026 11:00:12,Dynamics and diversity in autophagy mechanisms: lessons from yeast,2009,2/2/2026,Ongoing,"Autophagy, Mitophagy, Yoshinori Ohsumi, Review",7,4. Crucial,"- Identification of ""Core"" ATG Genes: Researchers have identified 15 ""core"" autophagy-related (Atg) genes in yeast that are essential for all types of autophagy. These genes are highly conserved from yeast to humans and form the fundamental machinery for autophagosome membrane formation.
+
+- Functional Subgroups: The core Atg proteins are organized into five distinct functional subgroups: the Atg1 kinase complex, the PtdIns 3-kinase complex, the Atg12 conjugation system, the Atg8 conjugation system, and a group of integral membrane proteins (including Atg9).
+
+- The Pre-autophagosomal Structure (PAS): Most Atg proteins concentrate at a single perivacuolar site called the PAS. This structure serves as the assembly point where the core machinery is organized to initiate the formation of the autophagosome.
+
+- Regulated Membrane Dynamics: Autophagy is not a static process; it is dynamically regulated by TORC1 signaling. In nutrient-rich conditions, TORC1 suppresses autophagy, but starvation or rapamycin treatment triggers the dephosphorylation of Atg13, which activates the Atg1 kinase and initiates PAS assembly.","- Great Cartoon differentiating Non-selective vs Selective autophagy.
+
+- Non-selective vs. Selective: While starvation-induced autophagy is largely random (non-selective), ""conductor"" proteins like Atg11 allow the cell to specifically target damaged organelles, toxic protein aggregates, or invasive bacteria for degradation.
+
+- Diverse Outcomes: Though the core machinery is the same, yeast can use these pathways for vastly different goals, such as the Cvt pathway, which is actually a biosynthetic transport route for vacuolar enzymes rather than a degradative one."
