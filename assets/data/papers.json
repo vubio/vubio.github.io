@@ -76,5 +76,34 @@
       "Non-selective vs. Selective: While starvation-induced autophagy is largely random (non-selective), \"conductor\" proteins like Atg11 allow the cell to specifically target damaged organelles, toxic protein aggregates, or invasive bacteria for degradation.",
       "Diverse Outcomes: Though the core machinery is the same, yeast can use these pathways for vastly different goals, such as the Cvt pathway, which is actually a biosynthetic transport route for vacuolar enzymes rather than a degradative one."
     ]
+  },
+  {
+    "id": "hadha-regulates-respiratory-complex-assembly-and-couples-fao-and-oxphos-2024",
+    "title": "HADHA Regulates Respiratory Complex Assembly and Couples FAO and OXPHOS",
+    "year_published": 2024,
+    "date_started": "2/6/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Mitochondria",
+      "OXPHOS",
+      "SA",
+      "Yidong Bai"
+    ],
+    "clarity_quality": "5",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "HADHA as a Regulatory Factor: The study identifies HADHA (a subunit of the mitochondrial trifunctional protein, MTP) as a key regulator for the assembly of respiratory supercomplexes (SCs) in mitochondria.",
+      "Coupling of Metabolic Pathways: The research demonstrates a direct physical and functional link between fatty acid oxidation (FAO) and oxidative phosphorylation (OXPHOS), showing that these two major bioenergetic pathways are interdependent.",
+      "Mechanism of Interaction: HADHA facilitates OXPHOS by binding directly to the membrane arm of complex I, which is essential for the stable formation of the respiratory chain.",
+      "Impact of Deficiency: Reducing HADHA levels (through knockdown or knockout) leads to decreased supercomplex assembly, defective OXPHOS function, and the accumulation of lipid droplets, mimicking metabolic disease states.",
+      "Pathological Significance: In mouse models, HADHA deficiency combined with a high-fat diet significantly worsens liver steatosis (fatty liver), highlighting how OXPHOS dysfunction contributes to primary FAO disorders."
+    ],
+    "interesting_points": [
+      "Survival via Adaptation: The researchers used a unique cell line (4AR6) that managed to restore its respiratory function despite missing an \"essential\" mitochondrial DNA subunit (ND6), leading them to discover HADHA's compensatory role.",
+      "Metabolic Stress Response: Cells naturally increase their expression of HADHA when forced to rely on mitochondria for energy (e.g., when glucose is replaced with galactose in cell culture).",
+      "Reciprocal Defects: The study explains why patients with primary fatty acid oxidation deficiencies often suffer from secondary respiratory chain defects, and vice versa.",
+      "Tissue-Specific Implications: The findings suggest that the coupling of these pathways may be more critical in high-energy organs like the liver, heart, and muscles, where FAO is a primary fuel source.",
+      "Dietary Stress: The research shows that a high-fat diet acts as a \"stress test\" that can unmask underlying genetic vulnerabilities in mitochondrial proteins that might otherwise remain asymptomatic."
+    ]
   }
 ]
