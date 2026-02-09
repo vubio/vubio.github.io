@@ -105,5 +105,36 @@
       "Tissue-Specific Implications: The findings suggest that the coupling of these pathways may be more critical in high-energy organs like the liver, heart, and muscles, where FAO is a primary fuel source.",
       "Dietary Stress: The research shows that a high-fat diet acts as a \"stress test\" that can unmask underlying genetic vulnerabilities in mitochondrial proteins that might otherwise remain asymptomatic."
     ]
+  },
+  {
+    "id": "connexin-43-hemichannels-regulate-mitochondrial-atp-generation-mobilization-and--2022",
+    "title": "Connexin 43 hemichannels regulate mitochondrial ATP generation, mobilization, and mitochondrial homeostasis against oxidative stress",
+    "year_published": 2022,
+    "date_started": "2/9/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Mitochondria",
+      "Cx43",
+      "Mitochondrial ATP",
+      "Jean Jiang",
+      "ROS",
+      "Osteocytes"
+    ],
+    "clarity_quality": "6",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "Mitochondrial Translocation: Under oxidative stress (induced by H2O2), Cx43 protein moves from other parts of the cell to the inner mitochondrial membrane.ATP",
+      "Regulation: Mitochondrial Cx43 (mtCx43) forms functional hemichannels that are essential for maintaining mitochondrial ATP generation. Cells with a Cx43 knockdown showed significantly impaired ATP production.",
+      "Proton Gradient Maintenance: The study concludes that mtCx43 hemichannels regulate the proton gradient across the mitochondrial inner membrane, which is the driving force for energy synthesis.",
+      "Direct Interaction with ATP Synthase: Cx43 does not work in isolation; it physically interacts with ATP5J2 (a subunit of ATP synthase/Complex V), likely to facilitate the efficient generation and mobilization of ATP.",
+      "Homeostatic Shield: The presence of these channels helps protect osteocytes from death caused by oxidative damage, acting as a \"rescue mission\" for the cell's energy factory"
+    ],
+    "interesting_points": [
+      "Orientation of the Protein: In the mitochondria, Cx43 is oriented with its C-terminus facing the intermembrane space, allowing it to be targeted specifically by certain antibodies that wouldn't affect it on the cell surface.",
+      "Dual Role of ROS: While oxidative stress is usually seen as purely damaging, this study shows it acts as the specific trigger that activates the \"protective\" translocation of Cx43 to the mitochondria.",
+      "K+ Influx: mtCx43 hemichannels appear to modulate Potassium influx into the mitochondrial matrix, which indirectly enhances the respiration process and the pumping of protons.",
+      "In Vivo Verification: The researchers confirmed these findings using Csf1± mice, showing that the accumulation of Cx43 in mitochondria happens in living organisms experiencing high oxidative stress, not just in cultured cells.",
+      "Broad Conductance: Unlike many highly selective ion channels, Cx43 hemichannels have a relatively large pore that allows the passage of various ions and small molecules (under 1 kDa), making them versatile regulators of the mitochondrial environment."
+    ]
   }
 ]
