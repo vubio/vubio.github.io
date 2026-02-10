@@ -68,3 +68,20 @@ Timestamp,Paper Title,Year Published,Date of starting reading,Current Reading St
 - In Vivo Verification: The researchers confirmed these findings using Csf1± mice, showing that the accumulation of Cx43 in mitochondria happens in living organisms experiencing high oxidative stress, not just in cultured cells.
 
 - Broad Conductance: Unlike many highly selective ion channels, Cx43 hemichannels have a relatively large pore that allows the passage of various ions and small molecules (under 1 kDa), making them versatile regulators of the mitochondrial environment."
+2/10/2026 12:11:08,Antibody-activation of connexin hemichannels in bone osteocytes with ATP release suppresses breast cancer and osteosarcoma malignancy,2024,2/10/2026,Ongoing,"Cx43-M2, Jean Jiang, Osteocytes, Breast Cancer, ATP, P2X7R",8,3. Highly Relevant,"- Development of Cx43-M2: Researchers created a first-of-its-kind antibody that specifically activates Connexin 43 (Cx43) hemichannels in osteocytes (bone cells) rather than inhibiting them.
+
+- Tumor Suppression: The activation of these channels triggers the release of ATP into the bone microenvironment, which inhibits the growth and migration of breast cancer and osteosarcoma cells.
+
+- Reduction in Metastasis: In mouse models, Cx43-M2 significantly decreased breast cancer bone metastasis and osteosarcoma tumor volume while improving overall survival rates.
+
+- Immune System Activation: The antibody transforms the cancer microenvironment from ""supportive"" to ""suppressive"" by increasing anti-tumor effector T cells (Tc and Th) and reducing immunosuppressive regulatory T cells (Tregs).
+
+- Bone Integrity: Treatment with the antibody was shown to protect bone structure against cancer-induced osteolysis (bone destruction).","- A ""Smart"" Mechanism: Unlike many cancer drugs that target the tumor directly, Cx43-M2 targets healthy bone cells to make the ""soil"" of the bone inhospitable for ""seed"" cancer cells.
+
+- High Specificity: Although Cx43 is found in the heart, liver, and spinal cord, the antibody primarily targeted bone osteocytes in situ and did not show detectable signals in those other vital organs, suggesting a low risk for systemic side effects.
+
+- Preserves Cell Communication: Interestingly, the antibody activates hemichannels (which leak molecules to the outside) without disrupting gap junctions (which allow cells to talk to each other), maintaining normal bone cell coordination.
+
+- Systemic Benefits: While the antibody targets bone, the resulting increase in circulating ATP provided a systemic anti-tumor effect, reducing cancer spread even in distal regions outside the bone.
+
+- Potential for Synergy: Because it reduces ""Treg"" cells in tumor tissues—a major hurdle for current immunotherapies—this antibody could potentially make existing treatments like PD-1 blockers more effective."
