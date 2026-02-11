@@ -526,18 +526,16 @@ function render() {
 
                 <div class="paper-summary">
                     <div class="meta">
-                        published year: <span class="meta-value">${yearDisplay}</span>
+                        published: <span class="meta-value">${yearDisplay}</span> |
+                        date: <span class="meta-value">${ds || "?"}</span> |
+                        status: <span class="meta-value">${status}</span> |
+                        rating: <span class="meta-value">${(clarity || "?")}/10</span> |
+                        relevance: <span class="meta-value">${relevance || "?"}</span>
                     </div>
                     ${tags}
                 </div>
         
                 <div class="paper-body" id="${pid}">
-                    <div class="meta">
-                        input date: <span class="meta-value">${ds || "—"}</span> · 
-                        reading status: <span class="meta-value">${status}</span><br>
-                        rating: <span class="meta-value">${clarity}/10</span> · 
-                        importance (low 0—4 high): <span class="meta-value">${relevance}</span>
-                    </div>
                     ${mainFinding}
                     ${interesting}
                 </div>
@@ -614,3 +612,5 @@ load();
 
 </body>
 </html>
+
+
