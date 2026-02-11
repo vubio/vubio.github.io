@@ -283,5 +283,34 @@
       "Silencing SPG7 actually enhanced mitochondrial bioenergetics, resulting in higher ATP production and oxygen consumption rates.",
       "The C-terminus of SPG7 was specifically identified as the \"CypD-interacting domain\" (CID), which is necessary for the assembly of the pore complex."
     ]
+  },
+  {
+    "id": "mcur1-is-a-scaffold-factor-for-the-mcu-complex-function-and-promotes-mitochondri-2016",
+    "title": "MCUR1 Is a Scaffold Factor for the MCU Complex Function and Promotes Mitochondrial Bioenergetics",
+    "year_published": 2016,
+    "date_started": "2/11/2026",
+    "status": "Ongoing",
+    "tags": [
+      "MCUR1",
+      "MCU",
+      "Madesh Muniswamy",
+      "Autophagy"
+    ],
+    "clarity_quality": "7",
+    "relevance": "1. Slightly Relevant",
+    "main_finding": [
+      "Essential Scaffold Factor: The study concludes that MCUR1 acts as a critical \"scaffold factor\" for the MCU complex. It is necessary for the proper assembly and stabilization of the heterooligomeric complex at the mitochondrial inner membrane.",
+      "Regulation of Calcium Uptake: Genetic deletion of MCUR1 in mouse cardiomyocytes and endothelial cells severely impairs mitochondrial calcium uptake and reduces the mitochondrial calcium uniporter current.",
+      "Impact on Bioenergetics: Loss of MCUR1 leads to a bioenergetic crisis, characterized by significantly reduced basal and agonist-induced ATP levels, which in turn impairs vital cell functions like proliferation and migration.",
+      "Triggering of Autophagy: The cellular stress and ATP depletion caused by the lack of MCUR1 (and subsequent lack of mitochondrial calcium) trigger autophagy as a survival mechanism.",
+      "Identification of Binding Domains: The researchers identified that the coiled-coil domains of both MCU and MCUR1 are the specific regions required for these proteins to bind to one another"
+    ],
+    "interesting_points": [
+      "Contradicting Previous Claims: The authors specifically address and provide evidence against a previous study suggesting MCUR1 was solely a cytochrome c oxidase (COX) assembly factor. They show that while it may have multiple roles, its function in the MCU complex is primary for calcium regulation.",
+      "Puncta Formation: Using Bimolecular Fluorescence Complementation (BiFC), the study visualized that MCUR1 and EMRE (another regulator) form specific \"puncta\" (clusters) within the mitochondria to facilitate calcium transport.",
+      "UCP2 Upregulation: In cells lacking MCUR1, there is a compensatory increase in Uncoupling Protein 2 (UCP2). This likely helps manage the mitochondrial proton gradient to prevent membrane hyperpolarization when calcium transport is absent.",
+      "Tissue-Specific Mortality: Interestingly, the loss of MCUR1 in the heart (cMCUR1 KO) resulted in smaller mice that died within 3 weeks of birth, whereas loss in the vasculature (endothelial cells) did not result in immediate mortality, highlighting the heart's extreme dependence on this calcium pathway.",
+      "Independent of MICU1: The study found that MCUR1 can bind to the MCU core and EMRE independently of MICU1 (the \"gatekeeper\" protein), suggesting a modular assembly of the uniporter complex."
+    ]
   }
 ]
