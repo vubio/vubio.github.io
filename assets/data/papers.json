@@ -312,5 +312,34 @@
       "Tissue-Specific Mortality: Interestingly, the loss of MCUR1 in the heart (cMCUR1 KO) resulted in smaller mice that died within 3 weeks of birth, whereas loss in the vasculature (endothelial cells) did not result in immediate mortality, highlighting the heart's extreme dependence on this calcium pathway.",
       "Independent of MICU1: The study found that MCUR1 can bind to the MCU core and EMRE independently of MICU1 (the \"gatekeeper\" protein), suggesting a modular assembly of the uniporter complex."
     ]
+  },
+  {
+    "id": "ampk-phosphorylates-and-inhibits-srebp-activity-to-attenuate-hepatic-steatosis-a-2011",
+    "title": "AMPK Phosphorylates and Inhibits SREBP Activity to Attenuate Hepatic Steatosis and Atherosclerosis in Diet-Induced Insulin-Resistant Mice",
+    "year_published": 2011,
+    "date_started": "2/11/2026",
+    "status": "Ongoing",
+    "tags": [
+      "AMPK",
+      "Mengwei Zang",
+      "Liver"
+    ],
+    "clarity_quality": "5",
+    "relevance": "1. Slightly Relevant",
+    "main_finding": [
+      "AMPK directly interacts with and phosphorylates SREBP-1c and SREBP-2, specifically identifying Ser372 as the critical phosphorylation site on SREBP-1c.",
+      "This phosphorylation inhibits the proteolytic cleavage and nuclear translocation of SREBP, which prevents it from activating genes responsible for fat production (lipogenesis).",
+      "Activation of AMPK by the synthetic polyphenol S17834 significantly reduces hepatic steatosis (fatty liver), hyperlipidemia, and atherosclerosis in insulin-resistant mice fed a high-fat, high-sucrose diet.",
+      "The study concludes that the AMPK-SREBP pathway is a vital therapeutic target for treating metabolic syndrome, type 2 diabetes, and associated cardiovascular diseases.",
+      "AMPK acts as a direct upstream kinase that suppresses the transcriptional activity of SREBP-1c and -2, thereby linking energy sensing directly to lipid control."
+    ],
+    "interesting_points": [
+      "While SREBP-1c and SREBP-2 are substrates for AMPK, the SREBP-1a isoform is notably not sensitive to this specific regulation.",
+      "AMPK activation disrupts the \"feed-forward\" mechanism of SREBP, meaning it stops SREBP from activating the transcription of its own gene.",
+      "The study explains how common drugs like metformin and natural compounds like resveratrol exert their lipid-lowering effects specifically through this Ser372 phosphorylation mechanism.",
+      "The synthetic polyphenol S17834 was able to improve insulin resistance and reduce body weight gain by 25% without causing liver toxicity or heart issues.",
+      "The research highlights that this AMPK-dependent suppression works even in insulin-resistant states, effectively bypassing the broken insulin signaling pathway to stop fat production.",
+      "There was a statistically significant correlation between plasma cholesterol levels and the size of atherosclerotic lesions, which were reduced by ~60% with S17834 treatment."
+    ]
   }
 ]
