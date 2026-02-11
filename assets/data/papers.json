@@ -167,5 +167,63 @@
       "Systemic Benefits: While the antibody targets bone, the resulting increase in circulating ATP provided a systemic anti-tumor effect, reducing cancer spread even in distal regions outside the bone.",
       "Potential for Synergy: Because it reduces \"Treg\" cells in tumor tissues—a major hurdle for current immunotherapies—this antibody could potentially make existing treatments like PD-1 blockers more effective."
     ]
+  },
+  {
+    "id": "lactate-elicits-er-mitochondrial-mg2-dynamics-to-integrate-cellular-metabolism-2020",
+    "title": "Lactate Elicits ER-Mitochondrial Mg2+ Dynamics to Integrate Cellular Metabolism",
+    "year_published": 2020,
+    "date_started": "2/10/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Lactate",
+      "Mitochondria",
+      "Magnesium",
+      "ER",
+      "Madesh Muniswamy"
+    ],
+    "clarity_quality": "8",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "L-lactate is a specific ligand for magnesium signaling: The study identifies L-lactate (a glycolytic end-product) as a signaling molecule that triggers the rapid release of magnesium (Mg²⁺) from endoplasmic reticulum (ER) stores.",
+      "Mrs2 mediates mitochondrial Mg²⁺ uptake: The magnesium released from the ER is taken up by the mitochondria through the Mrs2 channel, which acts as the primary regulated route for mitochondrial Mg²⁺ entry in mammalian cells.",
+      "Metabolic Integration: This Mg²⁺ surge acts as a second messenger that links glycolysis to mitochondrial bioenergetics by modulating the activity of the pyruvate dehydrogenase (PDH) complex.",
+      "Pathophysiological Impact: During acute inflammation (sepsis), lactate-induced mitochondrial Mg²⁺ surges contribute to organ failure; suppressing this surge by deleting Mrs2 or inhibiting lactate production can alleviate multi-organ failure and improve survival in models."
+    ],
+    "interesting_points": [
+      "Stereospecificity: The process is highly specific to L-lactate; D-lactate (the form primarily produced by bacteria) does not trigger the same ER Mg²⁺ release or mitochondrial uptake.",
+      "Temperature Sensitivity: Unlike the mitochondrial calcium uniporter (MCU), the Mrs2-mediated Mg²⁺ uptake machinery is remarkably sensitive to near-physiological temperature changes, functioning maximally at 37°C.",
+      "Feedback Inhibition: The Mrs2 channel has a built-in feedback mechanism where high levels of magnesium in the mitochondrial matrix can bind to its N-terminal domain to close the channel and prevent over-accumulation.",
+      "Bioenergetic \"Brake\": High mitochondrial Mg²⁺ levels can actually act as a brake on metabolism by promoting the phosphorylation (inactivation) of the PDH complex, whereas lowering matrix Mg²⁺ enhances oxygen consumption and metabolic activity.",
+      "Organ Protection: In septic shock models, Mrs2 knockout mice were protected from pulmonary edema, kidney injury, and extreme drops in body temperature, suggesting that targeting mitochondrial magnesium transport could be a therapeutic strategy for inflammatory diseases."
+    ]
+  },
+  {
+    "id": "limiting-mrs2-dependent-mitochondrial-mg2-uptake-induces-metabolic-programming-i-2023",
+    "title": "Limiting Mrs2-dependent mitochondrial Mg2+ uptake induces metabolic programming in prolonged dietary stress",
+    "year_published": 2023,
+    "date_started": "2/10/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Mrs2",
+      "Magnesium",
+      "Mitochondria",
+      "Madesh Muniswamy"
+    ],
+    "clarity_quality": "8",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "Prevention of Obesity: Genetic ablation or pharmacological blockade of the mitochondrial magnesium channel Mrs2 prevents weight gain and obesity in mice, even when they are fed a high-fat \"Western diet\" for up to a year.",
+      "Protection Against Metabolic Syndrome: Deletion of Mrs2 protects against the progression of Non-Alcoholic Fatty Liver Disease (NAFLD), prevents the development of Hepatocellular Carcinoma (HCC), and maintains healthy liver function.",
+      "Metabolic Reprogramming: Lowering mitochondrial magnesium levels triggers a \"pro-catabolic\" state, increasing glycolysis, β-oxidation (fat burning), and thermogenesis (heat production), which helps the body expend more energy.",
+      "Browning of Fat: Mrs2 deficiency promotes the \"beiging\" or browning of white adipose tissue, increasing mitochondrial density and metabolic activity in fat cells.",
+      "Identification of a Blocker: The study identifies CPACC (a cobalt derivative) as a potent and selective inhibitor of the Mrs2 channel that can effectively mimic the weight-loss effects of genetic deletion."
+    ],
+    "interesting_points": [
+      "Citrate's Dual Role: Mrs2 deficiency reduces the efflux of citrate from the mitochondria. Because citrate is a precursor for fat synthesis and an endogenous magnesium chelator, its reduction prevents fat accumulation and influences cellular signaling.",
+      "HIF-1α Stabilization: The study reveals that citric acid normally helps destabilize HIF-1α (a key metabolic transcription factor). By reducing citrate efflux, Mrs2-deficient cells stabilize HIF-1α even under normal oxygen levels, which drives beneficial metabolic changes.",
+      "Circadian Rhythm Preservation: While a Western diet typically disrupts the natural oscillations of respiration (the \"metabolic clock\"), mice lacking Mrs2 maintained normal circadian rhythms in their oxygen consumption and energy expenditure.",
+      "Magnesium vs. Calcium Competition: The research highlights a physiological \"competition\" where mitochondrial magnesium acts as an \"off\" switch or rheostat for calcium signaling; manipulating this balance can fundamentally change how a cell processes energy.",
+      "Microvascular Health: Beyond metabolism, the loss of Mrs2 was shown to prevent the \"thinning\" of tiny blood vessels (microvascular rarefaction) in the liver that usually occurs with aging and high-fat diets."
+    ]
   }
 ]
