@@ -341,5 +341,32 @@
       "The research highlights that this AMPK-dependent suppression works even in insulin-resistant states, effectively bypassing the broken insulin signaling pathway to stop fat production.",
       "There was a statistically significant correlation between plasma cholesterol levels and the size of atherosclerotic lesions, which were reduced by ~60% with S17834 treatment."
     ]
+  },
+  {
+    "id": "targeting-hepatic-serine-arginine-protein-kinase-2-ameliorates-alcohol-associate-2023",
+    "title": "Targeting hepatic serine-arginine protein kinase 2 ameliorates alcohol-associated liver disease by alternative splicing control of lipogenesis",
+    "year_published": 2023,
+    "date_started": "2/11/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Liver",
+      "Mengwei Zang",
+      "RNA splicing",
+      "SRPK2"
+    ],
+    "clarity_quality": "8",
+    "relevance": "1. Slightly Relevant",
+    "main_finding": [
+      "Discovery of a \"Splicing Switch\": The study identifies a specific protein kinase, SRPK2, that gets activated by alcohol in the liver. When active, it disrupts the splicing of a key protein called Lipin-1, shifting it from the \"good\" form (Lipin-1alpha) to the \"bad\" form (Lipin-1beta).",
+      "Mechanism of Fat Accumulation: This \"bad\" Lipin-1beta is what triggers SREBP-1, the master regulator that forces the liver to produce excessive fat (lipogenesis). Essentially, alcohol rewrites the RNA blueprint to favor fat production.",
+      "The Role of FGF21: The hormone FGF21 protects against liver disease by promoting the degradation of SRPK2. In mice without FGF21, alcohol causes much more severe damage because SRPK2 levels skyrocket.",
+      "Therapeutic Validation: Silencing SRPK2 in mice was sufficient to reverse alcohol-induced fatty liver and inflammation, proving it is a viable drug target."
+    ],
+    "interesting_points": [
+      "Strategic \"Druggability\": Unlike SREBP-1 (a transcription factor), which is considered \"undruggable\" because it lacks good binding pockets, SRPK2 is a kinase. Pharmaceutical companies are very good at making kinase inhibitors, making this a much more practical target for drug development than previous approaches.",
+      "The \"Root Cause\" Fix: Traditional metabolic drugs often try to fix the downstream damage (too much fat). This approach targets the RNA splicing machinery upstream, fixing the \"error\" in the cellular instruction manual before the damage occurs.",
+      "Connecting Metabolic & RNA Biology: This paper bridges two distinct fields. It shows that a metabolic signal (alcohol/mTORC1) directly controls RNA splicing machinery. This is a sophisticated angle that explains why the lab is hiring people with diverse backgrounds (metabolism vs. RNA biology).",
+      "Human Relevance: The study confirmed that SRPK2 is hyperactivated in human patients with alcohol-associated liver disease (ALD), not just in mice, which significantly increases the translational value of the new grant."
+    ]
   }
 ]
