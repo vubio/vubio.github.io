@@ -117,3 +117,37 @@ Timestamp,Paper Title,Year Published,Date of starting reading,Current Reading St
 - Magnesium vs. Calcium Competition: The research highlights a physiological ""competition"" where mitochondrial magnesium acts as an ""off"" switch or rheostat for calcium signaling; manipulating this balance can fundamentally change how a cell processes energy.
 
 - Microvascular Health: Beyond metabolism, the loss of Mrs2 was shown to prevent the ""thinning"" of tiny blood vessels (microvascular rarefaction) in the liver that usually occurs with aging and high-fat diets."
+2/11/2026 6:20:29,"Magnesium: Biochemistry, Nutrition, Detection, and Social Impact of Diseases Linked to Its Deficiency",2021,2/11/2026,Ongoing,"Magnesium, Review, MDPI",6,2. Moderately Relevant,"- Magnesium is a vital metabolite involved in over 600 enzymatic reactions and nearly every major metabolic and biochemical process within the cell.
+
+- Subclinical magnesium deficiency is a widespread public health crisis in Western populations, primarily driven by a diet high in processed foods and demineralized water.
+
+- Chronic magnesium deficiency is significantly associated with high-impact ""social pathologies,"" including type 2 diabetes, osteoporosis, cardiovascular diseases, cancer, and various neurological disorders.
+
+- Evaluating a person's magnesium status is clinically challenging because less than 1% of the body's magnesium is in the blood, meaning ""normal"" serum levels do not rule out a deficiency in tissues or bone.
+
+- Increasing dietary intake and proper supplementation are essential preventive strategies to improve long-term health outcomes and reduce the economic burden of chronic diseases.","- High supplemental doses of zinc (around 53 mg/day) can interfere with and decrease the body's overall magnesium balance.
+
+- Magnesium in drinking water is highly bioavailable, and its absorption is further enhanced when magnesium-rich mineral water is consumed during a meal.
+
+- Breast milk concentrations of magnesium vary widely, and breastfed infants generally require complementary foods after six months to meet 50% of their magnesium requirements during rapid growth.
+
+- The ""protective effect"" of magnesium at physiological levels helps stabilize the natural structure of DNA, whereas deficient levels may favor mutations that lead to carcinogenesis.
+
+- Magnesium acts as a ""natural calcium channel blocker,"" and maintaining the correct magnesium-to-calcium ratio is critical for preventing heart arrhythmias and hypertension."
+2/11/2026 6:26:53,SPG7 Is an Essential and Conserved Component of the Mitochondrial Permeability Transition Pore,2015,2/11/2026,Ongoing,"Madesh Muniswamy, mPTP, Mitochondria, Calcium, ROS",7,3. Highly Relevant,"- The protein SPG7 (paraplegin) is identified as a core, essential, and conserved component of the PTP.
+
+- The PTP is a heterooligomeric complex consisting of SPG7 (inner mitochondrial membrane), VDAC1 (outer mitochondrial membrane), and CypD (mitochondrial matrix).
+
+- Loss of SPG7 prevents mitochondrial swelling, membrane potential dissipation, and cell death induced by calcium overload and reactive oxygen species (ROS).
+
+- The interaction between SPG7 and CypD is direct and can be disrupted by the inhibitor Cyclosporine A (CsA).
+
+- SPG7 acts as a bridge at the contact sites between the inner and outer mitochondrial membranes to facilitate pore formation.","- The study used an unbiased RNAi-based screen of 128 mitochondrial proteins to narrow down the candidates for the PTP.
+
+- SPG7’s role in the PTP is independent of its known function as a metalloprotease; even ""proteolytically dead"" mutants of SPG7 were able to restore PTP function in knockout cells.
+
+- While SPG7 is often associated with the neurodegenerative disease hereditary spastic paraplegia (HSP), its role in PTP suggests it is also a critical regulator of cell death (necrosis) in many cell types, including cardiomyocytes.
+
+- Silencing SPG7 actually enhanced mitochondrial bioenergetics, resulting in higher ATP production and oxygen consumption rates.
+
+- The C-terminus of SPG7 was specifically identified as the ""CypD-interacting domain"" (CID), which is necessary for the assembly of the pore complex."
