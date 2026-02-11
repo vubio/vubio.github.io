@@ -245,6 +245,14 @@
           justify-content: space-between;
           gap: 12px;
         }
+
+        .paper-summary {
+          margin-top: 8px;
+        }
+        
+        .paper-summary .meta {
+          margin-bottom: 6px;
+        }
         
         .toggle-btn {
           border: 1px solid rgba(255,255,255,0.2);
@@ -476,6 +484,7 @@ function render() {
     list.innerHTML = items.map((p, idx) => {
         const title = esc(p.title || "(no title)");
         const year = esc(p.year_published ?? "");
+        const yearDisplay = year || "?";
         const ds = esc(p.date_started ?? "");
         const status = esc(p.status || "—");
         const clarity = esc(p.clarity_quality || "—");
@@ -513,6 +522,13 @@ function render() {
                     <button class="toggle-btn" type="button" data-toggle="${pid}" aria-expanded="false">
                         show
                     </button>
+                </div>
+
+                <div class="paper-summary">
+                    <div class="meta">
+                        published year: <span class="meta-value">${yearDisplay}</span>
+                    </div>
+                    ${tags}
                 </div>
         
                 <div class="paper-body" id="${pid}">
