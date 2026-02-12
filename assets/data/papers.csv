@@ -258,3 +258,18 @@ Timestamp,Paper Title,Year Published,Date of starting reading,Current Reading St
 - Anabolic Importance: Because PGE_2 is an anabolic agent (it helps build bone mass), this mechanism explains the direct cellular link between exercise/movement and the strengthening of the skeleton.
 
 - Dye Uptake Proof: The researchers proved the channels were opening by showing that the cells would ""swallow"" fluorescent dye (Lucifer Yellow) only when subjected to fluid flow, a process that was blocked by specific hemichannel inhibitors."
+2/12/2026 12:05:42,Connexin43: A Protein from Rat Heart Homologous to a Gap Junction Protein from Liver ,1987,2/12/2026,Completed,"Cx43, Daniel Goodenough, Gap junction",9,3. Highly Relevant,"- Discovery of a New Protein: The researchers successfully identified and cloned a new gap junction protein from the rat heart, which they named Connexin43.
+
+- Evidence of a Gene Family: By using a liver gap junction probe to find a heart protein, they proved that gap junctions are not identical across all tissues but are instead part of a related family of homologous proteins.
+
+- Molecular Characterization: They determined that the heart protein is encoded by a 1,146-bp open reading frame, resulting in a protein with a molecular mass of approximately 43,036 Daltons.
+
+- Widespread Expression: While discovered in the heart, Northern blot analysis revealed that this specific protein (Cx43) is also expressed in the kidney, ovary, uterus, and lens epithelium.
+
+- Structural Conservation: By comparing the heart and liver sequences, they concluded that the parts of the protein that sit inside the membrane or outside the cell are highly similar (conserved), while the parts inside the cell (cytoplasmic) are very different.","- The Nomenclature Shift: This paper is famous for proposing the ""Connexin"" naming system (e.g., Connexin32, Connexin43), moving the scientific community away from naming these proteins based on the organ where they were first found.
+
+- The ""Low Stringency"" Breakthrough: The discovery relied on a clever lab trick: lowering the ""stringency"" of their search to allow the liver ""bait"" to stick to a heart ""target"" that was only 55% similar.
+
+- Heart Rhythm Implications: The study laid the foundation for understanding how the heart beats in a synchronized way, as Connexin43 is the primary channel for electrical signaling between cardiac muscle cells.
+
+- Multi-Organ Utility: It was surprising at the time to find that the ""heart"" protein was also the primary gap junction protein in the lens of the eye and the uterus, suggesting it has versatile roles in different types of cell-to-cell communication."
