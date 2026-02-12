@@ -368,5 +368,60 @@
       "Connecting Metabolic & RNA Biology: This paper bridges two distinct fields. It shows that a metabolic signal (alcohol/mTORC1) directly controls RNA splicing machinery. This is a sophisticated angle that explains why the lab is hiring people with diverse backgrounds (metabolism vs. RNA biology).",
       "Human Relevance: The study confirmed that SRPK2 is hyperactivated in human patients with alcohol-associated liver disease (ALD), not just in mice, which significantly increases the translational value of the new grant."
     ]
+  },
+  {
+    "id": "an-essential-role-for-cardiolipin-in-the-stability-and-function-of-the-mitochond-2020",
+    "title": "An essential role for cardiolipin in the stability and function of the mitochondrial calcium uniporter",
+    "year_published": 2020,
+    "date_started": "2/11/2026",
+    "status": "Not Started",
+    "tags": [
+      "Cardiolipin",
+      "MCU",
+      "Mitochondria",
+      "Madesh Muniswamy"
+    ],
+    "clarity_quality": "6",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "Essential Role of Cardiolipin (CL): The study identifies cardiolipin as a specific and critical phospholipid required for the stability and assembly of the mitochondrial calcium uniporter (MCU) complex.",
+      "Impact of CL Deficiency: A lack or reduction of CL leads to the rapid protein turnover of MCU and a significant decrease in its steady-state levels, thereby impairing mitochondrial calcium uptake.",
+      "Evolutionary Conservation: This requirement for CL is conserved across species, as demonstrated by findings in yeast models, mouse muscle cells, and human patient tissues.",
+      "Link to Barth Syndrome: The research establishes that the partial loss of CL in Barth syndrome (BTHS) directly reduces the abundance and activity of the endogenous MCU, suggesting that impaired mitochondrial calcium signaling may contribute to the disease's pathogenesis."
+    ],
+    "interesting_points": [
+      "Specific Lipid Requirement: While the inner mitochondrial membrane contains several abundant phospholipids like PE and PC, the stability of the MCU was found to be specifically dependent on CL, rather than a general requirement for all phospholipids.",
+      "Mechanism of Stability: The study shows that CL does not necessarily affect the initial expression of MCU but is vital for its persistence in the membrane; without it, the protein is degraded much faster (increased turnover).",
+      "Yeast as a Research Model: The researchers successfully used Saccharomyces cerevisiae—which naturally lacks the uniporter—as a \"blank slate\" to heterologously reconstitute the human uniporter and test lipid requirements in a controlled genetic environment.",
+      "Clinical Relevance: The finding that MCU abundance is decreased by 40–90% in the cardiac tissue of Barth syndrome patients provides a potential new molecular explanation for the cardiomyopathy and exercise intolerance seen in these patients.",
+      "Structural Confirmation: The functional findings are highly complementary to recent structural studies (cryo-EM) that have identified specific lipid-binding sites on the MCU pore, where CL is thought to stabilize the transmembrane helices."
+    ]
+  },
+  {
+    "id": "age-dependent-loss-of-hepatic-sirt1-enhances-nlrp3-inflammasome-signaling-and-im-2023",
+    "title": "Age-dependent loss of hepatic SIRT1 enhances NLRP3 inflammasome signaling and impairs capacity for liver fibrosis resolution",
+    "year_published": 2023,
+    "date_started": "2/11/2026",
+    "status": "Not Started",
+    "tags": [
+      "SIRT1",
+      "Liver",
+      "Aging",
+      "Mengwei Zang"
+    ],
+    "clarity_quality": "5",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "Age-Dependent Decline of SIRT1: Aging causes a significant decrease in hepatic levels of the longevity factor SIRT1, which is directly linked to increased susceptibility to severe and persistent liver fibrosis.",
+      "NLRP3 Inflammasome Activation: The loss of SIRT1 triggers the activation of the NLRP3 inflammasome and the production of pro-inflammatory cytokines like IL-1β, creating a state of \"inflammaging\" that exacerbates liver injury.",
+      "Impaired Fibrosis Resolution: Unlike young mice, which can resolve liver fibrosis after the cause of injury is removed, older mice have a diminished capacity for recovery, leading to permanent scarring and abnormal extracellular matrix (ECM) remodeling.",
+      "Therapeutic Potential of NLRP3 Inhibition: Treating aged mice with MCC950, a selective NLRP3 inhibitor, successfully ameliorates alcohol-induced liver fibrosis by reducing inflammation and hepatocyte stress signaling."
+    ],
+    "interesting_points": [
+      "\"Mimicking\" Aging: Researchers found that genetically deleting SIRT1 in the livers of young mice caused them to develop severe fibrosis and inflammation similar to that seen in naturally aged mice, effectively \"mimicking\" the aging process.",
+      "The Role of ASK1 and HMGB1: The study identified that NLRP3 inhibition works partly by repressing hepatocyte-derived danger signals, specifically ASK1 and the cytoplasmic translocation of HMGB1, which otherwise drive a cycle of chronic inflammation.",
+      "HSC Hyperactivation: Aging leads to a higher number of activated hepatic stellate cells (HSCs)—the primary cells responsible for collagen deposition—which remain persistent in older livers even after the initial injury ceases.",
+      "Clinical Implications for ALD: The research suggests that the lack of effective treatments for liver cirrhosis in humans may be due to preclinical models focusing on young animals; using age-related models could lead to better clinical translations for older patients with alcohol-associated liver disease (ALD)."
+    ]
   }
 ]
