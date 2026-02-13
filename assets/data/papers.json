@@ -563,5 +563,34 @@
       "ROS and Apoptosis: Cells lacking MICU1 are significantly more sensitive to triggers of programmed cell death (apoptosis) because their mitochondria are already \"primed\" for failure due to high basal ROS levels.",
       "Bioenergetic \"Weakness\": Interestingly, while MICU1-deficient cells have more calcium, they don't actually produce more energy; the resulting ROS damage inhibits their metabolism, effectively canceling out the benefit of the extra calcium."
     ]
+  },
+  {
+    "id": "mitochondrial-calcium-uniporter-stabilization-preserves-energetic-homeostasis-du-2022",
+    "title": "Mitochondrial calcium uniporter stabilization preserves energetic homeostasis during Complex I impairment",
+    "year_published": 2022,
+    "date_started": "2/13/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Mitochondria",
+      "Dipayan Chaudhuri",
+      "Complex I"
+    ],
+    "clarity_quality": "5",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "Mitochondrial Complex I impairment triggers a compensatory increase in the levels and activity of the mitochondrial calcium uniporter (MCU) to help maintain ATP synthesis and energetic homeostasis.",
+      "This increase is regulated by a mechanism termed \"Complex I-induced protein turnover\" (CLIPT), where functional Complex I normally promotes MCU degradation via physical interaction.",
+      "When Complex I is dysfunctional, its interaction with MCU is disrupted, preventing MCU degradation and leading to the accumulation of functional channels.",
+      "This compensatory stabilization of MCU is critical for survival; in mouse models of mitochondrial cardiomyopathy (Tfam knockout), preventing this MCU increase significantly accelerated death.",
+      "Interventions that enhance this stabilization, such as overexpressing the MCU N-terminal domain (NTD), can rescue survival and function in organisms with Complex I deficiency."
+    ],
+    "interesting_points": [
+      "The CLIPT mechanism is evolutionarily conserved and was observed across multiple systems, including human induced pluripotent stem cells (IPSCs), mouse hearts, and Drosophila flight muscles.",
+      "The increase in MCU protein levels is post-transcriptional; mRNA levels do not change, confirming that the accumulation is due to reduced protein degradation rather than increased synthesis.",
+      "The disruption of the MCU-Complex I interaction is driven by aberrant signals typical of mitochondrial dysfunction, specifically increased Reactive Oxygen Species (ROS) and altered NADH/NAD+ ratios.",
+      "The N-terminal domain (NTD) of the MCU protein is the specific region necessary for binding to Complex I; deleting this domain prevents the interaction and the subsequent degradation of the channel.",
+      "In a proof-of-concept for therapy, expressing just the isolated NTD fragment in Drosophila (without the full channel) was sufficient to stabilize endogenous MCU and improve survival, suggesting a novel therapeutic target for mitochondrial diseases.",
+      "The study highlights a \"supply-demand\" match where calcium uptake is boosted to stimulate the TCA cycle and ATP production precisely when the electron transport chain is failing."
+    ]
   }
 ]
