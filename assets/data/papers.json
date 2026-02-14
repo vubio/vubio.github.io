@@ -592,5 +592,36 @@
       "In a proof-of-concept for therapy, expressing just the isolated NTD fragment in Drosophila (without the full channel) was sufficient to stabilize endogenous MCU and improve survival, suggesting a novel therapeutic target for mitochondrial diseases.",
       "The study highlights a \"supply-demand\" match where calcium uptake is boosted to stimulate the TCA cycle and ATP production precisely when the electron transport chain is failing."
     ]
+  },
+  {
+    "id": "redefining-the-roles-of-mitochondrial-dna-encoded-subunits-in-respiratory-comple-2015",
+    "title": "Redefining the roles of mitochondrial DNA-encoded subunits in respiratory Complex I assembly",
+    "year_published": 2015,
+    "date_started": "2/13/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Yidong Bai",
+      "Complex I",
+      "ND4",
+      "ND5",
+      "ND6",
+      "mtDNA"
+    ],
+    "clarity_quality": "7",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "The study identifies a new Complex I assembly intermediate (labeled as the > 950 kDa intermediate) that contains both the membrane and matrix arms at an early stage of assembly.",
+      "ND4 is critical for the initial formation of this large intermediate; in its absence, the assembly of Complex I is completely abolished.",
+      "ND6 plays a recruitment role, specifically facilitating the entry of the ND1 and ND5 subunits into the assembling complex.",
+      "ND5 acts as a stabilizer for the complex and is essential for the transition from a standalone Complex I to its incorporation into respiratory supercomplexes.",
+      "The researchers proposed a redefined, partially sequential assembly pathway for Complex I, correcting previous models regarding the timing and order of subunit incorporation."
+    ],
+    "interesting_points": [
+      "Non-Simultaneous Entry: Contrary to earlier beliefs that ND4 and ND5 enter the assembly together, this study proves they enter at different stages, with ND4 being required much earlier than ND5.",
+      "The > 950 kDa Intermediate: The discovery of this specific high-molecular-weight band suggests that Complex I forms an \"almost complete\" structure early on, which then undergoes a maturation process (losing assembly factors) to become the functional ~800 kDa form.",
+      "Late Entry of ND1: The study reveals that the ND1-containing subcomplex joins the assembly much later than previously thought, and its incorporation depends on the prior presence of ND6.",
+      "Kinetic Timeline: The research indicates that it takes approximately 12–24 hours for a newly synthesized mitochondrial subunit to be fully integrated into the functional respiratory machinery.",
+      "Clinical Implications: By delineating the specific roles of ND4, ND5, and ND6, the study provides a better basis for understanding the varying severity and pathology of Leber's Hereditary Optic Neuropathy (LHON) and other mitochondrial diseases."
+    ]
   }
 ]
