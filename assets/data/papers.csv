@@ -352,3 +352,18 @@ Timestamp,Paper Title,Year Published,Date of starting reading,Current Reading St
 - The findings highlight a ""bioenergetic switch"": cells with aged mitochondria may compensate for energy deficits by upregulating glycolysis, a metabolic signature similar to that seen in cancer cells.
 
 - The study provides a unique molecular tool to study low-occurrence pathogenic mutations that are otherwise difficult to analyze directly in intact muscle tissues."
+2/16/2026 12:33:34,A Century of Cholesterol and Coronaries: From Plaques to Genes to Statins,2015,2/16/2026,Ongoing,"Joseph Goldstein, Michael Brown, LDL, Review, Cholesterol, SREBP",10,3. Highly Relevant,"- Receptor Regulation: LDL levels in the blood are primarily controlled by LDL receptors in the liver. Genetic mutations that reduce these receptors cause high LDL and heart attacks, while mutations that increase receptor activity lower LDL and protect against heart disease.
+
+- The SREBP Pathway: The authors elucidated the molecular mechanism (the SREBP pathway) by which cells sense cholesterol levels in their membranes and transmit that information to the nucleus to regulate the production of LDL receptors and cholesterol synthesis.
+
+- PCSK9’s Role: The protein PCSK9 destroys LDL receptors. Inhibiting PCSK9 (via genetics or drugs) prevents receptor destruction, drastically lowers LDL, and significantly reduces the risk of heart attacks.
+
+- Earlier is Better: Lifelong exposure to low LDL (due to genetics or diet) offers far greater protection against heart disease (up to 88% reduction) than lowering LDL with drugs later in life after plaques have already formed.","- Historical Misunderstanding: In the early 20th century, doctors believed coronary blockage was ""universally fatal."" Consequently, they misdiagnosed non-fatal heart attacks as severe indigestion until the electrocardiogram (ECG) revealed the truth in 1919.
+
+- The ""Sealed Bottle"" Experiment: In 1933, Rudolph Schoenheimer proved that animals synthesize their own cholesterol by placing mice in sealed bottles and measuring their total cholesterol content. He found that synthesis slowed down when the mice were fed cholesterol, discovering the principle of feedback inhibition.
+
+- The ""Detective Story"" of SREBP: When researchers first isolated the SREBP transcription factor from cell nuclei, it weighed ~60 kDa. However, the genetic blueprint predicted a protein of 125 kDa. They eventually realized the protein is built as a ""prisoner"" anchored in the cell membrane and is only cut loose (cleaved) to enter the nucleus when cholesterol levels drop.
+
+- Dietary Extremes: Ancel Keys' ""Seven Countries Study"" highlighted a stark contrast: Japanese fishermen (low-fat diet) had an average cholesterol of 165 mg/dl, while East Finnish foresters (who ate butter on cheese) averaged 270 mg/dl and had a 13-fold higher rate of heart attacks.
+
+- Statins' Mechanism: Statins don't just ""lower cholesterol"" directly; they inhibit synthesis inside the cell, which tricks the liver into thinking it is starving for cholesterol. The liver responds by producing more LDL receptors, which then pull dangerous LDL out of the bloodstream."
