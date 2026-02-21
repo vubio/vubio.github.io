@@ -736,5 +736,32 @@
       "The proteins MBD5 and MBD6 were previously known to associate with heterochromatin but mysteriously did not bind to methylated DNA. This research newly identifies them as specialized RNA-binding proteins that preferentially recognize m5C-modified RNA.",
       "The findings highlight a growing theme in epigenetics where chromatin-associated regulatory RNAs (carRNAs) serve as active, dynamic platforms for controlling local and global chromatin architecture."
     ]
+  },
+  {
+    "id": "tet2-loss-leads-to-hypermutagenicity-in-haematopoietic-stem-progenitor-cells-2017",
+    "title": "Tet2 loss leads to hypermutagenicity in haematopoietic stem/progenitor cells",
+    "year_published": 2017,
+    "date_started": "2/21/2026",
+    "status": "Ongoing",
+    "tags": [
+      "TET2",
+      "Leukemia",
+      "Mingjiang Xu"
+    ],
+    "clarity_quality": "7",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "Loss of the Tet2 gene leads to hypermutagenicity (a significantly increased mutation rate) in haematopoietic stem and progenitor cells (HSCs/HPCs).",
+      "Tet2 knockout mice spontaneously develop lethal myeloid, T-cell, and B-cell malignancies after long latencies.",
+      "The increased mutational burden in Tet2-deficient cells is particularly high at specific genomic sites that gained 5-hydroxymethylcytosine (5hmC), which are locations where the TET2 enzyme normally binds.",
+      "Human patients with TET2-mutated myeloid malignancies possess a significantly higher number of mutational events compared to patients with wild-type TET2.",
+      "Tumors from Tet2 knockout mice accumulate numerous somatic mutations in genes frequently altered in human blood cancers, such as Apc, Nf1, Flt3, Cbl, and Notch1."
+    ],
+    "interesting_points": [
+      "The study uncovers a novel, tumor-suppressive role for the TET2 enzyme in safeguarding genome stability against mutagenesis, helping to explain why TET2 mutations are frequent early \"ancestral\" events in diverse haematological cancers and in age-related clonal haematopoiesis.",
+      "The T-cell and B-cell malignancies that developed in the Tet2-knockout mice were successfully transplanted into secondary wild-type recipients, confirming the true malignant and neoplastic nature of these cells.",
+      "The researchers demonstrated that stably re-expressing TET2 in TET2-knockdown cells completely rescued normal mutation frequencies, proving TET2's direct role in preventing DNA mutations.",
+      "The mutations observed in Tet2-deficient tumors were not entirely random; they showed a strong preference for occurring at or closely around CpG sites (73% of mutations), with base transition mutations (like G:C to A:T) dominating the mutational spectrum."
+    ]
   }
 ]
