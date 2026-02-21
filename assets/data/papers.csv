@@ -367,3 +367,18 @@ Timestamp,Paper Title,Year Published,Date of starting reading,Current Reading St
 - Dietary Extremes: Ancel Keys' ""Seven Countries Study"" highlighted a stark contrast: Japanese fishermen (low-fat diet) had an average cholesterol of 165 mg/dl, while East Finnish foresters (who ate butter on cheese) averaged 270 mg/dl and had a 13-fold higher rate of heart attacks.
 
 - Statins' Mechanism: Statins don't just ""lower cholesterol"" directly; they inhibit synthesis inside the cell, which tricks the liver into thinking it is starving for cholesterol. The liver responds by producing more LDL receptors, which then pull dangerous LDL out of the bloodstream."
+2/21/2026 6:14:11,HOTTIP-dependent R-loop formation regulates CTCF boundary activity and TAD integrity in leukemia,2022,2/21/2026,Ongoing,"HOTTIP, R-loop, Mingjiang Xu, Leukemia, TAD, AML",4,1. Slightly Relevant,"- Mechanism of Genome Organization: The study concludes that the long non-coding RNA (lncRNA) HOTTIP directly regulates the 3D genome structure in leukemia by recruiting the CTCF/cohesin complex and R-loop regulators to specific chromatin boundaries.
+
+- R-loop Function: HOTTIP-mediated R-loop formation is essential for reinforcing CTCF boundary activity and maintaining the integrity of Topologically Associated Domains (TADs).
+
+- Oncogenic Activation: These R-loop-dependent boundaries coordinate the oncogenic Wnt/β-catenin signaling pathway, which is a key driver of acute myeloid leukemia (AML).
+
+- Therapeutic Potential: Reducing HOTTIP-driven R-loops (either by deleting binding sites or using RNase H to eliminate the loops) impairs TAD topology and inhibits leukemia progression, suggesting a new strategy for mitigating AML severity.","- Direct RNA-DNA Interaction: HOTTIP recognizes specific binding motifs through sequence complementarity, forming R-loops via a base-pairing mechanism rather than just acting as a passive byproduct of transcription.
+
+- TAD Integrity: The loss of HOTTIP leads to the disappearance or weakening of specific TADs, particularly those encompassing the CTNNB1 (β-catenin), MYC, and MECOM loci.
+
+- HSC Impact: Single-cell RNA-seq analysis revealed that Hottip aberration specifically impacts hematopoietic stem cell (HSC) subpopulations, driving a myeloid-biased trajectory toward leukemia.
+
+- Regulatory Layer: The research highlights that R-loops, often viewed as threats to genome stability, can serve as powerful and precise regulators of gene expression and chromatin architecture.
+
+- Clinical Relevance: HOTTIP is highly expressed in AML patients with MLL rearrangements or NPM1 mutations, correlating with poor survival rates."
