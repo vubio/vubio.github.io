@@ -382,3 +382,14 @@ Timestamp,Paper Title,Year Published,Date of starting reading,Current Reading St
 - Regulatory Layer: The research highlights that R-loops, often viewed as threats to genome stability, can serve as powerful and precise regulators of gene expression and chromatin architecture.
 
 - Clinical Relevance: HOTTIP is highly expressed in AML patients with MLL rearrangements or NPM1 mutations, correlating with poor survival rates."
+2/21/2026 7:16:16,RNA m5C oxidation by TET2 regulates chromatin state and leukaemogenesis,2024,2/21/2026,Ongoing,"TET2, Mingjiang Xu, Leukemia, RNA m5C oxidation",6,2. Moderately Relevant,"- The TET2 enzyme, a known tumor suppressor in blood cancers, regulates chromatin structure and prevents leukemia by oxidizing 5-methylcytosine (m5C) on chromatin-associated RNA (caRNA), specifically retrotransposon RNA.
+
+- When TET2 is deficient or mutated, RNA m5C accumulates. This accumulation is recognized by the protein MBD6, which then directs the removal of a repressive histone mark (H2AK119ub). This results in an abnormally open chromatin state and the activation of genes that drive leukemia.
+
+- Depleting the MBD6 protein selectively halts the proliferation of TET2-mutant leukemic cells and largely reverses blood-formation defects in mouse models, establishing MBD6 as a highly promising therapeutic target for TET2-mutant malignancies.","- The study resolves a long-standing paradox in cancer biology: why TET2 deficiency—which impairs a DNA demethylase—unexpectedly leads to genome-wide open chromatin (DNA hypomethylation). The researchers proved this open chromatin phenotype is actually driven by the loss of TET2's RNA oxidation activity, not its DNA activity.
+
+- TET2 demonstrates a bimodal, ""moonlighting"" function depending on its protein partners: it oxidizes DNA at enhancer regions when paired with CXXC4/5 proteins, but oxidizes RNA at repeat elements when recruited by the RNA-binding protein PSPC1.
+
+- The proteins MBD5 and MBD6 were previously known to associate with heterochromatin but mysteriously did not bind to methylated DNA. This research newly identifies them as specialized RNA-binding proteins that preferentially recognize m5C-modified RNA.
+
+- The findings highlight a growing theme in epigenetics where chromatin-associated regulatory RNAs (carRNAs) serve as active, dynamic platforms for controlling local and global chromatin architecture."
