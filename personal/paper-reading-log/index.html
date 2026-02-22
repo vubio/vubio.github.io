@@ -156,6 +156,15 @@
             color: var(--accent);
         }
 
+        .paper-title {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .paper-title:hover {
+            text-decoration: underline;
+        }
+
         .meta {
             font-size: 0.85rem;
             color: var(--muted);
@@ -422,6 +431,11 @@ function esc(s) {
       .replaceAll("'", "&#039;");
 }
 
+function googleSearchUrl(title) {
+    const q = asText(title);
+    return `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+}
+
 /* ✅ #1 Build status dropdown from unique values in DATA */
 function populateStatusOptions() {
     const sel = document.getElementById("statusFilter");
@@ -483,6 +497,7 @@ function render() {
 
     list.innerHTML = items.map((p, idx) => {
         const title = esc(p.title || "(no title)");
+        const searchUrl = googleSearchUrl(p.title || "(no title)");
         const year = esc(p.year_published ?? "");
         const yearDisplay = year || "?";
         const ds = esc(p.date_started ?? "");
@@ -518,7 +533,7 @@ function render() {
         return `
             <div class="paper">
                 <div class="paper-header">
-                    <h2 style="margin:0;">${title}</h2>
+                    <h2 style="margin:0;"><a class="paper-title" href="${searchUrl}" target="_blank" rel="noopener noreferrer">${title}</a></h2>
                     <button class="toggle-btn" type="button" data-toggle="${pid}" aria-expanded="false">
                         show
                     </button>
