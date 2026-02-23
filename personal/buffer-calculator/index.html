@@ -147,6 +147,8 @@
     <div class="container">
         <section>
             <h1>Công thức pha chế dung dịch</h1>
+
+            <p id="last-updated" style="font-size: 0.85rem; color: var(--muted); margin-top: -15px; margin-bottom: 25px;"></p>
             
             <div id="loading-message">Loading Excel file...</div>
             
@@ -170,6 +172,20 @@
                 // 1. Fetch the Excel file from the server
                 const response = await fetch(excelFileUrl);
                 if (!response.ok) throw new Error("Could not find the Excel file.");
+
+                // --- NEW: Read the Last-Modified metadata ---
+                const lastModifiedHeader = response.headers.get('Last-Modified');
+                if (lastModifiedHeader) {
+                    const dateObj = new Date(lastModifiedHeader);
+                    // Formats it neatly, e.g., "23/02/2026, 16:48"
+                    const formattedDate = dateObj.toLocaleString('vi-VN', {
+                        year: 'numeric', month: '2-digit', day: '2-digit',
+                        hour: '2-digit', minute: '2-digit'
+                    });
+                    document.getElementById('last-updated').innerText = `Cập nhật lần cuối: ${formattedDate}`;
+                }
+                // --------------------------------------------
+                
                 const arrayBuffer = await response.arrayBuffer();
 
                 // 2. Parse the data using SheetJS
