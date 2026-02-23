@@ -112,7 +112,6 @@
         th {
             color: var(--accent);
             font-weight: 500;
-            text-transform: lowercase;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(5px); }
@@ -219,10 +218,18 @@
                 buffers[bufferName].forEach(row => {
                     tableHTML += `<tr>`;
                     headers.forEach(header => {
-                        tableHTML += `<td>${row[header] !== undefined ? row[header] : ''}</td>`;
+                        let cellValue = row[header];
+                        
+                        // If the value is a number, limit it to a max of 5 decimal places
+                        if (typeof cellValue === 'number') {
+                            cellValue = parseFloat(cellValue.toFixed(5));
+                        }
+                        
+                        tableHTML += `<td>${cellValue !== undefined ? cellValue : ''}</td>`;
                     });
                     tableHTML += `</tr>`;
                 });
+                
                 tableHTML += `</tbody></table>`;
                 tableDiv.innerHTML = tableHTML;
 
