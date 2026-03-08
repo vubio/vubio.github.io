@@ -763,5 +763,35 @@
       "The researchers demonstrated that stably re-expressing TET2 in TET2-knockdown cells completely rescued normal mutation frequencies, proving TET2's direct role in preventing DNA mutations.",
       "The mutations observed in Tet2-deficient tumors were not entirely random; they showed a strong preference for occurring at or closely around CpG sites (73% of mutations), with base transition mutations (like G:C to A:T) dominating the mutational spectrum."
     ]
+  },
+  {
+    "id": "the-intrinsically-disordered-regions-of-organellophagy-receptors-are-interchange-2025",
+    "title": "The intrinsically disordered regions of organellophagy receptors are interchangeable and control organelle fragmentation, ER-phagy and mitophagy flux",
+    "year_published": 2025,
+    "date_started": "3/8/2026",
+    "status": "Ongoing",
+    "tags": [
+      "ER-phagy",
+      "mitophagy",
+      "IDR",
+      "NCB",
+      "autophagy"
+    ],
+    "clarity_quality": "10",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "IDR-Driven Fragmentation: Organellophagy receptors (which handle the degradation of organelles like the ER and mitochondria) use a cytoplasmic intrinsically disordered region (IDR) module to control the physical fragmentation of the organelle, separate from the process of lysosomal delivery.",
+      "Interchangeability of Modules: The IDR modules of ER-phagy and mitophagy receptors are functionally interchangeable; transplanting an ER-phagy IDR to the mitochondria triggers mitophagy, and vice versa.",
+      "Biophysical Requirements: For an IDR to successfully fragment an organelle and trigger autophagy, it must possess a net cumulative negative charge, a minimum length (at least 47 residues), and a specific distance between the membrane and the LC3-interacting region (LIR).",
+      "Dispensability of Anchors: The specific membrane-tethering modules (like the RHD of FAM134B) determine where a receptor sits within an organelle but are not strictly required for the fragmentation process itself.",
+      "DRP1 Dependency: While ER-phagy fragmentation is independent of the fissionase DRP1, mitochondrial fragmentation induced by these transplanted IDRs requires DRP1 and its GTPase activity."
+    ],
+    "interesting_points": [
+      "Function Over Sequence: The study reveals a remarkable example of functional conservation based on biophysical traits (charge and disorder) rather than specific amino acid sequences.",
+      "Redefining Receptor Roles: It challenges the existing model that organelle fragmentation is primarily driven by the membrane-remodelling properties of tethering domains, shifting the focus to the cytoplasmic IDR.",
+      "LIR vs. Fragmentation: The research proves that the LIR motif (which binds LC3 for transport) is essential for clearing the organelle but is completely dispensable for the initial act of breaking the organelle into pieces.",
+      "Introduction of ORGATACs: The authors propose the development of Organelle-Targeting Chimeras (ORGATACs), synthetic tools that could be used to manually trigger the fragmentation and turnover of specific organelles to treat diseases like \"organelle gigantism\" or aging-related dysfunction.",
+      "The 24-Residue Rule: The study identifies a \"minimal distance\" (24 residues) required between the membrane and the LIR to avoid spatial constraints, explaining why many receptors have evolved specific IDR lengths to allow LC3 engagement."
+    ]
   }
 ]
