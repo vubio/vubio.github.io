@@ -425,3 +425,20 @@ Timestamp,Paper Title,Year Published,Date of starting reading,Current Reading St
 - Introduction of ORGATACs: The authors propose the development of Organelle-Targeting Chimeras (ORGATACs), synthetic tools that could be used to manually trigger the fragmentation and turnover of specific organelles to treat diseases like ""organelle gigantism"" or aging-related dysfunction.
 
 - The 24-Residue Rule: The study identifies a ""minimal distance"" (24 residues) required between the membrane and the LIR to avoid spatial constraints, explaining why many receptors have evolved specific IDR lengths to allow LC3 engagement."
+3/13/2026 7:57:45,Deletion of Tet2 in mice leads to dysregulated hematopoietic stem cells and subsequent development of myeloid malignancies,2011,3/13/2026,Ongoing,"Tet2, Leukemia, Mingjiang Xu",8,3. Highly Relevant,"- Tet2 as a Master Tumor Suppressor: The study proved that the loss of the Tet2 gene is a primary driver of myeloid cancers; its deletion in mice was sufficient to trigger diseases like Chronic Myelomonocytic Leukemia (CMML) and Myelodysplastic Syndromes (MDS).
+
+- Control of DNA Methylation: Researchers found that Tet2 loss causes a dramatic drop in 5-hmC levels and a corresponding increase in 5-mC, establishing Tet2 as a critical regulator of the chemical ""marks"" on DNA.
+
+- Pre-Cancerous Stem Cell Expansion: The study revealed that Tet2 deficiency causes a massive expansion of the blood stem cell pool (LSK cells) well before any outward signs of leukemia appear.
+
+- Biased Cell Production (Lineage Skewing): Mutant stem cells lose their balance and are ""programmed"" to overproduce monocytes and granulocytes at the expense of other vital blood cells like red blood cells.
+
+- Sensitivity to Gene Dosage: It was discovered that losing even one copy of the gene (Tet2 +/-) is enough to cause lethal blood cancer in a subset of cases, showing how sensitive the blood system is to Tet2 levels.","- Causation vs. Correlation: This was the first study to provide definitive in vivo proof that Tet2 mutations actually cause cancer, moving the gene from a ""suspected bystander"" found in patient DNA to a ""proven driver"" of disease.
+
+- Discovery of the Competitive Advantage: The paper proved that mutant stem cells have a ""fitness advantage,"" meaning they physically outcompete and displace healthy cells in the bone marrow. This concept is now a pillar of cancer biology.
+
+- The Foundation of Pre-Leukemia Research: By showing stem cells grow abnormally before the onset of disease, this study helped define the ""pre-leukemic state."" This led to the modern discovery of Clonal Hematopoiesis (CHIP), which is used today to identify cancer risk in healthy people.
+
+- Bridging Epigenetics and Physical Disease: It was a pioneering work that linked abstract epigenetic changes (the 5-mC to 5-hmC transition) to actual physical tumor growth, proving that how a cell ""reads"" its DNA is as important as the DNA code itself.
+
+- A Roadmap for Treatment: By identifying Tet2 as a gatekeeper of DNA methylation, this research validated the use of hypomethylating drugs as a standard treatment for MDS and leukemia patients."
