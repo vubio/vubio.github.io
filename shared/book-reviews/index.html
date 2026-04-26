@@ -6,7 +6,6 @@
     <title>Sách</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        /* Giữ phong cách High-Contrast từ GitHub của bạn */
         body {
             font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
             line-height: 1.6;
@@ -37,7 +36,6 @@
 
         .meta-info { font-size: 13px; color: #666; margin-top: 10px; }
 
-        /* Styling cho nút bấm Toggle (Sách) */
         details {
             border: 2px solid #000;
             border-radius: 4px;
@@ -50,7 +48,7 @@
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
-            list-style: none; /* Ẩn mũi tên mặc định */
+            list-style: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -59,7 +57,6 @@
 
         summary:hover { background: #e0e0e0; }
 
-        /* Tạo biểu tượng cộng/trừ giả */
         summary::after {
             content: '+';
             font-size: 20px;
@@ -69,14 +66,19 @@
             content: '−';
         }
 
-        /* Phần nội dung bên trong khi mở ra */
         .book-content {
             padding: 20px;
             border-top: 1px solid #ddd;
             background: #fff;
         }
 
-        .book-content h1 { display: none; } /* Ẩn tiêu đề lặp lại bên trong */
+        /* Ensure internal H1s inside the book are visible and styled */
+        .book-content h1 { 
+            display: block; 
+            font-size: 1.5em; 
+            margin-top: 0.5em; 
+            border-bottom: 1px solid #eee;
+        }
         
         .footer { margin-top: 50px; text-align: center; font-size: 13px; color: #0056b3; }
         a { text-decoration: none; color: inherit; }
@@ -100,24 +102,23 @@
     <script>
         async function loadBooks() {
             try {
-                // 1. Lấy file Books.md
                 const response = await fetch('Books.md');
                 const markdown = await response.text();
 
-                // 2. Tạm thời render ra một div ẩn để xử lý cấu trúc
                 const tempDiv = document.createElement('div');
                 tempDiv.innerHTML = marked.parse(markdown);
 
                 const container = document.getElementById('book-container');
-                container.innerHTML = ''; // Xóa dòng "Đang tải"
+                container.innerHTML = ''; 
 
                 let currentDetails = null;
                 let currentContent = null;
 
-                // 3. Duyệt qua các phần tử đã render để nhóm vào <details>
                 Array.from(tempDiv.children).forEach(el => {
-                    if (el.tagName === 'H1') {
-                        // Nếu gặp H1 mới (Tên sách mới), tạo một khối details mới
+                    // Logic: Only start a new toggle if it's an H1 AND contains bold text (<strong>)
+                    const isBookTitle = el.tagName === 'H1' && el.querySelector('strong');
+
+                    if (isBookTitle) {
                         currentDetails = document.createElement('details');
                         const summary = document.createElement('summary');
                         summary.textContent = el.textContent;
@@ -129,7 +130,7 @@
                         currentDetails.appendChild(currentContent);
                         container.appendChild(currentDetails);
                     } else if (currentContent) {
-                        // Nếu là nội dung thường, bỏ vào khối content của sách hiện tại
+                        // All other elements, including non-bold H1s, go inside the current toggle
                         currentContent.appendChild(el.cloneNode(true));
                     }
                 });
