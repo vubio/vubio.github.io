@@ -152,11 +152,12 @@
                         const summary = document.createElement('summary');
                         summary.textContent = el.textContent;
 
-                        currentDetails.addEventListener('toggle', () => {
-                            if (!currentDetails.open) return;
+                        currentDetails.addEventListener('toggle', (event) => {
+                            const targetDetails = event.currentTarget;
+                            if (!targetDetails.open) return;
 
                             container.querySelectorAll('details[open]').forEach(details => {
-                                if (details !== currentDetails) {
+                                if (details !== targetDetails) {
                                     details.open = false;
                                 }
                             });
