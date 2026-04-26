@@ -5,56 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Cheat Sheet | Vubio</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 800px; margin: 40px auto; padding: 0 20px; background-color: #f6f8fa; }
-        h1 { border-bottom: 2px solid #eaecef; padding-bottom: 0.3em; }
-        h2 { margin-top: 24px; color: #0366d6; }
-        .card { background: white; border: 1px solid #e1e4e8; border-radius: 6px; padding: 16px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        code { background-color: #f1f1f1; padding: 2px 5px; border-radius: 3px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 90%; }
-        pre { background: #272822; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; }
-        .highlight { color: #a6e22e; } /* green for commands */
-        .note { font-style: italic; color: #586069; font-size: 0.9em; margin-top: 10px; }
+        /* Simple & High Contrast */
+        body { 
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; 
+            line-height: 1.5; 
+            color: #1a1a1a; 
+            max-width: 700px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background-color: #ffffff; 
+        }
+        
+        h1 { border-bottom: 3px solid #000; padding-bottom: 10px; font-size: 24px; }
+        h2 { margin-top: 30px; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; color: #0056b3; }
+        
+        /* High Contrast Code Blocks */
+        pre { 
+            background: #f4f4f4; 
+            border: 2px solid #000; 
+            padding: 15px; 
+            border-radius: 4px; 
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        
+        code { 
+            font-family: "Courier New", Courier, monospace; 
+            font-weight: 700; /* Bold for extra clarity */
+            font-size: 16px;
+            color: #000000; 
+        }
+
+        .action-label {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 2px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 3px;
+            margin-bottom: 5px;
+        }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        strong { color: #d73a49; } /* Red for status warnings */
+        
+        .footer { margin-top: 50px; border-top: 1px solid #ddd; font-size: 12px; color: #666; text-align: center; }
     </style>
 </head>
 <body>
 
-    <h1>Git & GitHub Guide</h1>
-    <p>Personal notes for syncing the <code>vubio.github.io</code> repository.</p>
+    <h1>GIT CHEAT CODE</h1>
 
-    <div class="card">
-        <h2>1. Checking Differences (Who is newer?)</h2>
-        <p>Before doing anything, you need to "fetch" the latest info from GitHub without changing your local files yet.</p>
-        <pre><code>git fetch origin</code></pre>
-        
-        <p><strong>To see if you are ahead or behind:</strong></p>
-        <pre><code>git status</code></pre>
-        <ul>
-            <li><strong>"Your branch is up to date":</strong> Everything is perfectly synced.</li>
-            <li><strong>"Your branch is ahead of 'origin/main'":</strong> Local is newer. You have changes to <b>Push</b>.</li>
-            <li><strong>"Your branch is behind 'origin/main'":</strong> Online is newer. You need to <b>Pull</b>.</li>
-        </ul>
+    <h2>1. Check Status (Who is newer?)</h2>
+    <p>Compare your laptop to the GitHub server.</p>
+    
+    <div class="action-label">STEP 1: FETCH LATEST INFO</div>
+    <pre><code>git fetch origin</code></pre>
 
-        <p><strong>To see the actual code changes:</strong></p>
-        <pre><code>git diff main origin/main</code></pre>
+    <div class="action-label">STEP 2: CHECK STATUS</div>
+    <pre><code>git status</code></pre>
+    
+    <ul>
+        <li><strong>"Ahead of origin/main":</strong> Laptop is NEWER. (Need to Push)</li>
+        <li><strong>"Behind origin/main":</strong> GitHub is NEWER. (Need to Pull)</li>
+        <li><strong>"Up to date":</strong> Perfect sync.</li>
+    </ul>
+
+    <h2>2. Make Online = Local (Push)</h2>
+    <p>Use this after you finish coding on your laptop.</p>
+    <pre><code>git add .
+git commit -m "Update"
+git push origin main</code></pre>
+
+    <h2>3. Make Local = Online (Pull)</h2>
+    <p>Use this if you edited code on the GitHub website directly.</p>
+    <pre><code>git pull origin main</code></pre>
+
+    <div class="footer">
+        Vu Dang Nguyen | 2026 | vubio.github.io
     </div>
-
-    <div class="card">
-        <h2>2. Make Online similar to Local (Push)</h2>
-        <p>Use this when you have edited files on your laptop and want them to appear on your website.</p>
-        <pre><code><span class="highlight">git add .</span>
-<span class="highlight">git commit -m "Describe your changes here"</span>
-<span class="highlight">git push origin main</span></code></pre>
-        <p class="note">Note: If this fails, someone (or you) might have edited the files online directly. Pull first!</p>
-    </div>
-
-    <div class="card">
-        <h2>3. Make Local similar to Online (Pull)</h2>
-        <p>Use this if you edited files directly on the GitHub website or from another computer.</p>
-        <pre><code><span class="highlight">git pull origin main</span></code></pre>
-        <p class="note">This command "grabs" the online version and merges it into your local folder instantly.</p>
-    </div>
-
-    <hr>
-    <p style="text-align: center;">Created by Vu Dang Nguyen | 2026</p>
 
 </body>
 </html>
