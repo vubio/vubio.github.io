@@ -151,6 +151,16 @@
                         currentDetails = document.createElement('details');
                         const summary = document.createElement('summary');
                         summary.textContent = el.textContent;
+
+                        currentDetails.addEventListener('toggle', () => {
+                            if (!currentDetails.open) return;
+
+                            container.querySelectorAll('details[open]').forEach(details => {
+                                if (details !== currentDetails) {
+                                    details.open = false;
+                                }
+                            });
+                        });
                         
                         currentContent = document.createElement('div');
                         currentContent.className = 'book-content';
