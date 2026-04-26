@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sách</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     <style>
         body {
             font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
@@ -71,17 +71,8 @@
             border-top: 1px solid #ddd;
             background: #fff;
         }
-
-        /* Ensure internal H1s inside the book are visible and styled */
-        .book-content h1 { 
-            display: block; 
-            font-size: 1.5em; 
-            margin-top: 0.5em; 
-            border-bottom: 1px solid #eee;
-        }
         
         .footer { margin-top: 50px; text-align: center; font-size: 13px; color: #0056b3; }
-        a { text-decoration: none; color: inherit; }
     </style>
 </head>
 <body>
@@ -102,11 +93,22 @@
     <script>
         async function loadBooks() {
             try {
-                const response = await fetch('Books.md');
-                const markdown = await response.text();
+                // 1. Tải file Books.docx dưới dạng ArrayBuffer
+                const response = await fetch('Books.docx');
+                const arrayBuffer = await response.arrayBuffer();
 
+                // 2. Cấu hình Mammoth: Map style "Title" trong Word thành thẻ h1 đặc biệt
+                const options = {
+                    styleMap: [
+                        "p[style-name='Title'] => h1.book-title:fresh",
+                        "p[style-name='Titles'] => h1.book-title:fresh"
+                    ]
+                };
+
+                // 3. Chuyển đổi .docx sang HTML
+                const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer}, options);
                 const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = marked.parse(markdown);
+                tempDiv.innerHTML = result.value;
 
                 const container = document.getElementById('book-container');
                 container.innerHTML = ''; 
@@ -114,9 +116,9 @@
                 let currentDetails = null;
                 let currentContent = null;
 
+                // 4. Duyệt qua các phần tử để tạo accordion dựa trên thẻ h1.book-title
                 Array.from(tempDiv.children).forEach(el => {
-                    // Logic: Only start a new toggle if it's an H1 AND contains bold text (<strong>)
-                    const isBookTitle = el.tagName === 'H1' && el.querySelector('strong');
+                    const isBookTitle = el.tagName === 'H1' && el.classList.contains('book-title');
 
                     if (isBookTitle) {
                         currentDetails = document.createElement('details');
@@ -130,13 +132,13 @@
                         currentDetails.appendChild(currentContent);
                         container.appendChild(currentDetails);
                     } else if (currentContent) {
-                        // All other elements, including non-bold H1s, go inside the current toggle
+                        // Các nội dung khác (Heading 1, Heading 2, Text...) sẽ nằm trong toggle
                         currentContent.appendChild(el.cloneNode(true));
                     }
                 });
 
             } catch (error) {
-                document.getElementById('book-container').innerHTML = "Error: file not found";
+                document.getElementById('book-container').innerHTML = "Error: file not found or could not be parsed";
                 console.error(error);
             }
         }
