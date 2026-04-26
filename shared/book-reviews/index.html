@@ -1,27 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sách</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        body { 
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; 
-            line-height: 1.6; color: #1a1a1a; max-width: 900px; margin: 20px auto; padding: 20px; 
-            /* Basic protection against easy text-copying */
-            -webkit-user-select: none; -ms-user-select: none; user-select: none;
+        /* Giữ phong cách High-Contrast từ GitHub của bạn */
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
-        .header-section { border-bottom: 2px solid #000; padding-bottom: 20px; margin-bottom: 20px; }
+
+        .header-section {
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .copyright-tag {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 2px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
         .meta-info { font-size: 13px; color: #666; margin-top: 10px; }
-        .copyright-tag { display: inline-block; background: #000; color: #fff; padding: 2px 8px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
-        
-        /* The container for your document */
-        .content-frame {
-            width: 100%;
-            height: 800px; /* Adjust height as needed */
-            border: 1px solid #ddd;
+
+        /* Styling cho nút bấm Toggle (Sách) */
+        details {
+            border: 2px solid #000;
             border-radius: 4px;
+            margin-bottom: 15px;
+            background: #fff;
         }
+
+        summary {
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none; /* Ẩn mũi tên mặc định */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+        }
+
+        summary:hover { background: #e0e0e0; }
+
+        /* Tạo biểu tượng cộng/trừ giả */
+        summary::after {
+            content: '+';
+            font-size: 20px;
+        }
+
+        details[open] summary::after {
+            content: '−';
+        }
+
+        /* Phần nội dung bên trong khi mở ra */
+        .book-content {
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            background: #fff;
+        }
+
+        .book-content h1 { display: none; } /* Ẩn tiêu đề lặp lại bên trong */
+        
+        .footer { margin-top: 50px; text-align: center; font-size: 13px; color: #0056b3; }
+        a { text-decoration: none; color: inherit; }
     </style>
 </head>
 <body>
@@ -37,7 +95,52 @@
         </div>
     </div>
 
-    <iframe class="content-frame" src="Books.pdf" title="Book Reviews Content"></iframe>
+    <div id="book-container">Loading...</div>
 
+    <script>
+        async function loadBooks() {
+            try {
+                // 1. Lấy file Books.md
+                const response = await fetch('Books.md');
+                const markdown = await response.text();
+
+                // 2. Tạm thời render ra một div ẩn để xử lý cấu trúc
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = marked.parse(markdown);
+
+                const container = document.getElementById('book-container');
+                container.innerHTML = ''; // Xóa dòng "Đang tải"
+
+                let currentDetails = null;
+                let currentContent = null;
+
+                // 3. Duyệt qua các phần tử đã render để nhóm vào <details>
+                Array.from(tempDiv.children).forEach(el => {
+                    if (el.tagName === 'H1') {
+                        // Nếu gặp H1 mới (Tên sách mới), tạo một khối details mới
+                        currentDetails = document.createElement('details');
+                        const summary = document.createElement('summary');
+                        summary.textContent = el.textContent;
+                        
+                        currentContent = document.createElement('div');
+                        currentContent.className = 'book-content';
+
+                        currentDetails.appendChild(summary);
+                        currentDetails.appendChild(currentContent);
+                        container.appendChild(currentDetails);
+                    } else if (currentContent) {
+                        // Nếu là nội dung thường, bỏ vào khối content của sách hiện tại
+                        currentContent.appendChild(el.cloneNode(true));
+                    }
+                });
+
+            } catch (error) {
+                document.getElementById('book-container').innerHTML = "Error: file not found";
+                console.error(error);
+            }
+        }
+
+        loadBooks();
+    </script>
 </body>
 </html>
