@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Cheat Sheet | Vubio</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 800px; margin: 40px auto; padding: 0 20px; background-color: #f6f8fa; }
+        h1 { border-bottom: 2px solid #eaecef; padding-bottom: 0.3em; }
+        h2 { margin-top: 24px; color: #0366d6; }
+        .card { background: white; border: 1px solid #e1e4e8; border-radius: 6px; padding: 16px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        code { background-color: #f1f1f1; padding: 2px 5px; border-radius: 3px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 90%; }
+        pre { background: #272822; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; }
+        .highlight { color: #a6e22e; } /* green for commands */
+        .note { font-style: italic; color: #586069; font-size: 0.9em; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Git & GitHub Guide</h1>
+    <p>Personal notes for syncing the <code>vubio.github.io</code> repository.</p>
+
+    <div class="card">
+        <h2>1. Checking Differences (Who is newer?)</h2>
+        <p>Before doing anything, you need to "fetch" the latest info from GitHub without changing your local files yet.</p>
+        <pre><code>git fetch origin</code></pre>
+        
+        <p><strong>To see if you are ahead or behind:</strong></p>
+        <pre><code>git status</code></pre>
+        <ul>
+            <li><strong>"Your branch is up to date":</strong> Everything is perfectly synced.</li>
+            <li><strong>"Your branch is ahead of 'origin/main'":</strong> Local is newer. You have changes to <b>Push</b>.</li>
+            <li><strong>"Your branch is behind 'origin/main'":</strong> Online is newer. You need to <b>Pull</b>.</li>
+        </ul>
+
+        <p><strong>To see the actual code changes:</strong></p>
+        <pre><code>git diff main origin/main</code></pre>
+    </div>
+
+    <div class="card">
+        <h2>2. Make Online similar to Local (Push)</h2>
+        <p>Use this when you have edited files on your laptop and want them to appear on your website.</p>
+        <pre><code><span class="highlight">git add .</span>
+<span class="highlight">git commit -m "Describe your changes here"</span>
+<span class="highlight">git push origin main</span></code></pre>
+        <p class="note">Note: If this fails, someone (or you) might have edited the files online directly. Pull first!</p>
+    </div>
+
+    <div class="card">
+        <h2>3. Make Local similar to Online (Pull)</h2>
+        <p>Use this if you edited files directly on the GitHub website or from another computer.</p>
+        <pre><code><span class="highlight">git pull origin main</span></code></pre>
+        <p class="note">This command "grabs" the online version and merges it into your local folder instantly.</p>
+    </div>
+
+    <hr>
+    <p style="text-align: center;">Created by Vu Dang Nguyen | 2026</p>
+
+</body>
+</html>
