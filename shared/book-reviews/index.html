@@ -91,7 +91,7 @@
         async function loadBooks() {
             try {
                 // 1. Tải file Books.docx dưới dạng ArrayBuffer
-                const response = await fetch('Books.docx');
+                const response = await fetch('data.docx');
                 const arrayBuffer = await response.arrayBuffer();
 
                 // 2. Cấu hình Mammoth: Map style "Title" trong Word thành thẻ h1 đặc biệt
