@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sách</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     <style>
-        /* Giữ phong cách High-Contrast từ GitHub của bạn */
         body {
             font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
             line-height: 1.6;
@@ -14,9 +13,6 @@
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
         }
 
         .header-section {
@@ -37,7 +33,6 @@
 
         .meta-info { font-size: 13px; color: #666; margin-top: 10px; }
 
-        /* Styling cho nút bấm Toggle (Sách) */
         details {
             border: 2px solid #000;
             border-radius: 4px;
@@ -50,7 +45,7 @@
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
-            list-style: none; /* Ẩn mũi tên mặc định */
+            list-style: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -59,7 +54,6 @@
 
         summary:hover { background: #e0e0e0; }
 
-        /* Tạo biểu tượng cộng/trừ giả */
         summary::after {
             content: '+';
             font-size: 20px;
@@ -69,17 +63,13 @@
             content: '−';
         }
 
-        /* Phần nội dung bên trong khi mở ra */
         .book-content {
             padding: 20px;
             border-top: 1px solid #ddd;
             background: #fff;
         }
-
-        .book-content h1 { display: none; } /* Ẩn tiêu đề lặp lại bên trong */
         
         .footer { margin-top: 50px; text-align: center; font-size: 13px; color: #0056b3; }
-        a { text-decoration: none; color: inherit; }
     </style>
 </head>
 <body>
@@ -91,36 +81,86 @@
         
         <div class="meta-info">
             <strong>Liên hệ:</strong> vubio.contact@gmail.com<br>
-            <strong>Cập nhật mới nhất:</strong> 2026/04/25
+            <strong>Cập nhật mới nhất:</strong> <span id="last-modified">Loading...</span>
         </div>
     </div>
 
     <div id="book-container">Loading...</div>
 
     <script>
+        async function getLastModifiedDate() {
+          try {
+            // Replace 'vubio/vubio.github.io' with your actual repo path if different
+            const repo = 'vubio/vubio.github.io';
+            const path = 'shared/book-reviews/data.docx';
+            const apiUrl = `https://api.github.com/repos/${repo}/commits?path=${path}&page=1&per_page=1`;
+        
+            const response = await fetch(apiUrl);
+            const commits = await response.json();
+        
+            if (commits && commits.length > 0) {
+              const lastModified = commits[0].commit.committer.date;
+              const date = new Date(lastModified);
+              
+              const formattedDate = date.toLocaleDateString('vi-VN', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+              });
+              
+              document.getElementById('last-modified').textContent = formattedDate;
+            } else {
+              document.getElementById('last-modified').textContent = 'Không có dữ liệu';
+            }
+          } catch (error) {
+            console.error('Error fetching file metadata:', error);
+            document.getElementById('last-modified').textContent = 'Lỗi tải ngày';
+          }
+        }
+        
         async function loadBooks() {
             try {
-                // 1. Lấy file Books.md
-                const response = await fetch('Books.md');
-                const markdown = await response.text();
+                // 1. Tải file data.docx dưới dạng ArrayBuffer
+                const response = await fetch('data.docx');
+                const arrayBuffer = await response.arrayBuffer();
 
-                // 2. Tạm thời render ra một div ẩn để xử lý cấu trúc
+                // 2. Cấu hình Mammoth: Map style "Title" trong Word thành thẻ h1 đặc biệt
+                const options = {
+                    styleMap: [
+                        "p[style-name='Title'] => h1.book-title:fresh",
+                        "p[style-name='Titles'] => h1.book-title:fresh"
+                    ]
+                };
+
+                // 3. Chuyển đổi .docx sang HTML
+                const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer}, options);
                 const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = marked.parse(markdown);
+                tempDiv.innerHTML = result.value;
 
                 const container = document.getElementById('book-container');
-                container.innerHTML = ''; // Xóa dòng "Đang tải"
+                container.innerHTML = ''; 
 
                 let currentDetails = null;
                 let currentContent = null;
 
-                // 3. Duyệt qua các phần tử đã render để nhóm vào <details>
+                // 4. Duyệt qua các phần tử để tạo accordion dựa trên thẻ h1.book-title
                 Array.from(tempDiv.children).forEach(el => {
-                    if (el.tagName === 'H1') {
-                        // Nếu gặp H1 mới (Tên sách mới), tạo một khối details mới
+                    const isBookTitle = el.tagName === 'H1' && el.classList.contains('book-title');
+
+                    if (isBookTitle) {
                         currentDetails = document.createElement('details');
                         const summary = document.createElement('summary');
                         summary.textContent = el.textContent;
+
+                        currentDetails.addEventListener('toggle', () => {
+                            if (!currentDetails.open) return;
+
+                            container.querySelectorAll('details[open]').forEach(details => {
+                                if (details !== currentDetails) {
+                                    details.open = false;
+                                }
+                            });
+                        });
                         
                         currentContent = document.createElement('div');
                         currentContent.className = 'book-content';
@@ -129,18 +169,20 @@
                         currentDetails.appendChild(currentContent);
                         container.appendChild(currentDetails);
                     } else if (currentContent) {
-                        // Nếu là nội dung thường, bỏ vào khối content của sách hiện tại
+                        // Các nội dung khác (Heading 1, Heading 2, Text...) sẽ nằm trong toggle
                         currentContent.appendChild(el.cloneNode(true));
                     }
                 });
 
             } catch (error) {
-                document.getElementById('book-container').innerHTML = "Error: file not found";
+                document.getElementById('book-container').innerHTML = "Error: file not found or could not be parsed";
                 console.error(error);
             }
         }
 
+        // Load both the book content and the last modified date
         loadBooks();
+        getLastModifiedDate();
     </script>
 </body>
 </html>
