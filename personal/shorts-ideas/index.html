@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Shorts Prompt Builder</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --green: #10b981;
+      --danger: #ef4444;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #f6f8fb 0%, #eef4ff 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    header {
+      padding: 28px 20px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: -0.04em;
+    }
+
+    header p {
+      margin: 8px auto 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .app {
+      width: min(1500px, calc(100% - 28px));
+      margin: 0 auto 50px;
+      display: grid;
+      grid-template-columns: 380px 1fr 430px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 1200px) {
+      .app {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 650;
+      font-size: 0.88rem;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font: inherit;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+      transition: border 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+
+    textarea {
+      min-height: 88px;
+      resize: vertical;
+    }
+
+    .small {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    button,
+    .file-label {
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--accent);
+      color: #fff;
+      transition: transform 0.12s ease, opacity 0.12s ease, box-shadow 0.12s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      user-select: none;
+    }
+
+    button:hover,
+    .file-label:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+    }
+
+    button.secondary,
+    .file-label.secondary {
+      background: #eef2ff;
+      color: #3730a3;
+    }
+
+    button.green {
+      background: var(--green);
+    }
+
+    button.danger {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    button.gray {
+      background: #f3f4f6;
+      color: #374151;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .status {
+      min-height: 24px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .preset-summary {
+      padding: 12px;
+      border: 1px dashed #bfdbfe;
+      background: #eff6ff;
+      border-radius: 14px;
+      color: #1e3a8a;
+      font-size: 0.88rem;
+      margin-top: 12px;
+    }
+
+    .panel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .panel-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+    }
+
+    .panel-card h3 {
+      margin: 0 0 8px;
+      font-size: 0.92rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: #111827;
+    }
+
+    .panel-card h3 span {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .panel-card input,
+    .panel-card textarea {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .output {
+      min-height: 520px;
+      white-space: pre-wrap;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.84rem;
+      background: #0f172a;
+      color: #e5e7eb;
+      border: 0;
+      line-height: 1.55;
+    }
+
+    .history-list {
+      display: grid;
+      gap: 8px;
+      max-height: 340px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .history-item {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      padding: 10px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .history-item strong {
+      font-size: 0.9rem;
+    }
+
+    .history-meta {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .history-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .history-actions button {
+      padding: 7px 10px;
+      font-size: 0.78rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>YouTube Canvas Prompt Builder</h1>
+    <p>
+      Build reusable prompts for collage-style YouTube Shorts and long-video teaching images.
+      No backend needed. Your latest settings are saved in this browser.
+    </p>
+  </header>
+
+  <main class="app">
+    <!-- LEFT: VARIABLES -->
+    <section class="card">
+      <div class="section-title">
+        <h2>1. Prompt Variables</h2>
+        <span class="pill">local save</span>
+      </div>
+
+      <label for="topic">Topic</label>
+      <input id="topic" placeholder="e.g., Đánh răng trước hay sau khi ăn sáng" />
+
+      <label for="mainMessage">Main message / takeaway</label>
+      <textarea id="mainMessage" placeholder="e.g., Ưu tiên đánh răng trước ăn sáng; nếu sau ăn thì chờ 30 phút."></textarea>
+
+      <div class="row">
+        <div>
+          <label for="language">Language</label>
+          <select id="language"></select>
+        </div>
+        <div>
+          <label for="platform">Platform</label>
+          <select id="platform"></select>
+        </div>
+      </div>
+
+      <label for="preset">Preset</label>
+      <select id="preset"></select>
+      <div id="presetSummary" class="preset-summary"></div>
+
+      <div class="row">
+        <div>
+          <label for="grid">Grid</label>
+          <select id="grid"></select>
+        </div>
+        <div>
+          <label for="aspectRatio">Aspect ratio</label>
+          <select id="aspectRatio"></select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="orientation">Orientation</label>
+          <select id="orientation"></select>
+        </div>
+        <div>
+          <label for="density">Content density</label>
+          <select id="density"></select>
+        </div>
+      </div>
+
+      <label for="style">Illustration style</label>
+      <select id="style"></select>
+
+      <label for="colorTone">Color tone</label>
+      <select id="colorTone"></select>
+
+      <label for="background">Background style</label>
+      <select id="background"></select>
+
+      <label for="mood">Mood</label>
+      <select id="mood"></select>
+
+      <label for="audience">Audience</label>
+      <input id="audience" placeholder="e.g., Vietnamese general audience" />
+
+      <label for="extraRules">Extra rules</label>
+      <textarea id="extraRules" placeholder="e.g., Keep Vietnamese text very short. Avoid paragraphs. No watermark."></textarea>
+
+      <div class="button-row">
+        <button class="green" onclick="generatePrompt()">Generate Prompt</button>
+        <button class="secondary" onclick="applyPreset()">Apply Preset</button>
+        <button class="gray" onclick="clearForm()">Clear</button>
+      </div>
+
+      <div class="button-row">
+        <button class="secondary" onclick="exportProject()">Export JSON</button>
+        <label class="file-label secondary" for="importFile">Import JSON</label>
+        <input id="importFile" type="file" accept=".json,application/json" />
+      </div>
+
+      <div id="status" class="status"></div>
+    </section>
+
+    <!-- CENTER: PANEL PLANNER -->
+    <section class="card">
+      <div class="section-title">
+        <h2>2. Panel Planner</h2>
+        <span class="pill" id="panelCountPill">9 panels</span>
+      </div>
+
+      <p class="small">
+        For 3×3 Shorts, use 9 panels. For 2×2, use the first 4 panels. For landscape formats, use the number shown by the grid.
+      </p>
+
+      <div class="button-row">
+        <button class="secondary" onclick="autoFillBasicFlow()">Auto-fill basic flow</button>
+        <button class="secondary" onclick="updatePanelCountFromGrid()">Match grid count</button>
+        <button class="danger" onclick="clearPanels()">Clear panels</button>
+      </div>
+
+      <br />
+
+      <div id="panelGrid" class="panel-grid"></div>
+    </section>
+
+    <!-- RIGHT: OUTPUT + HISTORY -->
+    <section class="card">
+      <div class="section-title">
+        <h2>3. Final Prompt</h2>
+        <span class="pill">copy & use</span>
+      </div>
+
+      <textarea id="finalPrompt" class="output" placeholder="Your generated prompt will appear here..."></textarea>
+
+      <div class="button-row">
+        <button onclick="copyPrompt()">Copy Prompt</button>
+        <button class="green" onclick="saveToHistory()">Save Snapshot</button>
+        <button class="secondary" onclick="downloadTxt()">Download .txt</button>
+      </div>
+
+      <div id="copyStatus" class="status"></div>
+
+      <hr style="border:0;border-top:1px solid var(--border);margin:18px 0;" />
+
+      <div class="section-title">
+        <h2>Recent Snapshots</h2>
+        <button class="danger" onclick="clearHistory()">Clear</button>
+      </div>
+
+      <p class="small">
+        This is not a backend database. It only saves recent snapshots in this browser.
+      </p>
+
+      <div id="historyList" class="history-list"></div>
+    </section>
+  </main>
+
+  <p class="footer-note">
+    Tip: keep your best reusable presets in the code later. Use Export JSON for backup before clearing browser data.
+  </p>
+
+  <script>
+    const STORAGE_KEY = "vubio_shorts_prompt_builder_state_v1";
+    const HISTORY_KEY = "vubio_shorts_prompt_builder_history_v1";
+
+    const options = {
+      language: [
+        "Vietnamese",
+        "English",
+        "Vietnamese + simple English keywords",
+        "English + Vietnamese explanation"
+      ],
+      platform: [
+        "YouTube Short",
+        "YouTube long video",
+        "Instagram Reel",
+        "TikTok",
+        "General educational video"
+      ],
+      grid: [
+        "3x3",
+        "2x2",
+        "3x2",
+        "4x2",
+        "1x3",
+        "1x5"
+      ],
+      aspectRatio: [
+        "9:16",
+        "16:9",
+        "1:1",
+        "4:5"
+      ],
+      orientation: [
+        "Portrait",
+        "Landscape",
+        "Square"
+      ],
+      density: [
+        "Very light",
+        "Light",
+        "Medium",
+        "Dense",
+        "Very dense"
+      ],
+      style: [
+        "Cute flat infographic",
+        "Minimal vector infographic",
+        "Modern health explainer",
+        "Whiteboard teaching style",
+        "Textbook-style diagram",
+        "Scientific lecture board",
+        "Cozy Vietnamese classroom",
+        "Clean medical infographic"
+      ],
+      colorTone: [
+        "Soft blue-green-yellow",
+        "Clean medical blue-white",
+        "Warm beige-orange",
+        "Dark cozy blue",
+        "Pastel rainbow",
+        "Muted earth tone",
+        "High contrast black-yellow",
+        "Soft Vietnamese classroom pastel"
+      ],
+      background: [
+        "Soft pastel background",
+        "Clean white medical background",
+        "Dark cozy background",
+        "Subtle gradient background",
+        "Simple classroom board background",
+        "Minimal abstract background",
+        "Warm paper texture background"
+      ],
+      mood: [
+        "Friendly and educational",
+        "Calm and trustworthy",
+        "Cute and playful",
+        "Scientific and clear",
+        "Cozy and reflective",
+        "Professional and polished"
+      ]
+    };
+
+    const presets = {
+      "Shorts Explainer 3x3": {
+        platform: "YouTube Short",
+        grid: "3x3",
+        aspectRatio: "9:16",
+        orientation: "Portrait",
+        density: "Light",
+        style: "Cute flat infographic",
+        colorTone: "Soft blue-green-yellow",
+        background: "Soft pastel background",
+        mood: "Friendly and educational",
+        summary: "Best for short educational videos with minimal text and one clear takeaway."
+      },
+      "Dense Teaching Board 3x3": {
+        platform: "YouTube Short",
+        grid: "3x3",
+        aspectRatio: "9:16",
+        orientation: "Portrait",
+        density: "Dense",
+        style: "Scientific lecture board",
+        colorTone: "Clean medical blue-white",
+        background: "Clean white medical background",
+        mood: "Scientific and clear",
+        summary: "Best for zoomable teaching boards with more details in each panel."
+      },
+      "Long Video Overview 4x2": {
+        platform: "YouTube long video",
+        grid: "4x2",
+        aspectRatio: "16:9",
+        orientation: "Landscape",
+        density: "Medium",
+        style: "Modern health explainer",
+        colorTone: "Clean medical blue-white",
+        background: "Subtle gradient background",
+        mood: "Professional and polished",
+        summary: "Best for landscape overview images used in long YouTube videos."
+      },
+      "Story Strip 1x5": {
+        platform: "YouTube Short",
+        grid: "1x5",
+        aspectRatio: "9:16",
+        orientation: "Portrait",
+        density: "Very light",
+        style: "Minimal vector infographic",
+        colorTone: "Warm beige-orange",
+        background: "Warm paper texture background",
+        mood: "Cozy and reflective",
+        summary: "Best for simple sequential storytelling with very little text."
+      }
+    };
+
+    const defaultState = {
+      topic: "",
+      mainMessage: "",
+      language: "Vietnamese",
+      platform: "YouTube Short",
+      preset: "Shorts Explainer 3x3",
+      grid: "3x3",
+      aspectRatio: "9:16",
+      orientation: "Portrait",
+      density: "Light",
+      style: "Cute flat infographic",
+      colorTone: "Soft blue-green-yellow",
+      background: "Soft pastel background",
+      mood: "Friendly and educational",
+      audience: "Vietnamese general audience",
+      extraRules: "Keep all text short, large, and readable. Avoid dense paragraphs. No watermark, no logo.",
+      panels: makeEmptyPanels(9),
+      finalPrompt: ""
+    };
+
+    function makeEmptyPanels(count) {
+      return Array.from({ length: count }, (_, i) => ({
+        number: i + 1,
+        subtopic: "",
+        text: "",
+        visual: ""
+      }));
+    }
+
+    function getPanelCountFromGrid(grid) {
+      const match = grid.match(/(\d+)x(\d+)/);
+      if (!match) return 9;
+      return Number(match[1]) * Number(match[2]);
+    }
+
+    function populateSelect(id, values) {
+      const select = document.getElementById(id);
+      select.innerHTML = "";
+      values.forEach(value => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = value;
+        select.appendChild(option);
+      });
+    }
+
+    function init() {
+      Object.keys(options).forEach(key => populateSelect(key, options[key]));
+      populateSelect("preset", Object.keys(presets));
+
+      const saved = loadState();
+      setFormState(saved);
+      renderPanels(saved.panels || makeEmptyPanels(getPanelCountFromGrid(saved.grid || "3x3")));
+      renderHistory();
+      updatePresetSummary();
+
+      document.querySelectorAll("input, select, textarea").forEach(el => {
+        if (el.id !== "importFile") {
+          el.addEventListener("input", () => {
+            if (el.id === "grid") updatePanelCountFromGrid(false);
+            if (el.id === "preset") updatePresetSummary();
+            saveStateFromForm();
+          });
+        }
+      });
+
+      document.getElementById("importFile").addEventListener("change", importProject);
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return structuredClone(defaultState);
+        return { ...structuredClone(defaultState), ...JSON.parse(raw) };
+      } catch {
+        return structuredClone(defaultState);
+      }
+    }
+
+    function setFormState(state) {
+      for (const key of [
+        "topic", "mainMessage", "language", "platform", "preset", "grid", "aspectRatio",
+        "orientation", "density", "style", "colorTone", "background", "mood",
+        "audience", "extraRules", "finalPrompt"
+      ]) {
+        const el = document.getElementById(key);
+        if (el && state[key] !== undefined) el.value = state[key];
+      }
+    }
+
+    function getFormState() {
+      const state = {};
+      for (const key of [
+        "topic", "mainMessage", "language", "platform", "preset", "grid", "aspectRatio",
+        "orientation", "density", "style", "colorTone", "background", "mood",
+        "audience", "extraRules", "finalPrompt"
+      ]) {
+        state[key] = document.getElementById(key).value;
+      }
+      state.panels = getPanelsFromDOM();
+      return state;
+    }
+
+    function saveStateFromForm() {
+      const state = getFormState();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      setStatus("Saved locally in this browser.");
+    }
+
+    function setStatus(message) {
+      const el = document.getElementById("status");
+      el.textContent = message;
+      clearTimeout(setStatus.timer);
+      setStatus.timer = setTimeout(() => el.textContent = "", 1800);
+    }
+
+    function setCopyStatus(message) {
+      const el = document.getElementById("copyStatus");
+      el.textContent = message;
+      clearTimeout(setCopyStatus.timer);
+      setCopyStatus.timer = setTimeout(() => el.textContent = "", 2200);
+    }
+
+    function updatePresetSummary() {
+      const name = document.getElementById("preset").value;
+      const preset = presets[name];
+      const el = document.getElementById("presetSummary");
+      if (!preset) {
+        el.textContent = "";
+        return;
+      }
+      el.innerHTML = `
+        <strong>${name}</strong><br>
+        ${preset.summary}<br>
+        <span class="small">Grid: ${preset.grid} · Ratio: ${preset.aspectRatio} · Density: ${preset.density}</span>
+      `;
+    }
+
+    function applyPreset() {
+      const name = document.getElementById("preset").value;
+      const preset = presets[name];
+      if (!preset) return;
+
+      for (const [key, value] of Object.entries(preset)) {
+        const el = document.getElementById(key);
+        if (el) el.value = value;
+      }
+
+      updatePanelCountFromGrid(true);
+      updatePresetSummary();
+      saveStateFromForm();
+      setStatus("Preset applied.");
+    }
+
+    function updatePanelCountFromGrid(force = true) {
+      const grid = document.getElementById("grid").value;
+      const count = getPanelCountFromGrid(grid);
+      const current = getPanelsFromDOM();
+
+      if (!force && current.length === count) return;
+
+      let panels = current.slice(0, count);
+      while (panels.length < count) {
+        panels.push({
+          number: panels.length + 1,
+          subtopic: "",
+          text: "",
+          visual: ""
+        });
+      }
+
+      panels = panels.map((p, i) => ({ ...p, number: i + 1 }));
+      renderPanels(panels);
+      saveStateFromForm();
+    }
+
+    function renderPanels(panels) {
+      const grid = document.getElementById("panelGrid");
+      const count = panels.length;
+      document.getElementById("panelCountPill").textContent = `${count} panels`;
+
+      grid.innerHTML = "";
+      panels.forEach((panel, index) => {
+        const div = document.createElement("div");
+        div.className = "panel-card";
+        div.innerHTML = `
+          <h3>Panel ${index + 1} <span>${panel.subtopic ? "filled" : "empty"}</span></h3>
+          <input data-panel="${index}" data-field="subtopic" placeholder="Subtopic" value="${escapeHtml(panel.subtopic || "")}" />
+          <input data-panel="${index}" data-field="text" placeholder="Text on image" value="${escapeHtml(panel.text || "")}" />
+          <textarea data-panel="${index}" data-field="visual" placeholder="Visual idea">${escapeHtml(panel.visual || "")}</textarea>
+        `;
+        grid.appendChild(div);
+      });
+
+      grid.querySelectorAll("input, textarea").forEach(el => {
+        el.addEventListener("input", saveStateFromForm);
+      });
+    }
+
+    function getPanelsFromDOM() {
+      const cards = [...document.querySelectorAll(".panel-card")];
+      return cards.map((card, index) => {
+        const get = field => card.querySelector(`[data-field="${field}"]`)?.value || "";
+        return {
+          number: index + 1,
+          subtopic: get("subtopic"),
+          text: get("text"),
+          visual: get("visual")
+        };
+      });
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;");
+    }
+
+    function autoFillBasicFlow() {
+      const count = getPanelCountFromGrid(document.getElementById("grid").value);
+      const topic = document.getElementById("topic").value || "your topic";
+
+      const base = [
+        ["Main question", `Main question`, `Show the core question about ${topic}`],
+        ["Why it matters", `Why it matters`, "Simple icon showing relevance or problem"],
+        ["Key concept 1", `Key idea 1`, "Illustration of the first main mechanism or reason"],
+        ["Key concept 2", `Key idea 2`, "Illustration of the second main mechanism or reason"],
+        ["Common mistake", `Common mistake`, "Warning icon or wrong choice illustration"],
+        ["Better option", `Better option`, "Clear visual of the recommended option"],
+        ["Practical step", `What to do`, "Simple action/routine illustration"],
+        ["Alternative", `Another option`, "Alternative safe method or secondary tip"],
+        ["Final takeaway", `Remember this`, "Summary panel with strong visual conclusion"],
+        ["Extra detail", `Extra detail`, "Small supporting diagram"],
+        ["Example", `Example`, "Before/after or mini scenario"],
+        ["Call to action", `Save this`, "Simple CTA or final reminder"]
+      ];
+
+      const panels = base.slice(0, count).map((p, i) => ({
+        number: i + 1,
+        subtopic: p[0],
+        text: p[1],
+        visual: p[2]
+      }));
+
+      renderPanels(panels);
+      saveStateFromForm();
+      setStatus("Basic panel flow filled.");
+    }
+
+    function clearPanels() {
+      const count = getPanelCountFromGrid(document.getElementById("grid").value);
+      renderPanels(makeEmptyPanels(count));
+      saveStateFromForm();
+      setStatus("Panels cleared.");
+    }
+
+    function clearForm() {
+      if (!confirm("Clear current form? Your recent snapshots will remain.")) return;
+      setFormState(structuredClone(defaultState));
+      renderPanels(makeEmptyPanels(9));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultState));
+      updatePresetSummary();
+      setStatus("Form cleared.");
+    }
+
+    function generatePrompt() {
+      const state = getFormState();
+      const panelLines = state.panels
+        .filter(p => p.subtopic || p.text || p.visual)
+        .map(p => {
+          return `${p.number}. ${p.subtopic || "Panel topic"}. Text: "${p.text || "minimal text"}". Visual: ${p.visual || "simple relevant illustration"}.`;
+        })
+        .join("\n");
+
+      const panelCount = getPanelCountFromGrid(state.grid);
+
+      const prompt = `Create a single ${state.orientation.toLowerCase()} infographic image in ${state.language}, designed as a ${state.grid} canvas made of ${panelCount} contiguous sub-images arranged from left to right, top to bottom.
+
+Topic: "${state.topic || "Untitled topic"}"
+
+Main message:
+${state.mainMessage || "Make the idea clear, practical, and easy to remember."}
+
+The image is for ${state.platform}. The overall aspect ratio should be ${state.aspectRatio}. Each sub-image should be designed so it can be zoomed into during video editing.
+
+There must be no borders, frames, gutters, or white gaps between panels. The panels should touch edge-to-edge, while still feeling visually distinct through background color, composition, or scene changes.
+
+Audience: ${state.audience || "general audience"}
+Mood: ${state.mood}
+Illustration style: ${state.style}
+Color tone: ${state.colorTone}
+Background style: ${state.background}
+Content density: ${state.density}
+Text amount: ${state.density === "Very light" || state.density === "Light" ? "minimal, short, large, and readable" : "clear and structured, but not distracting"}
+
+Panel plan:
+${panelLines || "1. Main idea. Text: \"Main question\". Visual: simple icon-based introduction."}
+
+Important design rules:
+- Keep each panel visually simple and easy to understand.
+- Use minimal distractions.
+- Keep all text large, short, and readable.
+- Avoid dense paragraphs unless the selected density asks for a teaching-board style.
+- Do not add extra text beyond the planned panel text unless necessary.
+- No watermark, no logo.
+- Make each panel suitable for zoom-in transitions in a video.
+${state.extraRules ? "- " + state.extraRules.replace(/\n/g, "\n- ") : ""}`;
+
+      document.getElementById("finalPrompt").value = prompt;
+      saveStateFromForm();
+      setCopyStatus("Prompt generated.");
+    }
+
+    async function copyPrompt() {
+      const text = document.getElementById("finalPrompt").value;
+      if (!text.trim()) {
+        setCopyStatus("No prompt to copy yet.");
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(text);
+        setCopyStatus("Copied to clipboard.");
+      } catch {
+        document.getElementById("finalPrompt").select();
+        document.execCommand("copy");
+        setCopyStatus("Copied.");
+      }
+    }
+
+    function downloadTxt() {
+      const text = document.getElementById("finalPrompt").value;
+      if (!text.trim()) {
+        setCopyStatus("Generate a prompt first.");
+        return;
+      }
+
+      const filename = slugify(document.getElementById("topic").value || "prompt") + ".txt";
+      downloadFile(filename, text, "text/plain");
+    }
+
+    function exportProject() {
+      const state = getFormState();
+      state.exportedAt = new Date().toISOString();
+      const filename = slugify(state.topic || "shorts-prompt-project") + ".json";
+      downloadFile(filename, JSON.stringify(state, null, 2), "application/json");
+      setStatus("Project exported as JSON.");
+    }
+
+    function importProject(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = e => {
+        try {
+          const imported = JSON.parse(e.target.result);
+          const state = { ...structuredClone(defaultState), ...imported };
+          setFormState(state);
+          renderPanels(state.panels || makeEmptyPanels(getPanelCountFromGrid(state.grid)));
+          updatePresetSummary();
+          saveStateFromForm();
+          setStatus("Project imported.");
+        } catch {
+          alert("Could not import this JSON file.");
+        }
+      };
+      reader.readAsText(file);
+      event.target.value = "";
+    }
+
+    function downloadFile(filename, content, type) {
+      const blob = new Blob([content], { type });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function slugify(text) {
+      return String(text)
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .slice(0, 80) || "prompt";
+    }
+
+    function saveToHistory() {
+      const state = getFormState();
+      if (!state.finalPrompt.trim()) generatePrompt();
+
+      const updated = getFormState();
+      const item = {
+        id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+        createdAt: new Date().toISOString(),
+        topic: updated.topic || "Untitled topic",
+        preset: updated.preset,
+        grid: updated.grid,
+        language: updated.language,
+        state: updated
+      };
+
+      const history = loadHistory();
+      history.unshift(item);
+      const trimmed = history.slice(0, 20);
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(trimmed));
+      renderHistory();
+      setCopyStatus("Snapshot saved locally.");
+    }
+
+    function loadHistory() {
+      try {
+        return JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
+      } catch {
+        return [];
+      }
+    }
+
+    function renderHistory() {
+      const list = document.getElementById("historyList");
+      const history = loadHistory();
+
+      if (!history.length) {
+        list.innerHTML = `<p class="small">No snapshots yet.</p>`;
+        return;
+      }
+
+      list.innerHTML = "";
+      history.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "history-item";
+        const date = new Date(item.createdAt).toLocaleString();
+
+        div.innerHTML = `
+          <strong>${escapeHtml(item.topic)}</strong>
+          <div class="history-meta">${escapeHtml(item.preset)} · ${escapeHtml(item.grid)} · ${escapeHtml(item.language)} · ${date}</div>
+          <div class="history-actions">
+            <button class="secondary" data-action="load" data-id="${item.id}">Load</button>
+            <button data-action="copy" data-id="${item.id}">Copy</button>
+            <button class="danger" data-action="delete" data-id="${item.id}">Delete</button>
+          </div>
+        `;
+
+        list.appendChild(div);
+      });
+
+      list.querySelectorAll("button").forEach(btn => {
+        btn.addEventListener("click", () => handleHistoryAction(btn.dataset.action, btn.dataset.id));
+      });
+    }
+
+    function handleHistoryAction(action, id) {
+      const history = loadHistory();
+      const item = history.find(h => h.id === id);
+      if (!item) return;
+
+      if (action === "load") {
+        setFormState(item.state);
+        renderPanels(item.state.panels || []);
+        updatePresetSummary();
+        saveStateFromForm();
+        setCopyStatus("Snapshot loaded.");
+      }
+
+      if (action === "copy") {
+        navigator.clipboard.writeText(item.state.finalPrompt || "").then(() => {
+          setCopyStatus("Snapshot prompt copied.");
+        });
+      }
+
+      if (action === "delete") {
+        const updated = history.filter(h => h.id !== id);
+        localStorage.setItem(HISTORY_KEY, JSON.stringify(updated));
+        renderHistory();
+      }
+    }
+
+    function clearHistory() {
+      if (!confirm("Clear all local snapshots?")) return;
+      localStorage.removeItem(HISTORY_KEY);
+      renderHistory();
+      setCopyStatus("Local snapshots cleared.");
+    }
+
+    window.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>
