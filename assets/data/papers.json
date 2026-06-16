@@ -1,1 +1,825 @@
-[]
+[
+  {
+    "id": "connexin-43-restoration-alleviates-desmosomal-arrhythmogenic-cardiomyopathy-2026",
+    "title": "Connexin-43 Restoration Alleviates Desmosomal Arrhythmogenic Cardiomyopathy",
+    "year_published": 2026,
+    "date_started": "1/30/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Cx43",
+      "ACM",
+      "JC"
+    ],
+    "clarity_quality": "5",
+    "relevance": "1. Slightly Relevant",
+    "main_finding": [
+      "Mutation-Agnostic Therapy: Restoring Cx43 expression effectively treats ACM across different genetic backgrounds, including DSP, PKP2, and DSG2 mutations.",
+      "Effects: improve survival, rescue cardiac function, reduce arrhythmias, fix/stabilize structure."
+    ],
+    "interesting_points": [
+      "Therapy effects observed even when administered at late stages of the disease, showing potential for treating patients with existing structural damage.",
+      "Evidence suggests Cx43 may act as a transcriptional co-factor, directly or indirectly upregulating the expression of mechanical junction genes at the RNA level.",
+      "Longevity: AAV-mediated Cx43 gene therapy significantly prolonged lifespan in severe ACM mouse models, more than doubling survival time in some cases."
+    ]
+  },
+  {
+    "id": "mitochondria-anchored-receptor-atg32-mediates-degradation-of-mitochondria-via-se-2009",
+    "title": "Mitochondria-Anchored Receptor Atg32 Mediates Degradation of Mitochondria via Selective Autophagy",
+    "year_published": 2009,
+    "date_started": "1/30/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Autophagy",
+      "Mitophagy",
+      "Yoshinori Ohsumi",
+      "free GFP",
+      "JC"
+    ],
+    "clarity_quality": "9",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "Discovery of Atg32: Atg32 as a mitochondria-anchored protein that is essential for mitophagy.",
+      "Selective vs. Bulk Autophagy: bulk autophagy is triggered by starvation, mitophagy occurs in post-log phase cells under respiratory conditions.",
+      "Mechanism of Recruitment: Atg32 acts as a receptor by localizing to the mitochondrial outer membrane and interacting with Atg8 and Atg11, which are critical proteins for recognizing cargo and initiating the autophagic machinery.",
+      "Essential Genes: The research found that while 14 \"core\" Atg proteins are required for mitophagy, the process is mechanistically unique because it requires Atg11 but can occur independently of Atg13 (a core factor for bulk autophagy)."
+    ],
+    "interesting_points": [
+      "Oxidative Stress Trigger: The expression of Atg32 is temporally upregulated during respiratory growth, and this induction can be suppressed by antioxidants like N-acetylcysteine (NAC), suggesting that OXIDATIVE STRESS helps trigger mitochondrial degradation.",
+      "Selective vs. Bulk Autophagy: bulk autophagy is triggered by starvation, mitophagy occurs in post-log phase cells under respiratory conditions.",
+      "Structural Specificity: Atg32 is a single-pass membrane protein with a specific orientation: its N-terminus faces the cytosol to recruit autophagic proteins, while its C-terminus stays inside the mitochondrial intermembrane space.",
+      "Exclusive Cargo Sequestration: Using electron microscopy, the authors observed \"mitophagosomes\"—double-membrane vesicles that exclusively sequester mitochondrial fragments while excluding other cytoplasmic components like ribosomes.",
+      "Evolutionary Implications: Although Atg32 homologs were specifically found in yeast, it contains a conserved WXXI/L motif also found in mammalian autophagy receptors (like p62), suggesting a universal evolutionary mechanism for selective organelle degradation."
+    ]
+  },
+  {
+    "id": "dynamics-and-diversity-in-autophagy-mechanisms-lessons-from-yeast-2009",
+    "title": "Dynamics and diversity in autophagy mechanisms: lessons from yeast",
+    "year_published": 2009,
+    "date_started": "2/2/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Autophagy",
+      "Mitophagy",
+      "Yoshinori Ohsumi",
+      "Review"
+    ],
+    "clarity_quality": "7",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "Identification of \"Core\" ATG Genes: Researchers have identified 15 \"core\" autophagy-related (Atg) genes in yeast that are essential for all types of autophagy. These genes are highly conserved from yeast to humans and form the fundamental machinery for autophagosome membrane formation.",
+      "Functional Subgroups: The core Atg proteins are organized into five distinct functional subgroups: the Atg1 kinase complex, the PtdIns 3-kinase complex, the Atg12 conjugation system, the Atg8 conjugation system, and a group of integral membrane proteins (including Atg9).",
+      "The Pre-autophagosomal Structure (PAS): Most Atg proteins concentrate at a single perivacuolar site called the PAS. This structure serves as the assembly point where the core machinery is organized to initiate the formation of the autophagosome.",
+      "Regulated Membrane Dynamics: Autophagy is not a static process; it is dynamically regulated by TORC1 signaling. In nutrient-rich conditions, TORC1 suppresses autophagy, but starvation or rapamycin treatment triggers the dephosphorylation of Atg13, which activates the Atg1 kinase and initiates PAS assembly."
+    ],
+    "interesting_points": [
+      "Great Cartoon differentiating Non-selective vs Selective autophagy.",
+      "Non-selective vs. Selective: While starvation-induced autophagy is largely random (non-selective), \"conductor\" proteins like Atg11 allow the cell to specifically target damaged organelles, toxic protein aggregates, or invasive bacteria for degradation.",
+      "Diverse Outcomes: Though the core machinery is the same, yeast can use these pathways for vastly different goals, such as the Cvt pathway, which is actually a biosynthetic transport route for vacuolar enzymes rather than a degradative one."
+    ]
+  },
+  {
+    "id": "hadha-regulates-respiratory-complex-assembly-and-couples-fao-and-oxphos-2024",
+    "title": "HADHA Regulates Respiratory Complex Assembly and Couples FAO and OXPHOS",
+    "year_published": 2024,
+    "date_started": "2/6/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Mitochondria",
+      "OXPHOS",
+      "SA",
+      "Yidong Bai"
+    ],
+    "clarity_quality": "5",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "HADHA as a Regulatory Factor: The study identifies HADHA (a subunit of the mitochondrial trifunctional protein, MTP) as a key regulator for the assembly of respiratory supercomplexes (SCs) in mitochondria.",
+      "Coupling of Metabolic Pathways: The research demonstrates a direct physical and functional link between fatty acid oxidation (FAO) and oxidative phosphorylation (OXPHOS), showing that these two major bioenergetic pathways are interdependent.",
+      "Mechanism of Interaction: HADHA facilitates OXPHOS by binding directly to the membrane arm of complex I, which is essential for the stable formation of the respiratory chain.",
+      "Impact of Deficiency: Reducing HADHA levels (through knockdown or knockout) leads to decreased supercomplex assembly, defective OXPHOS function, and the accumulation of lipid droplets, mimicking metabolic disease states.",
+      "Pathological Significance: In mouse models, HADHA deficiency combined with a high-fat diet significantly worsens liver steatosis (fatty liver), highlighting how OXPHOS dysfunction contributes to primary FAO disorders."
+    ],
+    "interesting_points": [
+      "Survival via Adaptation: The researchers used a unique cell line (4AR6) that managed to restore its respiratory function despite missing an \"essential\" mitochondrial DNA subunit (ND6), leading them to discover HADHA's compensatory role.",
+      "Metabolic Stress Response: Cells naturally increase their expression of HADHA when forced to rely on mitochondria for energy (e.g., when glucose is replaced with galactose in cell culture).",
+      "Reciprocal Defects: The study explains why patients with primary fatty acid oxidation deficiencies often suffer from secondary respiratory chain defects, and vice versa.",
+      "Tissue-Specific Implications: The findings suggest that the coupling of these pathways may be more critical in high-energy organs like the liver, heart, and muscles, where FAO is a primary fuel source.",
+      "Dietary Stress: The research shows that a high-fat diet acts as a \"stress test\" that can unmask underlying genetic vulnerabilities in mitochondrial proteins that might otherwise remain asymptomatic."
+    ]
+  },
+  {
+    "id": "connexin-43-hemichannels-regulate-mitochondrial-atp-generation-mobilization-and--2022",
+    "title": "Connexin 43 hemichannels regulate mitochondrial ATP generation, mobilization, and mitochondrial homeostasis against oxidative stress",
+    "year_published": 2022,
+    "date_started": "2/9/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Mitochondria",
+      "Cx43",
+      "Mitochondrial ATP",
+      "Jean Jiang",
+      "ROS",
+      "Osteocytes"
+    ],
+    "clarity_quality": "6",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "Mitochondrial Translocation: Under oxidative stress (induced by H2O2), Cx43 protein moves from other parts of the cell to the inner mitochondrial membrane.ATP",
+      "Regulation: Mitochondrial Cx43 (mtCx43) forms functional hemichannels that are essential for maintaining mitochondrial ATP generation. Cells with a Cx43 knockdown showed significantly impaired ATP production.",
+      "Proton Gradient Maintenance: The study concludes that mtCx43 hemichannels regulate the proton gradient across the mitochondrial inner membrane, which is the driving force for energy synthesis.",
+      "Direct Interaction with ATP Synthase: Cx43 does not work in isolation; it physically interacts with ATP5J2 (a subunit of ATP synthase/Complex V), likely to facilitate the efficient generation and mobilization of ATP.",
+      "Homeostatic Shield: The presence of these channels helps protect osteocytes from death caused by oxidative damage, acting as a \"rescue mission\" for the cell's energy factory"
+    ],
+    "interesting_points": [
+      "Orientation of the Protein: In the mitochondria, Cx43 is oriented with its C-terminus facing the intermembrane space, allowing it to be targeted specifically by certain antibodies that wouldn't affect it on the cell surface.",
+      "Dual Role of ROS: While oxidative stress is usually seen as purely damaging, this study shows it acts as the specific trigger that activates the \"protective\" translocation of Cx43 to the mitochondria.",
+      "K+ Influx: mtCx43 hemichannels appear to modulate Potassium influx into the mitochondrial matrix, which indirectly enhances the respiration process and the pumping of protons.",
+      "In Vivo Verification: The researchers confirmed these findings using Csf1± mice, showing that the accumulation of Cx43 in mitochondria happens in living organisms experiencing high oxidative stress, not just in cultured cells.",
+      "Broad Conductance: Unlike many highly selective ion channels, Cx43 hemichannels have a relatively large pore that allows the passage of various ions and small molecules (under 1 kDa), making them versatile regulators of the mitochondrial environment."
+    ]
+  },
+  {
+    "id": "antibody-activation-of-connexin-hemichannels-in-bone-osteocytes-with-atp-release-2024",
+    "title": "Antibody-activation of connexin hemichannels in bone osteocytes with ATP release suppresses breast cancer and osteosarcoma malignancy",
+    "year_published": 2024,
+    "date_started": "2/10/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Cx43-M2",
+      "Jean Jiang",
+      "Osteocytes",
+      "Breast Cancer",
+      "ATP",
+      "P2X7R"
+    ],
+    "clarity_quality": "8",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "Development of Cx43-M2: Researchers created a first-of-its-kind antibody that specifically activates Connexin 43 (Cx43) hemichannels in osteocytes (bone cells) rather than inhibiting them.",
+      "Tumor Suppression: The activation of these channels triggers the release of ATP into the bone microenvironment, which inhibits the growth and migration of breast cancer and osteosarcoma cells.",
+      "Reduction in Metastasis: In mouse models, Cx43-M2 significantly decreased breast cancer bone metastasis and osteosarcoma tumor volume while improving overall survival rates.",
+      "Immune System Activation: The antibody transforms the cancer microenvironment from \"supportive\" to \"suppressive\" by increasing anti-tumor effector T cells (Tc and Th) and reducing immunosuppressive regulatory T cells (Tregs).",
+      "Bone Integrity: Treatment with the antibody was shown to protect bone structure against cancer-induced osteolysis (bone destruction)."
+    ],
+    "interesting_points": [
+      "A \"Smart\" Mechanism: Unlike many cancer drugs that target the tumor directly, Cx43-M2 targets healthy bone cells to make the \"soil\" of the bone inhospitable for \"seed\" cancer cells.",
+      "High Specificity: Although Cx43 is found in the heart, liver, and spinal cord, the antibody primarily targeted bone osteocytes in situ and did not show detectable signals in those other vital organs, suggesting a low risk for systemic side effects.",
+      "Preserves Cell Communication: Interestingly, the antibody activates hemichannels (which leak molecules to the outside) without disrupting gap junctions (which allow cells to talk to each other), maintaining normal bone cell coordination.",
+      "Systemic Benefits: While the antibody targets bone, the resulting increase in circulating ATP provided a systemic anti-tumor effect, reducing cancer spread even in distal regions outside the bone.",
+      "Potential for Synergy: Because it reduces \"Treg\" cells in tumor tissues—a major hurdle for current immunotherapies—this antibody could potentially make existing treatments like PD-1 blockers more effective."
+    ]
+  },
+  {
+    "id": "lactate-elicits-er-mitochondrial-mg2-dynamics-to-integrate-cellular-metabolism-2020",
+    "title": "Lactate Elicits ER-Mitochondrial Mg2+ Dynamics to Integrate Cellular Metabolism",
+    "year_published": 2020,
+    "date_started": "2/10/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Lactate",
+      "Mitochondria",
+      "Magnesium",
+      "ER",
+      "Madesh Muniswamy"
+    ],
+    "clarity_quality": "8",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "L-lactate is a specific ligand for magnesium signaling: The study identifies L-lactate (a glycolytic end-product) as a signaling molecule that triggers the rapid release of magnesium (Mg²⁺) from endoplasmic reticulum (ER) stores.",
+      "Mrs2 mediates mitochondrial Mg²⁺ uptake: The magnesium released from the ER is taken up by the mitochondria through the Mrs2 channel, which acts as the primary regulated route for mitochondrial Mg²⁺ entry in mammalian cells.",
+      "Metabolic Integration: This Mg²⁺ surge acts as a second messenger that links glycolysis to mitochondrial bioenergetics by modulating the activity of the pyruvate dehydrogenase (PDH) complex.",
+      "Pathophysiological Impact: During acute inflammation (sepsis), lactate-induced mitochondrial Mg²⁺ surges contribute to organ failure; suppressing this surge by deleting Mrs2 or inhibiting lactate production can alleviate multi-organ failure and improve survival in models."
+    ],
+    "interesting_points": [
+      "Stereospecificity: The process is highly specific to L-lactate; D-lactate (the form primarily produced by bacteria) does not trigger the same ER Mg²⁺ release or mitochondrial uptake.",
+      "Temperature Sensitivity: Unlike the mitochondrial calcium uniporter (MCU), the Mrs2-mediated Mg²⁺ uptake machinery is remarkably sensitive to near-physiological temperature changes, functioning maximally at 37°C.",
+      "Feedback Inhibition: The Mrs2 channel has a built-in feedback mechanism where high levels of magnesium in the mitochondrial matrix can bind to its N-terminal domain to close the channel and prevent over-accumulation.",
+      "Bioenergetic \"Brake\": High mitochondrial Mg²⁺ levels can actually act as a brake on metabolism by promoting the phosphorylation (inactivation) of the PDH complex, whereas lowering matrix Mg²⁺ enhances oxygen consumption and metabolic activity.",
+      "Organ Protection: In septic shock models, Mrs2 knockout mice were protected from pulmonary edema, kidney injury, and extreme drops in body temperature, suggesting that targeting mitochondrial magnesium transport could be a therapeutic strategy for inflammatory diseases."
+    ]
+  },
+  {
+    "id": "limiting-mrs2-dependent-mitochondrial-mg2-uptake-induces-metabolic-programming-i-2023",
+    "title": "Limiting Mrs2-dependent mitochondrial Mg2+ uptake induces metabolic programming in prolonged dietary stress",
+    "year_published": 2023,
+    "date_started": "2/10/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Mrs2",
+      "Magnesium",
+      "Mitochondria",
+      "Madesh Muniswamy"
+    ],
+    "clarity_quality": "8",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "Prevention of Obesity: Genetic ablation or pharmacological blockade of the mitochondrial magnesium channel Mrs2 prevents weight gain and obesity in mice, even when they are fed a high-fat \"Western diet\" for up to a year.",
+      "Protection Against Metabolic Syndrome: Deletion of Mrs2 protects against the progression of Non-Alcoholic Fatty Liver Disease (NAFLD), prevents the development of Hepatocellular Carcinoma (HCC), and maintains healthy liver function.",
+      "Metabolic Reprogramming: Lowering mitochondrial magnesium levels triggers a \"pro-catabolic\" state, increasing glycolysis, β-oxidation (fat burning), and thermogenesis (heat production), which helps the body expend more energy.",
+      "Browning of Fat: Mrs2 deficiency promotes the \"beiging\" or browning of white adipose tissue, increasing mitochondrial density and metabolic activity in fat cells.",
+      "Identification of a Blocker: The study identifies CPACC (a cobalt derivative) as a potent and selective inhibitor of the Mrs2 channel that can effectively mimic the weight-loss effects of genetic deletion."
+    ],
+    "interesting_points": [
+      "Citrate's Dual Role: Mrs2 deficiency reduces the efflux of citrate from the mitochondria. Because citrate is a precursor for fat synthesis and an endogenous magnesium chelator, its reduction prevents fat accumulation and influences cellular signaling.",
+      "HIF-1α Stabilization: The study reveals that citric acid normally helps destabilize HIF-1α (a key metabolic transcription factor). By reducing citrate efflux, Mrs2-deficient cells stabilize HIF-1α even under normal oxygen levels, which drives beneficial metabolic changes.",
+      "Circadian Rhythm Preservation: While a Western diet typically disrupts the natural oscillations of respiration (the \"metabolic clock\"), mice lacking Mrs2 maintained normal circadian rhythms in their oxygen consumption and energy expenditure.",
+      "Magnesium vs. Calcium Competition: The research highlights a physiological \"competition\" where mitochondrial magnesium acts as an \"off\" switch or rheostat for calcium signaling; manipulating this balance can fundamentally change how a cell processes energy.",
+      "Microvascular Health: Beyond metabolism, the loss of Mrs2 was shown to prevent the \"thinning\" of tiny blood vessels (microvascular rarefaction) in the liver that usually occurs with aging and high-fat diets."
+    ]
+  },
+  {
+    "id": "magnesium-biochemistry-nutrition-detection-and-social-impact-of-diseases-linked--2021",
+    "title": "Magnesium: Biochemistry, Nutrition, Detection, and Social Impact of Diseases Linked to Its Deficiency",
+    "year_published": 2021,
+    "date_started": "2/11/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Magnesium",
+      "Review",
+      "MDPI"
+    ],
+    "clarity_quality": "6",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "Magnesium is a vital metabolite involved in over 600 enzymatic reactions and nearly every major metabolic and biochemical process within the cell.",
+      "Subclinical magnesium deficiency is a widespread public health crisis in Western populations, primarily driven by a diet high in processed foods and demineralized water.",
+      "Chronic magnesium deficiency is significantly associated with high-impact \"social pathologies,\" including type 2 diabetes, osteoporosis, cardiovascular diseases, cancer, and various neurological disorders.",
+      "Evaluating a person's magnesium status is clinically challenging because less than 1% of the body's magnesium is in the blood, meaning \"normal\" serum levels do not rule out a deficiency in tissues or bone.",
+      "Increasing dietary intake and proper supplementation are essential preventive strategies to improve long-term health outcomes and reduce the economic burden of chronic diseases."
+    ],
+    "interesting_points": [
+      "High supplemental doses of zinc (around 53 mg/day) can interfere with and decrease the body's overall magnesium balance.",
+      "Magnesium in drinking water is highly bioavailable, and its absorption is further enhanced when magnesium-rich mineral water is consumed during a meal.",
+      "Breast milk concentrations of magnesium vary widely, and breastfed infants generally require complementary foods after six months to meet 50% of their magnesium requirements during rapid growth.",
+      "The \"protective effect\" of magnesium at physiological levels helps stabilize the natural structure of DNA, whereas deficient levels may favor mutations that lead to carcinogenesis.",
+      "Magnesium acts as a \"natural calcium channel blocker,\" and maintaining the correct magnesium-to-calcium ratio is critical for preventing heart arrhythmias and hypertension."
+    ]
+  },
+  {
+    "id": "spg7-is-an-essential-and-conserved-component-of-the-mitochondrial-permeability-t-2015",
+    "title": "SPG7 Is an Essential and Conserved Component of the Mitochondrial Permeability Transition Pore",
+    "year_published": 2015,
+    "date_started": "2/11/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Madesh Muniswamy",
+      "mPTP",
+      "Mitochondria",
+      "Calcium",
+      "ROS"
+    ],
+    "clarity_quality": "7",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "The protein SPG7 (paraplegin) is identified as a core, essential, and conserved component of the PTP.",
+      "The PTP is a heterooligomeric complex consisting of SPG7 (inner mitochondrial membrane), VDAC1 (outer mitochondrial membrane), and CypD (mitochondrial matrix).",
+      "Loss of SPG7 prevents mitochondrial swelling, membrane potential dissipation, and cell death induced by calcium overload and reactive oxygen species (ROS).",
+      "The interaction between SPG7 and CypD is direct and can be disrupted by the inhibitor Cyclosporine A (CsA).",
+      "SPG7 acts as a bridge at the contact sites between the inner and outer mitochondrial membranes to facilitate pore formation."
+    ],
+    "interesting_points": [
+      "The study used an unbiased RNAi-based screen of 128 mitochondrial proteins to narrow down the candidates for the PTP.",
+      "SPG7’s role in the PTP is independent of its known function as a metalloprotease; even \"proteolytically dead\" mutants of SPG7 were able to restore PTP function in knockout cells.",
+      "While SPG7 is often associated with the neurodegenerative disease hereditary spastic paraplegia (HSP), its role in PTP suggests it is also a critical regulator of cell death (necrosis) in many cell types, including cardiomyocytes.",
+      "Silencing SPG7 actually enhanced mitochondrial bioenergetics, resulting in higher ATP production and oxygen consumption rates.",
+      "The C-terminus of SPG7 was specifically identified as the \"CypD-interacting domain\" (CID), which is necessary for the assembly of the pore complex."
+    ]
+  },
+  {
+    "id": "mcur1-is-a-scaffold-factor-for-the-mcu-complex-function-and-promotes-mitochondri-2016",
+    "title": "MCUR1 Is a Scaffold Factor for the MCU Complex Function and Promotes Mitochondrial Bioenergetics",
+    "year_published": 2016,
+    "date_started": "2/11/2026",
+    "status": "Ongoing",
+    "tags": [
+      "MCUR1",
+      "MCU",
+      "Madesh Muniswamy",
+      "Autophagy"
+    ],
+    "clarity_quality": "7",
+    "relevance": "1. Slightly Relevant",
+    "main_finding": [
+      "Essential Scaffold Factor: The study concludes that MCUR1 acts as a critical \"scaffold factor\" for the MCU complex. It is necessary for the proper assembly and stabilization of the heterooligomeric complex at the mitochondrial inner membrane.",
+      "Regulation of Calcium Uptake: Genetic deletion of MCUR1 in mouse cardiomyocytes and endothelial cells severely impairs mitochondrial calcium uptake and reduces the mitochondrial calcium uniporter current.",
+      "Impact on Bioenergetics: Loss of MCUR1 leads to a bioenergetic crisis, characterized by significantly reduced basal and agonist-induced ATP levels, which in turn impairs vital cell functions like proliferation and migration.",
+      "Triggering of Autophagy: The cellular stress and ATP depletion caused by the lack of MCUR1 (and subsequent lack of mitochondrial calcium) trigger autophagy as a survival mechanism.",
+      "Identification of Binding Domains: The researchers identified that the coiled-coil domains of both MCU and MCUR1 are the specific regions required for these proteins to bind to one another"
+    ],
+    "interesting_points": [
+      "Contradicting Previous Claims: The authors specifically address and provide evidence against a previous study suggesting MCUR1 was solely a cytochrome c oxidase (COX) assembly factor. They show that while it may have multiple roles, its function in the MCU complex is primary for calcium regulation.",
+      "Puncta Formation: Using Bimolecular Fluorescence Complementation (BiFC), the study visualized that MCUR1 and EMRE (another regulator) form specific \"puncta\" (clusters) within the mitochondria to facilitate calcium transport.",
+      "UCP2 Upregulation: In cells lacking MCUR1, there is a compensatory increase in Uncoupling Protein 2 (UCP2). This likely helps manage the mitochondrial proton gradient to prevent membrane hyperpolarization when calcium transport is absent.",
+      "Tissue-Specific Mortality: Interestingly, the loss of MCUR1 in the heart (cMCUR1 KO) resulted in smaller mice that died within 3 weeks of birth, whereas loss in the vasculature (endothelial cells) did not result in immediate mortality, highlighting the heart's extreme dependence on this calcium pathway.",
+      "Independent of MICU1: The study found that MCUR1 can bind to the MCU core and EMRE independently of MICU1 (the \"gatekeeper\" protein), suggesting a modular assembly of the uniporter complex."
+    ]
+  },
+  {
+    "id": "ampk-phosphorylates-and-inhibits-srebp-activity-to-attenuate-hepatic-steatosis-a-2011",
+    "title": "AMPK Phosphorylates and Inhibits SREBP Activity to Attenuate Hepatic Steatosis and Atherosclerosis in Diet-Induced Insulin-Resistant Mice",
+    "year_published": 2011,
+    "date_started": "2/11/2026",
+    "status": "Ongoing",
+    "tags": [
+      "AMPK",
+      "Mengwei Zang",
+      "Liver"
+    ],
+    "clarity_quality": "5",
+    "relevance": "1. Slightly Relevant",
+    "main_finding": [
+      "AMPK directly interacts with and phosphorylates SREBP-1c and SREBP-2, specifically identifying Ser372 as the critical phosphorylation site on SREBP-1c.",
+      "This phosphorylation inhibits the proteolytic cleavage and nuclear translocation of SREBP, which prevents it from activating genes responsible for fat production (lipogenesis).",
+      "Activation of AMPK by the synthetic polyphenol S17834 significantly reduces hepatic steatosis (fatty liver), hyperlipidemia, and atherosclerosis in insulin-resistant mice fed a high-fat, high-sucrose diet.",
+      "The study concludes that the AMPK-SREBP pathway is a vital therapeutic target for treating metabolic syndrome, type 2 diabetes, and associated cardiovascular diseases.",
+      "AMPK acts as a direct upstream kinase that suppresses the transcriptional activity of SREBP-1c and -2, thereby linking energy sensing directly to lipid control."
+    ],
+    "interesting_points": [
+      "While SREBP-1c and SREBP-2 are substrates for AMPK, the SREBP-1a isoform is notably not sensitive to this specific regulation.",
+      "AMPK activation disrupts the \"feed-forward\" mechanism of SREBP, meaning it stops SREBP from activating the transcription of its own gene.",
+      "The study explains how common drugs like metformin and natural compounds like resveratrol exert their lipid-lowering effects specifically through this Ser372 phosphorylation mechanism.",
+      "The synthetic polyphenol S17834 was able to improve insulin resistance and reduce body weight gain by 25% without causing liver toxicity or heart issues.",
+      "The research highlights that this AMPK-dependent suppression works even in insulin-resistant states, effectively bypassing the broken insulin signaling pathway to stop fat production.",
+      "There was a statistically significant correlation between plasma cholesterol levels and the size of atherosclerotic lesions, which were reduced by ~60% with S17834 treatment."
+    ]
+  },
+  {
+    "id": "targeting-hepatic-serine-arginine-protein-kinase-2-ameliorates-alcohol-associate-2023",
+    "title": "Targeting hepatic serine-arginine protein kinase 2 ameliorates alcohol-associated liver disease by alternative splicing control of lipogenesis",
+    "year_published": 2023,
+    "date_started": "2/11/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Liver",
+      "Mengwei Zang",
+      "RNA splicing",
+      "SRPK2"
+    ],
+    "clarity_quality": "8",
+    "relevance": "1. Slightly Relevant",
+    "main_finding": [
+      "Discovery of a \"Splicing Switch\": The study identifies a specific protein kinase, SRPK2, that gets activated by alcohol in the liver. When active, it disrupts the splicing of a key protein called Lipin-1, shifting it from the \"good\" form (Lipin-1alpha) to the \"bad\" form (Lipin-1beta).",
+      "Mechanism of Fat Accumulation: This \"bad\" Lipin-1beta is what triggers SREBP-1, the master regulator that forces the liver to produce excessive fat (lipogenesis). Essentially, alcohol rewrites the RNA blueprint to favor fat production.",
+      "The Role of FGF21: The hormone FGF21 protects against liver disease by promoting the degradation of SRPK2. In mice without FGF21, alcohol causes much more severe damage because SRPK2 levels skyrocket.",
+      "Therapeutic Validation: Silencing SRPK2 in mice was sufficient to reverse alcohol-induced fatty liver and inflammation, proving it is a viable drug target."
+    ],
+    "interesting_points": [
+      "Strategic \"Druggability\": Unlike SREBP-1 (a transcription factor), which is considered \"undruggable\" because it lacks good binding pockets, SRPK2 is a kinase. Pharmaceutical companies are very good at making kinase inhibitors, making this a much more practical target for drug development than previous approaches.",
+      "The \"Root Cause\" Fix: Traditional metabolic drugs often try to fix the downstream damage (too much fat). This approach targets the RNA splicing machinery upstream, fixing the \"error\" in the cellular instruction manual before the damage occurs.",
+      "Connecting Metabolic & RNA Biology: This paper bridges two distinct fields. It shows that a metabolic signal (alcohol/mTORC1) directly controls RNA splicing machinery. This is a sophisticated angle that explains why the lab is hiring people with diverse backgrounds (metabolism vs. RNA biology).",
+      "Human Relevance: The study confirmed that SRPK2 is hyperactivated in human patients with alcohol-associated liver disease (ALD), not just in mice, which significantly increases the translational value of the new grant."
+    ]
+  },
+  {
+    "id": "an-essential-role-for-cardiolipin-in-the-stability-and-function-of-the-mitochond-2020",
+    "title": "An essential role for cardiolipin in the stability and function of the mitochondrial calcium uniporter",
+    "year_published": 2020,
+    "date_started": "2/11/2026",
+    "status": "Not Started",
+    "tags": [
+      "Cardiolipin",
+      "MCU",
+      "Mitochondria",
+      "Madesh Muniswamy"
+    ],
+    "clarity_quality": "6",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "Essential Role of Cardiolipin (CL): The study identifies cardiolipin as a specific and critical phospholipid required for the stability and assembly of the mitochondrial calcium uniporter (MCU) complex.",
+      "Impact of CL Deficiency: A lack or reduction of CL leads to the rapid protein turnover of MCU and a significant decrease in its steady-state levels, thereby impairing mitochondrial calcium uptake.",
+      "Evolutionary Conservation: This requirement for CL is conserved across species, as demonstrated by findings in yeast models, mouse muscle cells, and human patient tissues.",
+      "Link to Barth Syndrome: The research establishes that the partial loss of CL in Barth syndrome (BTHS) directly reduces the abundance and activity of the endogenous MCU, suggesting that impaired mitochondrial calcium signaling may contribute to the disease's pathogenesis."
+    ],
+    "interesting_points": [
+      "Specific Lipid Requirement: While the inner mitochondrial membrane contains several abundant phospholipids like PE and PC, the stability of the MCU was found to be specifically dependent on CL, rather than a general requirement for all phospholipids.",
+      "Mechanism of Stability: The study shows that CL does not necessarily affect the initial expression of MCU but is vital for its persistence in the membrane; without it, the protein is degraded much faster (increased turnover).",
+      "Yeast as a Research Model: The researchers successfully used Saccharomyces cerevisiae—which naturally lacks the uniporter—as a \"blank slate\" to heterologously reconstitute the human uniporter and test lipid requirements in a controlled genetic environment.",
+      "Clinical Relevance: The finding that MCU abundance is decreased by 40–90% in the cardiac tissue of Barth syndrome patients provides a potential new molecular explanation for the cardiomyopathy and exercise intolerance seen in these patients.",
+      "Structural Confirmation: The functional findings are highly complementary to recent structural studies (cryo-EM) that have identified specific lipid-binding sites on the MCU pore, where CL is thought to stabilize the transmembrane helices."
+    ]
+  },
+  {
+    "id": "age-dependent-loss-of-hepatic-sirt1-enhances-nlrp3-inflammasome-signaling-and-im-2023",
+    "title": "Age-dependent loss of hepatic SIRT1 enhances NLRP3 inflammasome signaling and impairs capacity for liver fibrosis resolution",
+    "year_published": 2023,
+    "date_started": "2/11/2026",
+    "status": "Not Started",
+    "tags": [
+      "SIRT1",
+      "Liver",
+      "Aging",
+      "Mengwei Zang"
+    ],
+    "clarity_quality": "5",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "Age-Dependent Decline of SIRT1: Aging causes a significant decrease in hepatic levels of the longevity factor SIRT1, which is directly linked to increased susceptibility to severe and persistent liver fibrosis.",
+      "NLRP3 Inflammasome Activation: The loss of SIRT1 triggers the activation of the NLRP3 inflammasome and the production of pro-inflammatory cytokines like IL-1β, creating a state of \"inflammaging\" that exacerbates liver injury.",
+      "Impaired Fibrosis Resolution: Unlike young mice, which can resolve liver fibrosis after the cause of injury is removed, older mice have a diminished capacity for recovery, leading to permanent scarring and abnormal extracellular matrix (ECM) remodeling.",
+      "Therapeutic Potential of NLRP3 Inhibition: Treating aged mice with MCC950, a selective NLRP3 inhibitor, successfully ameliorates alcohol-induced liver fibrosis by reducing inflammation and hepatocyte stress signaling."
+    ],
+    "interesting_points": [
+      "\"Mimicking\" Aging: Researchers found that genetically deleting SIRT1 in the livers of young mice caused them to develop severe fibrosis and inflammation similar to that seen in naturally aged mice, effectively \"mimicking\" the aging process.",
+      "The Role of ASK1 and HMGB1: The study identified that NLRP3 inhibition works partly by repressing hepatocyte-derived danger signals, specifically ASK1 and the cytoplasmic translocation of HMGB1, which otherwise drive a cycle of chronic inflammation.",
+      "HSC Hyperactivation: Aging leads to a higher number of activated hepatic stellate cells (HSCs)—the primary cells responsible for collagen deposition—which remain persistent in older livers even after the initial injury ceases.",
+      "Clinical Implications for ALD: The research suggests that the lack of effective treatments for liver cirrhosis in humans may be due to preclinical models focusing on young animals; using age-related models could lead to better clinical translations for older patients with alcohol-associated liver disease (ALD)."
+    ]
+  },
+  {
+    "id": "inhibition-of-astrocyte-hemichannel-improves-recovery-from-spinal-cord-injury-2021",
+    "title": "Inhibition of astrocyte hemichannel improves recovery from spinal cord injury",
+    "year_published": 2021,
+    "date_started": "2/12/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Cx43",
+      "Astrocytes",
+      "Jean Jiang",
+      "Spinal cord injury"
+    ],
+    "clarity_quality": "",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "Identification of a Therapeutic Target: The study identifies Connexin 43 (Cx43) hemichannels in astrocytes as a primary mediator of secondary damage following spinal cord injury.",
+      "Development of MHC1 Antibody: Researchers developed a specific mouse-human chimeric monoclonal antibody, MHC1, which inhibits Cx43 hemichannels without affecting gap junction communication.",
+      "Improved Functional Recovery: Administration of MHC1 within 30 minutes of injury significantly improved hind limb locomotion in mouse models, with benefits lasting up to 8 weeks post-injury.",
+      "Reduction of Secondary Damage: Treatment with MHC1 was shown to decrease gliosis (glial scar formation) and lesion sizes while increasing the sparing of both white and gray matter and improving neuronal survival.",
+      "Therapeutic Window: The antibody's effectiveness is limited to the acute phase of injury; administration 30 days post-injury did not result in functional recovery, likely because the blood-spinal cord barrier had closed and the initial inflammatory stimulus had subsided."
+    ],
+    "interesting_points": [
+      "Specificity is Key: Unlike previous treatments (such as carbenoxolone or certain peptides) that block both hemichannels and gap junctions, MHC1 is highly selective. This is crucial because gap junctions are often necessary for normal physiological functions.",
+      "Single Dose Efficacy: Remarkably, a single administration of the antibody shortly after the trauma was sufficient to produce long-term improvements in motor function.",
+      "Mechanism of Action: The study suggests that by blocking these hemichannels, the antibody prevents the release of neurotoxic factors like ATP and glutamate, which typically create a \"cytotoxic post-injury environment\" that kills healthy neurons near the initial wound.",
+      "Incomplete vs. Complete Injury: While the antibody significantly helped in models of \"incomplete\" SCI (where some function is retained), it did not restore motor function in \"complete\" SCI models, though it still reduced scarring. This suggests the treatment works by preserving existing neurons rather than regenerating new ones.",
+      "Mimicking Physical Trauma: The researchers used a \"Flexcell\" device to mechanically stretch astrocytes in a lab setting to mimic the physical stress of an SCI, proving that mechanical trauma alone is enough to force these harmful hemichannels open."
+    ]
+  },
+  {
+    "id": "mechanical-strain-opens-connexin-43-hemichannels-in-osteocytes-a-novel-mechanism-2005",
+    "title": "Mechanical Strain Opens Connexin 43 Hemichannels in Osteocytes: A Novel Mechanism for the Release of Prostaglandin",
+    "year_published": 2005,
+    "date_started": "2/12/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Jean Jiang",
+      "Cx43",
+      "Prostaglandin",
+      "Osteocytes"
+    ],
+    "clarity_quality": "7",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "Discovery of a Novel Portal: The study concludes that Connexin 43 (Cx43) hemichannels act as the primary exit route (portal) for Prostaglandin (PGE_2) in osteocytes when they are subjected to mechanical strain.",
+      "Mechanical Activation: Fluid flow shear stress (simulating the physical load on bones) triggers the opening of these hemichannels, allowing for the rapid release of PGE_2 into the extracellular environment.",
+      "Translocation to the Membrane: Mechanical stress causes Cx43 to move (translocate) from the interior of the cell to the membrane surface, effectively doubling the number of available hemichannels.",
+      "Exclusion of Other Transporters: The researchers demonstrated that other common transport mechanisms, such as the P2X7 purinergic receptor and the PGT transporter, are not responsible for this specific release of PGE_2."
+    ],
+    "interesting_points": [
+      "Density Paradox: Osteocytes plated at lower densities (where they have less physical contact) actually released more PGE_2 per cell than those at higher densities, highlighting that this is a hemichannel function rather than a gap-junction function.",
+      "Passive Release: Unlike many transport processes that require energy, hemichannels allow for the passive, energy-independent exit of molecules, which explains how bone cells can release signals so rapidly after a physical impact.",
+      "Anabolic Importance: Because PGE_2 is an anabolic agent (it helps build bone mass), this mechanism explains the direct cellular link between exercise/movement and the strengthening of the skeleton.",
+      "Dye Uptake Proof: The researchers proved the channels were opening by showing that the cells would \"swallow\" fluorescent dye (Lucifer Yellow) only when subjected to fluid flow, a process that was blocked by specific hemichannel inhibitors."
+    ]
+  },
+  {
+    "id": "connexin43-a-protein-from-rat-heart-homologous-to-a-gap-junction-protein-from-li-1987",
+    "title": "Connexin43: A Protein from Rat Heart Homologous to a Gap Junction Protein from Liver",
+    "year_published": 1987,
+    "date_started": "2/12/2026",
+    "status": "Completed",
+    "tags": [
+      "Cx43",
+      "Daniel Goodenough",
+      "Gap junction"
+    ],
+    "clarity_quality": "9",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "Discovery of a New Protein: The researchers successfully identified and cloned a new gap junction protein from the rat heart, which they named Connexin43.",
+      "Evidence of a Gene Family: By using a liver gap junction probe to find a heart protein, they proved that gap junctions are not identical across all tissues but are instead part of a related family of homologous proteins.",
+      "Molecular Characterization: They determined that the heart protein is encoded by a 1,146-bp open reading frame, resulting in a protein with a molecular mass of approximately 43,036 Daltons.",
+      "Widespread Expression: While discovered in the heart, Northern blot analysis revealed that this specific protein (Cx43) is also expressed in the kidney, ovary, uterus, and lens epithelium.",
+      "Structural Conservation: By comparing the heart and liver sequences, they concluded that the parts of the protein that sit inside the membrane or outside the cell are highly similar (conserved), while the parts inside the cell (cytoplasmic) are very different."
+    ],
+    "interesting_points": [
+      "The Nomenclature Shift: This paper is famous for proposing the \"Connexin\" naming system (e.g., Connexin32, Connexin43), moving the scientific community away from naming these proteins based on the organ where they were first found.",
+      "The \"Low Stringency\" Breakthrough: The discovery relied on a clever lab trick: lowering the \"stringency\" of their search to allow the liver \"bait\" to stick to a heart \"target\" that was only 55% similar.",
+      "Heart Rhythm Implications: The study laid the foundation for understanding how the heart beats in a synchronized way, as Connexin43 is the primary channel for electrical signaling between cardiac muscle cells.",
+      "Multi-Organ Utility: It was surprising at the time to find that the \"heart\" protein was also the primary gap junction protein in the lens of the eye and the uterus, suggesting it has versatile roles in different types of cell-to-cell communication."
+    ]
+  },
+  {
+    "id": "antibodies-targeting-extracellular-domain-of-connexins-for-studies-of-hemichanne-2013",
+    "title": "Antibodies targeting extracellular domain of connexins for studies of hemichannels",
+    "year_published": 2013,
+    "date_started": "2/13/2026",
+    "status": "Completed",
+    "tags": [
+      "Jean Jiang",
+      "Review",
+      "Cx43",
+      "Antibodies"
+    ],
+    "clarity_quality": "6",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "Specific Hemichannel Inhibition: The primary breakthrough is the development of antibodies, specifically Cx43(E2), that target the second extracellular loop of Connexin 43. These antibodies can selectively block hemichannels without immediately affecting existing gap junction channels.",
+      "Solving the Specificity Challenge: Traditional blockers like \"connexin mimetic peptides\" (e.g., GAP26, GAP27) often lack specificity or have unknown mechanisms. High-affinity antibodies provide a more precise tool for distinguishing the physiological roles of hemichannels versus gap junctions.",
+      "Steric Hindrance Mechanism: Because antibodies (approx. 150 kDa) are much larger than the inter-channel spacing in gap junction plaques (approx. 100 Å), they are physically excluded from established junctions. They only bind to \"free\" hemichannels on the cell surface.",
+      "Therapeutic Potential: These antibodies are not just research tools; they show promise for targeted drug delivery (via immunoliposomes) and as potential treatments for pathologies like cancer (gliomas), ischemia, and chronic inflammation where hemichannel activity is often exacerbated."
+    ],
+    "interesting_points": [
+      "Discovery via \"Splitting\": The article notes that antibodies against the extracellular domains cannot access gap junctions unless the junctions are \"split\" using harsh treatments like alkali, urea, or calcium depletion.",
+      "Filopodia Localization: Using the aEL2-186 antibody, researchers discovered that free hemichannels are concentrated at the tips of filopodia, suggesting these areas are critical for the initial docking and pairing of cells to form new gap junctions.",
+      "Dual Function Blocking: Beyond just closing the pore, the Cx43(E2) antibody can block cell-cell adhesion and aggregation by disrupting the docking interaction between hemichannels of neighboring cells.",
+      "\"Magic Bullet\" for Cancer: Monoclonal antibodies coated onto nanoparticles have been successfully used in rats to deliver diagnostic tracers and drugs specifically to the peritumoral invasion zone of gliomas, which overexpress Cx43.",
+      "E2 vs. E1 Immunogenicity: Research found that the second extracellular loop (E2) typically produces a much more robust immune response and more specific antibodies than the first loop (E1)."
+    ]
+  },
+  {
+    "id": "micu1-is-an-essential-gatekeeper-for-mcu-mediated-mitochondrial-ca2-uptake-that--2012",
+    "title": "MICU1 Is an Essential Gatekeeper for MCU-Mediated Mitochondrial Ca2+ Uptake that Regulates Cell Survival",
+    "year_published": 2012,
+    "date_started": "2/13/2026",
+    "status": "Ongoing",
+    "tags": [
+      "MICU1",
+      "MCU",
+      "Cacium",
+      "Mitochondria",
+      "Madesh Muniswamy"
+    ],
+    "clarity_quality": "8",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "MICU1 is a gatekeeper, not a pore-component: While it was previously thought MICU1 might be required for calcium uptake, this study shows it actually functions to inhibit uptake when cytoplasmic calcium levels are low.",
+      "Establishment of a Calcium Threshold: MICU1 sets a specific threshold (approximately 3 uM) that prevents mitochondria from taking up calcium under resting conditions, despite the massive electrical drive to do so.",
+      "Essential for Cell Survival: By preventing constant calcium loading, MICU1 protects the cell from chronic stress, excessive reactive oxygen species (ROS) production, and premature cell death.",
+      "MCU-Dependency: The researchers proved that the \"leaky\" calcium accumulation seen when MICU1 is missing is specifically traveling through the MCU channel, as silencing MCU fixes the problem."
+    ],
+    "interesting_points": [
+      "The \"Thermodynamic Problem\": Mitochondria have a very negative membrane potential (approx -180 mV), which acts like a powerful vacuum for calcium. Without MICU1 acting as a \"brake,\" mitochondria would constantly overfill and eventually self-destruct.",
+      "EF-Hand Precision: MICU1 uses two specialized structures called EF hands to sense calcium. If even one of these is mutated, the protein loses its ability to block the channel, leading to mitochondrial calcium overload.",
+      "Metabolic Impact: When MICU1 is absent, the constant trickle of calcium keeps mitochondrial enzymes (like pyruvate dehydrogenase) in a permanently active state, which sounds efficient but actually leads to \"exhaustion\" via oxidative stress.",
+      "ROS and Apoptosis: Cells lacking MICU1 are significantly more sensitive to triggers of programmed cell death (apoptosis) because their mitochondria are already \"primed\" for failure due to high basal ROS levels.",
+      "Bioenergetic \"Weakness\": Interestingly, while MICU1-deficient cells have more calcium, they don't actually produce more energy; the resulting ROS damage inhibits their metabolism, effectively canceling out the benefit of the extra calcium."
+    ]
+  },
+  {
+    "id": "mitochondrial-calcium-uniporter-stabilization-preserves-energetic-homeostasis-du-2022",
+    "title": "Mitochondrial calcium uniporter stabilization preserves energetic homeostasis during Complex I impairment",
+    "year_published": 2022,
+    "date_started": "2/13/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Mitochondria",
+      "Dipayan Chaudhuri",
+      "Complex I"
+    ],
+    "clarity_quality": "5",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "Mitochondrial Complex I impairment triggers a compensatory increase in the levels and activity of the mitochondrial calcium uniporter (MCU) to help maintain ATP synthesis and energetic homeostasis.",
+      "This increase is regulated by a mechanism termed \"Complex I-induced protein turnover\" (CLIPT), where functional Complex I normally promotes MCU degradation via physical interaction.",
+      "When Complex I is dysfunctional, its interaction with MCU is disrupted, preventing MCU degradation and leading to the accumulation of functional channels.",
+      "This compensatory stabilization of MCU is critical for survival; in mouse models of mitochondrial cardiomyopathy (Tfam knockout), preventing this MCU increase significantly accelerated death.",
+      "Interventions that enhance this stabilization, such as overexpressing the MCU N-terminal domain (NTD), can rescue survival and function in organisms with Complex I deficiency."
+    ],
+    "interesting_points": [
+      "The CLIPT mechanism is evolutionarily conserved and was observed across multiple systems, including human induced pluripotent stem cells (IPSCs), mouse hearts, and Drosophila flight muscles.",
+      "The increase in MCU protein levels is post-transcriptional; mRNA levels do not change, confirming that the accumulation is due to reduced protein degradation rather than increased synthesis.",
+      "The disruption of the MCU-Complex I interaction is driven by aberrant signals typical of mitochondrial dysfunction, specifically increased Reactive Oxygen Species (ROS) and altered NADH/NAD+ ratios.",
+      "The N-terminal domain (NTD) of the MCU protein is the specific region necessary for binding to Complex I; deleting this domain prevents the interaction and the subsequent degradation of the channel.",
+      "In a proof-of-concept for therapy, expressing just the isolated NTD fragment in Drosophila (without the full channel) was sufficient to stabilize endogenous MCU and improve survival, suggesting a novel therapeutic target for mitochondrial diseases.",
+      "The study highlights a \"supply-demand\" match where calcium uptake is boosted to stimulate the TCA cycle and ATP production precisely when the electron transport chain is failing."
+    ]
+  },
+  {
+    "id": "redefining-the-roles-of-mitochondrial-dna-encoded-subunits-in-respiratory-comple-2015",
+    "title": "Redefining the roles of mitochondrial DNA-encoded subunits in respiratory Complex I assembly",
+    "year_published": 2015,
+    "date_started": "2/13/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Yidong Bai",
+      "Complex I",
+      "ND4",
+      "ND5",
+      "ND6",
+      "mtDNA"
+    ],
+    "clarity_quality": "7",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "The study identifies a new Complex I assembly intermediate (labeled as the > 950 kDa intermediate) that contains both the membrane and matrix arms at an early stage of assembly.",
+      "ND4 is critical for the initial formation of this large intermediate; in its absence, the assembly of Complex I is completely abolished.",
+      "ND6 plays a recruitment role, specifically facilitating the entry of the ND1 and ND5 subunits into the assembling complex.",
+      "ND5 acts as a stabilizer for the complex and is essential for the transition from a standalone Complex I to its incorporation into respiratory supercomplexes.",
+      "The researchers proposed a redefined, partially sequential assembly pathway for Complex I, correcting previous models regarding the timing and order of subunit incorporation."
+    ],
+    "interesting_points": [
+      "Non-Simultaneous Entry: Contrary to earlier beliefs that ND4 and ND5 enter the assembly together, this study proves they enter at different stages, with ND4 being required much earlier than ND5.",
+      "The > 950 kDa Intermediate: The discovery of this specific high-molecular-weight band suggests that Complex I forms an \"almost complete\" structure early on, which then undergoes a maturation process (losing assembly factors) to become the functional ~800 kDa form.",
+      "Late Entry of ND1: The study reveals that the ND1-containing subcomplex joins the assembly much later than previously thought, and its incorporation depends on the prior presence of ND6.",
+      "Kinetic Timeline: The research indicates that it takes approximately 12–24 hours for a newly synthesized mitochondrial subunit to be fully integrated into the functional respiratory machinery.",
+      "Clinical Implications: By delineating the specific roles of ND4, ND5, and ND6, the study provides a better basis for understanding the varying severity and pathology of Leber's Hereditary Optic Neuropathy (LHON) and other mitochondrial diseases."
+    ]
+  },
+  {
+    "id": "generation-and-bioenergetic-analysis-of-cybrids-containing-mitochondrial-dna-fro-2009",
+    "title": "Generation and bioenergetic analysis of cybrids containing mitochondrial DNA from mouse skeletal muscle during aging",
+    "year_published": 2009,
+    "date_started": "2/13/2026",
+    "status": "Ongoing",
+    "tags": [
+      "mtDNA",
+      "Mitochondria",
+      "Yidong Bai",
+      "Cybrids"
+    ],
+    "clarity_quality": "7",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "The researchers successfully developed a novel technique to transfer mitochondrial DNA (mtDNA) from mouse skeletal muscle into cell lines, creating \"cybrids\" for detailed bioenergetic study.",
+      "Cybrids containing mtDNA from old mice (26 months) showed a significant decrease in maximal respiratory capacity and a more \"relaxed\" (less efficient) coupling of oxidative phosphorylation compared to those from young mice.",
+      "Age-related decline in mitochondrial function leads to reduced cell growth and viability, particularly when cells are forced to rely on mitochondria for energy (using galactose medium).",
+      "A clear correlation was found between decreased mtDNA copy number in old muscle and the decline in respiratory rates and growth capacity."
+    ],
+    "interesting_points": [
+      "This study represents the first successful generation of cybrids using mtDNA derived specifically from skeletal muscle, a tissue heavily impacted by aging and sarcopenia.",
+      "The research suggests that the bioenergetic defects observed in aging are encoded within the mtDNA itself, as these defects persisted even after the mtDNA was transferred into a standardized nuclear environment (the ρ0 cell line).",
+      "The findings highlight a \"bioenergetic switch\": cells with aged mitochondria may compensate for energy deficits by upregulating glycolysis, a metabolic signature similar to that seen in cancer cells.",
+      "The study provides a unique molecular tool to study low-occurrence pathogenic mutations that are otherwise difficult to analyze directly in intact muscle tissues."
+    ]
+  },
+  {
+    "id": "a-century-of-cholesterol-and-coronaries-from-plaques-to-genes-to-statins-2015",
+    "title": "A Century of Cholesterol and Coronaries: From Plaques to Genes to Statins",
+    "year_published": 2015,
+    "date_started": "2/16/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Joseph Goldstein",
+      "Michael Brown",
+      "LDL",
+      "Review",
+      "Cholesterol",
+      "SREBP"
+    ],
+    "clarity_quality": "10",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "Receptor Regulation: LDL levels in the blood are primarily controlled by LDL receptors in the liver. Genetic mutations that reduce these receptors cause high LDL and heart attacks, while mutations that increase receptor activity lower LDL and protect against heart disease.",
+      "The SREBP Pathway: The authors elucidated the molecular mechanism (the SREBP pathway) by which cells sense cholesterol levels in their membranes and transmit that information to the nucleus to regulate the production of LDL receptors and cholesterol synthesis.",
+      "PCSK9’s Role: The protein PCSK9 destroys LDL receptors. Inhibiting PCSK9 (via genetics or drugs) prevents receptor destruction, drastically lowers LDL, and significantly reduces the risk of heart attacks.",
+      "Earlier is Better: Lifelong exposure to low LDL (due to genetics or diet) offers far greater protection against heart disease (up to 88% reduction) than lowering LDL with drugs later in life after plaques have already formed."
+    ],
+    "interesting_points": [
+      "Historical Misunderstanding: In the early 20th century, doctors believed coronary blockage was \"universally fatal.\" Consequently, they misdiagnosed non-fatal heart attacks as severe indigestion until the electrocardiogram (ECG) revealed the truth in 1919.",
+      "The \"Sealed Bottle\" Experiment: In 1933, Rudolph Schoenheimer proved that animals synthesize their own cholesterol by placing mice in sealed bottles and measuring their total cholesterol content. He found that synthesis slowed down when the mice were fed cholesterol, discovering the principle of feedback inhibition.",
+      "The \"Detective Story\" of SREBP: When researchers first isolated the SREBP transcription factor from cell nuclei, it weighed ~60 kDa. However, the genetic blueprint predicted a protein of 125 kDa. They eventually realized the protein is built as a \"prisoner\" anchored in the cell membrane and is only cut loose (cleaved) to enter the nucleus when cholesterol levels drop.",
+      "Dietary Extremes: Ancel Keys' \"Seven Countries Study\" highlighted a stark contrast: Japanese fishermen (low-fat diet) had an average cholesterol of 165 mg/dl, while East Finnish foresters (who ate butter on cheese) averaged 270 mg/dl and had a 13-fold higher rate of heart attacks.",
+      "Statins' Mechanism: Statins don't just \"lower cholesterol\" directly; they inhibit synthesis inside the cell, which tricks the liver into thinking it is starving for cholesterol. The liver responds by producing more LDL receptors, which then pull dangerous LDL out of the bloodstream."
+    ]
+  },
+  {
+    "id": "hottip-dependent-r-loop-formation-regulates-ctcf-boundary-activity-and-tad-integ-2022",
+    "title": "HOTTIP-dependent R-loop formation regulates CTCF boundary activity and TAD integrity in leukemia",
+    "year_published": 2022,
+    "date_started": "2/21/2026",
+    "status": "Ongoing",
+    "tags": [
+      "HOTTIP",
+      "R-loop",
+      "Mingjiang Xu",
+      "Leukemia",
+      "TAD",
+      "AML"
+    ],
+    "clarity_quality": "4",
+    "relevance": "1. Slightly Relevant",
+    "main_finding": [
+      "Mechanism of Genome Organization: The study concludes that the long non-coding RNA (lncRNA) HOTTIP directly regulates the 3D genome structure in leukemia by recruiting the CTCF/cohesin complex and R-loop regulators to specific chromatin boundaries.",
+      "R-loop Function: HOTTIP-mediated R-loop formation is essential for reinforcing CTCF boundary activity and maintaining the integrity of Topologically Associated Domains (TADs).",
+      "Oncogenic Activation: These R-loop-dependent boundaries coordinate the oncogenic Wnt/β-catenin signaling pathway, which is a key driver of acute myeloid leukemia (AML).",
+      "Therapeutic Potential: Reducing HOTTIP-driven R-loops (either by deleting binding sites or using RNase H to eliminate the loops) impairs TAD topology and inhibits leukemia progression, suggesting a new strategy for mitigating AML severity."
+    ],
+    "interesting_points": [
+      "Direct RNA-DNA Interaction: HOTTIP recognizes specific binding motifs through sequence complementarity, forming R-loops via a base-pairing mechanism rather than just acting as a passive byproduct of transcription.",
+      "TAD Integrity: The loss of HOTTIP leads to the disappearance or weakening of specific TADs, particularly those encompassing the CTNNB1 (β-catenin), MYC, and MECOM loci.",
+      "HSC Impact: Single-cell RNA-seq analysis revealed that Hottip aberration specifically impacts hematopoietic stem cell (HSC) subpopulations, driving a myeloid-biased trajectory toward leukemia.",
+      "Regulatory Layer: The research highlights that R-loops, often viewed as threats to genome stability, can serve as powerful and precise regulators of gene expression and chromatin architecture.",
+      "Clinical Relevance: HOTTIP is highly expressed in AML patients with MLL rearrangements or NPM1 mutations, correlating with poor survival rates."
+    ]
+  },
+  {
+    "id": "rna-m5c-oxidation-by-tet2-regulates-chromatin-state-and-leukaemogenesis-2024",
+    "title": "RNA m5C oxidation by TET2 regulates chromatin state and leukaemogenesis",
+    "year_published": 2024,
+    "date_started": "2/21/2026",
+    "status": "Ongoing",
+    "tags": [
+      "TET2",
+      "Mingjiang Xu",
+      "Leukemia",
+      "RNA m5C oxidation"
+    ],
+    "clarity_quality": "6",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "The TET2 enzyme, a known tumor suppressor in blood cancers, regulates chromatin structure and prevents leukemia by oxidizing 5-methylcytosine (m5C) on chromatin-associated RNA (caRNA), specifically retrotransposon RNA.",
+      "When TET2 is deficient or mutated, RNA m5C accumulates. This accumulation is recognized by the protein MBD6, which then directs the removal of a repressive histone mark (H2AK119ub). This results in an abnormally open chromatin state and the activation of genes that drive leukemia.",
+      "Depleting the MBD6 protein selectively halts the proliferation of TET2-mutant leukemic cells and largely reverses blood-formation defects in mouse models, establishing MBD6 as a highly promising therapeutic target for TET2-mutant malignancies."
+    ],
+    "interesting_points": [
+      "The study resolves a long-standing paradox in cancer biology: why TET2 deficiency—which impairs a DNA demethylase—unexpectedly leads to genome-wide open chromatin (DNA hypomethylation). The researchers proved this open chromatin phenotype is actually driven by the loss of TET2's RNA oxidation activity, not its DNA activity.",
+      "TET2 demonstrates a bimodal, \"moonlighting\" function depending on its protein partners: it oxidizes DNA at enhancer regions when paired with CXXC4/5 proteins, but oxidizes RNA at repeat elements when recruited by the RNA-binding protein PSPC1.",
+      "The proteins MBD5 and MBD6 were previously known to associate with heterochromatin but mysteriously did not bind to methylated DNA. This research newly identifies them as specialized RNA-binding proteins that preferentially recognize m5C-modified RNA.",
+      "The findings highlight a growing theme in epigenetics where chromatin-associated regulatory RNAs (carRNAs) serve as active, dynamic platforms for controlling local and global chromatin architecture."
+    ]
+  },
+  {
+    "id": "tet2-loss-leads-to-hypermutagenicity-in-haematopoietic-stem-progenitor-cells-2017",
+    "title": "Tet2 loss leads to hypermutagenicity in haematopoietic stem/progenitor cells",
+    "year_published": 2017,
+    "date_started": "2/21/2026",
+    "status": "Ongoing",
+    "tags": [
+      "TET2",
+      "Leukemia",
+      "Mingjiang Xu"
+    ],
+    "clarity_quality": "7",
+    "relevance": "2. Moderately Relevant",
+    "main_finding": [
+      "Loss of the Tet2 gene leads to hypermutagenicity (a significantly increased mutation rate) in haematopoietic stem and progenitor cells (HSCs/HPCs).",
+      "Tet2 knockout mice spontaneously develop lethal myeloid, T-cell, and B-cell malignancies after long latencies.",
+      "The increased mutational burden in Tet2-deficient cells is particularly high at specific genomic sites that gained 5-hydroxymethylcytosine (5hmC), which are locations where the TET2 enzyme normally binds.",
+      "Human patients with TET2-mutated myeloid malignancies possess a significantly higher number of mutational events compared to patients with wild-type TET2.",
+      "Tumors from Tet2 knockout mice accumulate numerous somatic mutations in genes frequently altered in human blood cancers, such as Apc, Nf1, Flt3, Cbl, and Notch1."
+    ],
+    "interesting_points": [
+      "The study uncovers a novel, tumor-suppressive role for the TET2 enzyme in safeguarding genome stability against mutagenesis, helping to explain why TET2 mutations are frequent early \"ancestral\" events in diverse haematological cancers and in age-related clonal haematopoiesis.",
+      "The T-cell and B-cell malignancies that developed in the Tet2-knockout mice were successfully transplanted into secondary wild-type recipients, confirming the true malignant and neoplastic nature of these cells.",
+      "The researchers demonstrated that stably re-expressing TET2 in TET2-knockdown cells completely rescued normal mutation frequencies, proving TET2's direct role in preventing DNA mutations.",
+      "The mutations observed in Tet2-deficient tumors were not entirely random; they showed a strong preference for occurring at or closely around CpG sites (73% of mutations), with base transition mutations (like G:C to A:T) dominating the mutational spectrum."
+    ]
+  },
+  {
+    "id": "the-intrinsically-disordered-regions-of-organellophagy-receptors-are-interchange-2025",
+    "title": "The intrinsically disordered regions of organellophagy receptors are interchangeable and control organelle fragmentation, ER-phagy and mitophagy flux",
+    "year_published": 2025,
+    "date_started": "3/8/2026",
+    "status": "Ongoing",
+    "tags": [
+      "ER-phagy",
+      "mitophagy",
+      "IDR",
+      "NCB",
+      "autophagy"
+    ],
+    "clarity_quality": "10",
+    "relevance": "4. Crucial",
+    "main_finding": [
+      "IDR-Driven Fragmentation: Organellophagy receptors (which handle the degradation of organelles like the ER and mitochondria) use a cytoplasmic intrinsically disordered region (IDR) module to control the physical fragmentation of the organelle, separate from the process of lysosomal delivery.",
+      "Interchangeability of Modules: The IDR modules of ER-phagy and mitophagy receptors are functionally interchangeable; transplanting an ER-phagy IDR to the mitochondria triggers mitophagy, and vice versa.",
+      "Biophysical Requirements: For an IDR to successfully fragment an organelle and trigger autophagy, it must possess a net cumulative negative charge, a minimum length (at least 47 residues), and a specific distance between the membrane and the LC3-interacting region (LIR).",
+      "Dispensability of Anchors: The specific membrane-tethering modules (like the RHD of FAM134B) determine where a receptor sits within an organelle but are not strictly required for the fragmentation process itself.",
+      "DRP1 Dependency: While ER-phagy fragmentation is independent of the fissionase DRP1, mitochondrial fragmentation induced by these transplanted IDRs requires DRP1 and its GTPase activity."
+    ],
+    "interesting_points": [
+      "Function Over Sequence: The study reveals a remarkable example of functional conservation based on biophysical traits (charge and disorder) rather than specific amino acid sequences.",
+      "Redefining Receptor Roles: It challenges the existing model that organelle fragmentation is primarily driven by the membrane-remodelling properties of tethering domains, shifting the focus to the cytoplasmic IDR.",
+      "LIR vs. Fragmentation: The research proves that the LIR motif (which binds LC3 for transport) is essential for clearing the organelle but is completely dispensable for the initial act of breaking the organelle into pieces.",
+      "Introduction of ORGATACs: The authors propose the development of Organelle-Targeting Chimeras (ORGATACs), synthetic tools that could be used to manually trigger the fragmentation and turnover of specific organelles to treat diseases like \"organelle gigantism\" or aging-related dysfunction.",
+      "The 24-Residue Rule: The study identifies a \"minimal distance\" (24 residues) required between the membrane and the LIR to avoid spatial constraints, explaining why many receptors have evolved specific IDR lengths to allow LC3 engagement."
+    ]
+  },
+  {
+    "id": "deletion-of-tet2-in-mice-leads-to-dysregulated-hematopoietic-stem-cells-and-subs-2011",
+    "title": "Deletion of Tet2 in mice leads to dysregulated hematopoietic stem cells and subsequent development of myeloid malignancies",
+    "year_published": 2011,
+    "date_started": "3/13/2026",
+    "status": "Ongoing",
+    "tags": [
+      "Tet2",
+      "Leukemia",
+      "Mingjiang Xu"
+    ],
+    "clarity_quality": "8",
+    "relevance": "3. Highly Relevant",
+    "main_finding": [
+      "Tet2 as a Master Tumor Suppressor: The study proved that the loss of the Tet2 gene is a primary driver of myeloid cancers; its deletion in mice was sufficient to trigger diseases like Chronic Myelomonocytic Leukemia (CMML) and Myelodysplastic Syndromes (MDS).",
+      "Control of DNA Methylation: Researchers found that Tet2 loss causes a dramatic drop in 5-hmC levels and a corresponding increase in 5-mC, establishing Tet2 as a critical regulator of the chemical \"marks\" on DNA.",
+      "Pre-Cancerous Stem Cell Expansion: The study revealed that Tet2 deficiency causes a massive expansion of the blood stem cell pool (LSK cells) well before any outward signs of leukemia appear.",
+      "Biased Cell Production (Lineage Skewing): Mutant stem cells lose their balance and are \"programmed\" to overproduce monocytes and granulocytes at the expense of other vital blood cells like red blood cells.",
+      "Sensitivity to Gene Dosage: It was discovered that losing even one copy of the gene (Tet2 +/-) is enough to cause lethal blood cancer in a subset of cases, showing how sensitive the blood system is to Tet2 levels."
+    ],
+    "interesting_points": [
+      "Causation vs. Correlation: This was the first study to provide definitive in vivo proof that Tet2 mutations actually cause cancer, moving the gene from a \"suspected bystander\" found in patient DNA to a \"proven driver\" of disease.",
+      "Discovery of the Competitive Advantage: The paper proved that mutant stem cells have a \"fitness advantage,\" meaning they physically outcompete and displace healthy cells in the bone marrow. This concept is now a pillar of cancer biology.",
+      "The Foundation of Pre-Leukemia Research: By showing stem cells grow abnormally before the onset of disease, this study helped define the \"pre-leukemic state.\" This led to the modern discovery of Clonal Hematopoiesis (CHIP), which is used today to identify cancer risk in healthy people.",
+      "Bridging Epigenetics and Physical Disease: It was a pioneering work that linked abstract epigenetic changes (the 5-mC to 5-hmC transition) to actual physical tumor growth, proving that how a cell \"reads\" its DNA is as important as the DNA code itself.",
+      "A Roadmap for Treatment: By identifying Tet2 as a gatekeeper of DNA methylation, this research validated the use of hypomethylating drugs as a standard treatment for MDS and leukemia patients."
+    ]
+  }
+]
